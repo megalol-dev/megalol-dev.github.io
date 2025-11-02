@@ -1,0 +1,493 @@
+
+/*Variables generales - son las usadas en el modo día*/
+:root{
+    --primary-color: hsl(214, 84%, 56%);
+    --text-color:hsl(0, 0%, 5%);
+    --bg-color:hsl(0, 0%, 40%);
+    --bg-card-color: hsl(0, 0%, 90%);
+
+    --border-radius: 0.8em;
+
+    --transition: color .3s ease, background-color .3s ease;
+}
+
+/* Todo tenga un borde*/
+*{
+    box-sizing: border-box;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+
+}
+
+/* Todo el cuerpo de la web*/
+body{
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: var(--transition);
+    font-family: sans-serif;
+}
+
+/*Modo nocturno ON: cambiamos el color del fondo y las letras*/
+body.dark{
+    --text-color: hsl(0, 100%, 99%);
+    --bg-color: hsl(0, 0%, 6%);
+    --bg-card-color: hsl(0, 2%, 11%);
+}
+
+/* Para la cabeza de la pagina web */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+    padding: 0 1.5em;
+    background-color: var(--bg-card-color);
+    transition: var(--transition);
+}
+
+/* Interruptores */
+.switches{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+.toggle-theme{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.flags{
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flags__item{
+    width: 30px;
+
+}
+
+.flags__img {
+    display: block;
+    cursor: pointer;
+}
+
+
+
+.toggle-theme__icon{
+    margin-right: 0.5em;
+    width: 20px;
+}
+
+.toggle-theme__text{
+    font-size: 0.8rem;
+}
+
+.colors {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+    width: 100px;
+}
+
+.colors__item {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--text-color);
+    cursor: pointer;
+    background-color: var(--primary-color);
+ 
+}
+
+.colors__item--blue {
+   --primary-color: hsl(214, 84%, 56%);
+}
+
+.colors__item--green {
+    --primary-color: hsl(141, 96%, 44%);
+}
+
+.colors__item--purple {
+    --primary-color: hsl(289, 96%, 44%);
+}
+
+.colors__item--orange {
+    --primary-color: hsl(25, 96%, 44%);
+}
+
+.title {
+    text-align: center;
+    color: var(--primary-color);
+    transition: var(--transicion);
+}
+
+/* Para que en movil se vea en una columna*/
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* móvil: una columna */
+    gap: 1rem;
+    /* opcional, separación */
+    padding: 2em;
+}
+
+
+/*media query del main*/
+@media (min-width: 720px) {
+    .main {
+        /*grid-template-columns: 320px 1fr;*/
+        grid-template-columns: min-content 1fr;
+        /* izquierda fija, derecha flexible */
+        align-items: start;
+    }
+}
+
+.columna {
+    display: grid;
+    gap: 0.5em;
+}
+
+
+/* La columna de la derecha contendrá 1 o 2 tarjetas en grid */
+.columna--derecha {
+    display: grid;
+    gap: 1rem;
+}
+
+/* 2 columnas en pantallas anchas */
+@media (min-width: 720px) {
+    .columna--derecha {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+}
+
+
+/*Fondo de la columna izquierda donde se ven mis datos*/
+.card {
+    padding: 1em;
+    background-color: var(--bg-card-color);
+    border-radius: var(--border-radius);
+}
+
+
+
+.card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* antes era cover */
+    object-position: center;
+    background-color: var(--bg-card-color);
+    /* relleno detrás si sobran bordes */
+}
+
+.card__image img {
+    width: 100%;
+    height: auto;
+    /* o fija una altura y usa object-fit */
+    display: block;
+    object-fit: cover;
+    /* útil si fijas altura */
+}
+
+.card__image-container {
+    width: 100%;
+    /* ocupa todo el ancho disponible */
+    aspect-ratio: 1 / 1;
+    /* 🔥 crea un cuadrado perfecto */
+    overflow: hidden;
+    /* recorta el exceso */
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-card-color);
+    /* por si la imagen tarda en cargar */
+}
+
+.card__header {
+    padding: 1em 0;
+
+}
+
+.card__title {
+    margin: 0.5;
+    margin-bottom: 1em;
+    font-size: 1.2rem;
+}
+
+.card__subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+
+.card__link {
+    display: inline-flex;
+    /* usa inline-flex en lugar de flex */
+    align-items: center;
+    gap: 0.5em;
+    white-space: nowrap;
+    /* evita que el email se corte */
+    overflow: hidden;
+    /* opcional si el contenedor es estrecho */
+    text-overflow: ellipsis;
+    /* opcional, añade "..." si se corta */
+}
+
+
+.card__link a {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+
+.card__text {
+    font-size: .9rem;
+    line-height: 1.5;
+}
+
+/* (Opcional) Ajustes visuales coherentes entre cards de skills */
+.card--skills .card__title {
+    margin-top: 0;
+}
+
+
+/* Card proyecto a ancho completo de la grid de la derecha */
+.card--project {
+    /* Por defecto (móvil) apilado */
+    display: grid;
+    gap: 1rem;
+}
+
+/* Contenido del proyecto */
+.project {
+    position: relative;
+    display: grid;
+    gap: .5rem;
+}
+
+.project__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin: .5em 0;
+    font-size: .8rem;
+    width: 100%;
+    
+}
+
+@media (min-width: 760px) {
+    .project__tags {
+        font-size: 0.9rem;
+        
+    }
+}
+
+.project__tag {
+    padding: .4em .8em;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    font-size: .8rem;
+    opacity: .9;
+}
+
+
+
+
+/* A partir de 720px, si tu .columna--derecha ya es 2 columnas */
+@media (min-width: 720px) {
+    .card--project {
+        grid-column: 1 / -1;
+        /*ocupa las 2 columnas de .columna--derecha */
+        grid-template-columns: minmax(180px, 220px) 1fr;
+        /* imagen | contenido */
+        align-items: start;
+    }
+}
+
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+
+.skills__item {
+    display: flex;
+    align-items: center;
+    /* centra verticalmente nombre y barra */
+    justify-content: space-between;
+    gap: 1rem;
+    /* espacio entre texto y barra */
+}
+
+
+/* Nombre de la tecnología */
+.skills__tech {
+    font-weight: 600;
+    color: var(--text-color);
+    min-width: 90px;
+    /* ancho mínimo para alinear bien */
+}
+
+/* Barra de progreso */
+.skills__bar {
+    flex: 1;
+    /* ocupa todo el espacio restante */
+    position: relative;
+    height: 8px;
+    background-color: #b8b8b8;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+
+/* Parte que se rellena */
+.skills__bar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: var(--primary-color);
+    border-radius: inherit;
+    animation: fill-bar 5s ease forwards;
+    /* animación al cargar */
+}
+
+.icon {
+    margin-right: 1em;
+}
+
+.experience {
+    display: flex;
+    align-items: start;
+    margin-bottom: 1em;
+    padding: 1em;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.experience__image { 
+    max-width: 15%;   
+    margin-right: 1em;
+}
+
+.experience__time {
+    font-size: 0.8rem;
+    margin-bottom: 0.5em;
+}
+
+.experience__job {
+    margin:0;
+    margin-bottom: 0.5em;
+    color: var(--primary-color);
+    transition: var(--transition);
+
+}
+
+.experience__description {
+    font-size: .8rem;
+    margin-bottom: 1.5em;
+
+
+}
+
+/* Botones alineados y con separación */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 225px;
+    gap: .5rem;
+    margin-top: .5rem;
+}
+
+.button {
+    width: 100px;
+    line-height: 2.5;
+    text-align: center;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    
+}
+
+@media screen and (min-width: 760px) {
+    .buttons {
+        position: static;
+        margin-top: 1rem;
+    }
+}
+
+.button--primary {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+
+}
+
+
+.button--ghost {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+@keyframes fill-bar {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--level, 0%);
+    }
+}
+
+
+
+/* Ajustes de color en modo día */
+body:not(.dark) .project__tag,
+body:not(.dark) .button--primary {
+    background-color: #000;
+    /* negro puro */
+    color: #fff;
+    /* texto blanco */
+    border-color: #000;
+    /* borde coherente */
+}
+
+/* Si quieres que las tags sigan usando el color primario pero más oscuro, usa esta variante: */
+body:not(.dark) .project__tag {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Botón "Demo" en modo día */
+body:not(.dark) .button--primary {
+    background-color: var(--primary-color);
+    /* mantiene el color del tema */
+    color: #ffffff;
+    /* texto negro */
+    border-color: var(--primary-color);
+    /* borde del mismo color */
+}
+
