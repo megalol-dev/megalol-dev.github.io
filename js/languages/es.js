@@ -57,7 +57,7 @@ export default {
         proj1_title: "Tienda Online Deportivas",
         proj1_type: "Aplicación Web",
         proj1_desc:
-            "Desarrollé un juego tipo «¿Quién es quién?» utilizando Java, implementando tanto la lógica del juego como la interfaz gráfica y el sistema de controles. Diseñé personajes y elementos visuales con ayuda de herramientas de inteligencia artificial, consiguiendo un estilo coherente y atractivo. El proyecto destaca por su estructura modular, la interacción fluida con el usuario y el enfoque en la jugabilidad y la presentación visual.",
+            "Prototipo de tienda online para comprar deportivas, incluye sistema para ver deportivas de colores en tiempo real.",
 
     proj2_title: "¿Quién es quién?",
     proj2_type: "Video juego - Aplicación de escritorio",
@@ -75,6 +75,6 @@ export default {
         "Aplicación de escritorio en Java para crear, editar y organizar tareas de forma simple e intuitiva. Además, los datos son persistentes.",
 
     // Botones
-    btn_demo: "demo",
+    btn_demo: "video",
     btn_code: "code"
 };

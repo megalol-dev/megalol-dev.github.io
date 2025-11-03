@@ -73,6 +73,6 @@ export default {
         "A Java desktop application to create, edit, and organize tasks in a simple and intuitive way. Data persistence is included.",
 
     // Buttons
-    btn_demo: "demo",
+    btn_demo: "video",
     btn_code: "code"
 };
