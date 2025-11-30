@@ -54,24 +54,29 @@ export default {
     skill_illustrator: "Adobe Illustrator",
 
     // Proyectos
-        proj1_title: "Tienda Online Deportivas",
-        proj1_type: "Aplicación Web",
-        proj1_desc:
-            "Prototipo de tienda online para comprar deportivas, incluye sistema para ver deportivas de colores en tiempo real.",
-
-    proj2_title: "¿Quién es quién?",
-    proj2_type: "Video juego - Aplicación de escritorio",
+    proj1_title: "Tienda Online Deportivas",
+    proj1_type: "Aplicación Web",
+    proj1_desc:
+        "Prototipo de tienda online para comprar deportivas. Incluye un sistema para ver deportivas de distintos colores en tiempo real. Los datos de las deportivas se almacenan en un archivo JSON y es escalable para añadir más artículos en el futuro.",
+    
+    proj2_title: "Tienda Online supermercado",
+    proj2_type: "Aplicación Web",
     proj2_desc:
-        "Versión digital del clásico juego de deducción, desarrollada en Java con interfaz gráfica y personajes al estilo Dragon Ball generados por IA.",
+        "Prototipo de tienda online para comprar comida, incluye una base de datos SQL para gestionar el inventario.",
 
-    proj3_title: "Comecocos",
+    proj3_title: "¿Quién es quién?",
     proj3_type: "Video juego - Aplicación de escritorio",
     proj3_desc:
+        "Versión digital del clásico juego de deducción, desarrollada en Java con interfaz gráfica y personajes al estilo Dragon Ball generados por IA.",
+
+    proj4_title: "Comecocos",
+    proj4_type: "Video juego - Aplicación de escritorio",
+    proj4_desc:
         "Recreación del clásico Pac-Man, con sistema de niveles, colisiones y música personalizada.",
 
-    proj4_title: "Gestor de tareas",
-    proj4_type: "Aplicación de escritorio",
-    proj4_desc:
+    proj5_title: "Gestor de tareas",
+    proj5_type: "Aplicación de escritorio",
+    proj5_desc:
         "Aplicación de escritorio en Java para crear, editar y organizar tareas de forma simple e intuitiva. Además, los datos son persistentes.",
 
     // Botones

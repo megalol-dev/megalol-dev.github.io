@@ -55,21 +55,26 @@ export default {
     proj1_title: "Sports Shoes Online Store",
     proj1_type: "Web Application",
     proj1_desc:
-        "Prototype of an online store for purchasing sports shoes. It features a real-time color selection system that allows users to view each shoe model in different colors.",
-
-    proj2_title: "Guess Who?",
-    proj2_type: "Video game - Desktop application",
+        "Prototype of an online store for purchasing sneakers. It includes a system to view sneakers in different colors in real time. The sneaker data is stored in a JSON file and the project is scalable for adding more items in the future.",
+    
+    proj2_title: "Online Supermarket Store",
+    proj2_type: "Web Application",
     proj2_desc:
-        "A digital version of the classic deduction game, developed in Java with a graphical interface and Dragon Ball-style AI-generated characters.",
+        "Prototype of an online store for purchasing food, including an SQL database to manage the inventory.",
 
-    proj3_title: "Pac-Man Clone",
+    proj3_title: "Guess Who?",
     proj3_type: "Video game - Desktop application",
     proj3_desc:
+        "A digital version of the classic deduction game, developed in Java with a graphical interface and Dragon Ball-style AI-generated characters.",
+
+    proj4_title: "Pac-Man Clone",
+    proj4_type: "Video game - Desktop application",
+    proj4_desc:
         "A recreation of the classic Pac-Man with a level system, collisions, and custom music.",
 
-    proj4_title: "Task Manager",
-    proj4_type: "Desktop application",
-    proj4_desc:
+    proj5_title: "Task Manager",
+    proj5_type: "Desktop application",
+    proj5_desc:
         "A Java desktop application to create, edit, and organize tasks in a simple and intuitive way. Data persistence is included.",
 
     // Buttons
