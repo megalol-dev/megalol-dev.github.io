@@ -58,7 +58,7 @@ export default {
     proj1_title: "Refugio Animal — Plataforma de Adopciones",
     proj1_type: "Aplicación Web + CRUD Completo",
     proj1_desc:
-        "Aplicación web profesional para la gestión de un refugio animal.Incluye sistema de adopciones, formulario público, gestión interna de animales,usuarios con roles y solicitudes.CRUD completo con almacenamiento en base de datos SQLite y backend construido con Flask.",
+        "Aplicación web profesional para la gestión de un refugio animal. Incluye sistema de adopciones, formulario público, gestión interna de animales, usuarios con roles y solicitudes. CRUD completo con almacenamiento en base de datos SQLite y backend construido con Flask.",
     
     proj2_title: "Tienda Online Deportivas",
     proj2_type: "Aplicación Web",
