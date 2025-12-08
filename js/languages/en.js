@@ -52,29 +52,35 @@ export default {
     skill_illustrator: "Adobe Illustrator",
 
     // Projects
-    proj1_title: "Sports Shoes Online Store",
-    proj1_type: "Web Application",
+
+    proj1_title: "Animal Shelter — Adoption Platform",
+    proj1_type: "Web Application + Full CRUD",
     proj1_desc:
-        "Prototype of an online store for purchasing sneakers. It includes a system to view sneakers in different colors in real time. The sneaker data is stored in a JSON file and the project is scalable for adding more items in the future.",
-    
-    proj2_title: "Online Supermarket Store",
+        "Professional web application for managing an animal shelter. Includes an adoption system, public request form, internal management of animals, role-based user system, and adoption requests. Full CRUD functionality with SQLite database storage and a Flask-powered backend.",
+
+    proj2_title: "Sports Shoes Online Store",
     proj2_type: "Web Application",
     proj2_desc:
+        "Prototype of an online store for purchasing sneakers. It includes a system to view sneakers in different colors in real time. The sneaker data is stored in a JSON file and the project is scalable for adding more items in the future.",
+    
+    proj3_title: "Online Supermarket Store",
+    proj3_type: "Web Application",
+    proj3_desc:
         "Prototype of an online store for purchasing food, including an SQL database to manage the inventory.",
 
-    proj3_title: "Guess Who?",
-    proj3_type: "Video game - Desktop application",
-    proj3_desc:
-        "A digital version of the classic deduction game, developed in Java with a graphical interface and Dragon Ball-style AI-generated characters.",
-
-    proj4_title: "Pac-Man Clone",
+    proj4_title: "Guess Who?",
     proj4_type: "Video game - Desktop application",
     proj4_desc:
+        "A digital version of the classic deduction game, developed in Java with a graphical interface and Dragon Ball-style AI-generated characters.",
+
+    proj5_title: "Pac-Man Clone",
+    proj5_type: "Video game - Desktop application",
+    proj5_desc:
         "A recreation of the classic Pac-Man with a level system, collisions, and custom music.",
 
-    proj5_title: "Task Manager",
-    proj5_type: "Desktop application",
-    proj5_desc:
+    proj6_title: "Task Manager",
+    proj6_type: "Desktop application",
+    proj6_desc:
         "A Java desktop application to create, edit, and organize tasks in a simple and intuitive way. Data persistence is included.",
 
     // Buttons

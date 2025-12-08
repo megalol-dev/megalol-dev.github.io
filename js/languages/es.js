@@ -54,29 +54,35 @@ export default {
     skill_illustrator: "Adobe Illustrator",
 
     // Proyectos
-    proj1_title: "Tienda Online Deportivas",
-    proj1_type: "Aplicación Web",
+
+    proj1_title: "Refugio Animal — Plataforma de Adopciones",
+    proj1_type: "Aplicación Web + CRUD Completo",
     proj1_desc:
-        "Prototipo de tienda online para comprar deportivas. Incluye un sistema para ver deportivas de distintos colores en tiempo real. Los datos de las deportivas se almacenan en un archivo JSON y es escalable para añadir más artículos en el futuro.",
+        "Aplicación web profesional para la gestión de un refugio animal.Incluye sistema de adopciones, formulario público, gestión interna de animales,usuarios con roles y solicitudes.CRUD completo con almacenamiento en base de datos SQLite y backend construido con Flask.",
     
-    proj2_title: "Tienda Online supermercado",
+    proj2_title: "Tienda Online Deportivas",
     proj2_type: "Aplicación Web",
     proj2_desc:
+        "Prototipo de tienda online para comprar deportivas. Incluye un sistema para ver deportivas de distintos colores en tiempo real. Los datos de las deportivas se almacenan en un archivo JSON y es escalable para añadir más artículos en el futuro.",
+    
+    proj3_title: "Tienda Online supermercado",
+    proj3_type: "Aplicación Web",
+    proj3_desc:
         "Prototipo de tienda online para comprar comida, incluye una base de datos SQL para gestionar el inventario.",
 
-    proj3_title: "¿Quién es quién?",
-    proj3_type: "Video juego - Aplicación de escritorio",
-    proj3_desc:
-        "Versión digital del clásico juego de deducción, desarrollada en Java con interfaz gráfica y personajes al estilo Dragon Ball generados por IA.",
-
-    proj4_title: "Comecocos",
+    proj4_title: "¿Quién es quién?",
     proj4_type: "Video juego - Aplicación de escritorio",
     proj4_desc:
+        "Versión digital del clásico juego de deducción, desarrollada en Java con interfaz gráfica y personajes al estilo Dragon Ball generados por IA.",
+
+    proj5_title: "Comecocos",
+    proj5_type: "Video juego - Aplicación de escritorio",
+    proj5_desc:
         "Recreación del clásico Pac-Man, con sistema de niveles, colisiones y música personalizada.",
 
-    proj5_title: "Gestor de tareas",
-    proj5_type: "Aplicación de escritorio",
-    proj5_desc:
+    proj6_title: "Gestor de tareas",
+    proj6_type: "Aplicación de escritorio",
+    proj6_desc:
         "Aplicación de escritorio en Java para crear, editar y organizar tareas de forma simple e intuitiva. Además, los datos son persistentes.",
 
     // Botones
