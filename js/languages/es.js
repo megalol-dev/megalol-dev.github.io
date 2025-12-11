@@ -3,13 +3,17 @@ export default {
     // Metadatos / generales
     site_title: "Portfolio",
 
+    // Banner
+    banner_title: "Desarrollo web",
+
     // Tema
     toggle_dark: "Dark mode", // Si prefieres “Modo oscuro”, cámbialo aquí
+
 
     // Perfil
     profile_role: "Front-end Developer",
     profile_bio:
-        "Soy un desarrollador web con una gran pasión por la programación y el mundo de los videojuegos. Me caracterizo por mi curiosidad, mi compromiso con el aprendizaje continuo y mi interés en mejorar mis competencias técnicas y creativas. He desarrollado varios proyectos personales en Java utilizando Swing, entre ellos una versión del clásico Comecocos y un juego de ¿Quién es quién?, en los que implementé tanto la lógica del juego como su interfaz gráfica.",
+        "Soy estudiante de Desarrollo de Aplicaciones Web y actualmente busco unas prácticas para completar mis estudios. En mi portafolio encontrarás diversos proyectos que he desarrollado para demostrar mis habilidades y mi evolución como programador. Entre mis trabajos más destacados se incluyen una aplicación web con CRUD completo y sistema de login, una tienda de deportivas con cambio de modelo en tiempo real y proceso de compra simulado, así como varios clones de videojuegos entre ellos, ¿Quién es quién? y el Comecocos, en los que he implementado tanto la lógica como la interfaz gráfica. Todos mis proyectos están disponibles con su código en GitHub, y también puedes ver demostraciones en vídeo a través de mi canal de YouTube. Me apasionan las bases de datos y el desarrollo web en general, y estoy siempre dispuesto a aprender nuevas tecnologías y afrontar nuevos retos.",
 
     // Experiencia
     experience_title: "Experiencia",
@@ -43,6 +47,10 @@ export default {
     hobby_gallery: "Mi galería de ilustraciones",
 
     // Skills
+
+    // Tecnologías
+    tech_title: "Tecnologías",
+
     skills_frontend_title: "Front-end",
     skill_html: "HTML",
     skill_css: "CSS",
@@ -89,3 +97,4 @@ export default {
     btn_demo: "video",
     btn_code: "code"
 };
+

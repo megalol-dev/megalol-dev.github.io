@@ -432,10 +432,10 @@ body.dark{
     
 }
 
-@media screen and (min-width: 760px) {
-    .buttons {
-        position: static;
-        margin-top: 1rem;
+@media screen and (min-width: 992px) {
+    .banner__inner {
+        height: 160px;
+        /* más bajo para respetar proporción */
     }
 }
 
@@ -491,3 +491,202 @@ body:not(.dark) .button--primary {
     /* borde del mismo color */
 }
 
+
+/* ===== Banner a ancho completo ===== */
+
+.banner {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.banner__inner {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    /* altura ideal para móvil/tablet */
+    overflow: hidden;
+}
+
+.banner__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Capa oscura para que se lea bien el texto */
+.banner__inner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.55));
+}
+
+/* Texto centrado encima del banner */
+.banner__title {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 4vw, 2.8rem);
+}
+
+/* Por defecto (móvil): solo mostramos la imagen móvil */
+.banner__image--desktop {
+    display: none;
+}
+
+/* En escritorio (PC): 992px en adelante */
+@media screen and (min-width: 992px) {
+    .banner__image--mobile {
+        display: none;
+    }
+
+    .banner__image--desktop {
+        display: block;
+    }
+}
+
+
+/* ============================
+   BARRAS DEL BANNER
+============================= */
+
+/* Contenedor de cada barra */
+.banner__bar {
+    width: 100%;
+    height: 6px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* sutil fondo */
+    position: relative;
+}
+
+/* Parte animada de cada barra */
+.banner__bar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background-color: var(--primary-color);
+    animation: banner-fill 6s ease forwards;
+}
+
+/* Barra SUPERIOR → carga IZQUIERDA → DERECHA */
+.banner__bar--top::after {
+    left: 0;
+}
+
+/* Barra INFERIOR → carga DERECHA → IZQUIERDA */
+.banner__bar--bottom::after {
+    right: 0;
+    animation-name: banner-fill-reverse;
+}
+
+/* Animación normal */
+@keyframes banner-fill {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* Animación inversa */
+@keyframes banner-fill-reverse {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* RESPONSIVE (opcional, por si quieres que sean más finas en móvil) */
+@media (max-width: 480px) {
+    .banner__bar {
+        height: 4px;
+    }
+}
+
+
+/* ============================
+   SECCIÓN TECNOLOGÍAS
+============================= */
+
+/* Que la tarjeta de tecnologías ocupe el ancho completo en la columna derecha */
+.card--technologies {
+    margin-bottom: 1rem;
+}
+
+/* En pantallas anchas, que ocupe las 2 columnas de .columna--derecha */
+@media (min-width: 720px) {
+    .card--technologies {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Grid de iconos */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Cada tecnología */
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.3rem;
+    padding: 0.75rem 0.5rem;
+    border-radius: var(--border-radius);
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Iconos Devicon */
+.tech-item i {
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+/* Texto debajo del icono */
+.tech-item span {
+    font-size: 0.85rem;
+}
+
+/* “Pills” para GPT, Gemini, NotebookLM, Flash */
+.tech-item__pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 999px;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* Ajustes para modo oscuro: que el fondo no quede demasiado claro */
+body.dark .tech-item {
+    background-color: rgba(255, 255, 255, 0.03);
+}

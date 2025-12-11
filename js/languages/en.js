@@ -3,13 +3,16 @@ export default {
     // Metadata / general
     site_title: "Portfolio",
 
+    // Banner
+    banner_title: "Web development",
+
     // Theme
     toggle_dark: "Dark mode",
 
     // Profile
     profile_role: "Front-end Developer",
     profile_bio:
-        "I’m a web developer with a strong passion for programming and the world of video games. I’m characterized by my curiosity, commitment to continuous learning, and interest in improving both my technical and creative skills. I’ve developed several personal projects in Java using Swing, including a version of the classic Pac-Man and a 'Guess Who?' game, where I implemented both the game logic and its graphical interface.",
+        "I am a Web Application Development student currently seeking an internship to complete my studies. In my portfolio, you will find a variety of projects I have created to showcase my skills and growth as a developer. Among my most notable works are a full web application with complete CRUD functionality and a user login system, a sneaker store with real-time model switching and a simulated checkout process, as well as several video game clones —including Guess Who? and Pac-Man— where I implemented both the game logic and the graphical interface. All of my projects are available with their source code on GitHub, and you can also watch demonstration videos on my YouTube channel. I am passionate about databases and web development in general, and I am always eager to learn new technologies and take on new challenges.",
 
     // Experience
     experience_title: "Experience",
@@ -41,6 +44,10 @@ export default {
     hobby_gallery: "My illustration gallery",
 
     // Skills
+
+    tech_title: "Technologies",
+
+
     skills_frontend_title: "Front-end",
     skill_html: "HTML",
     skill_css: "CSS",

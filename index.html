@@ -7,12 +7,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <!-- Devicon: iconos de tecnologías -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css" />
   <title data-i18n="site_title">Portfolio</title>
 </head>
 
+
+
 <body class="dark">
+
+<section class="banner">
+  <div class="banner__bar banner__bar--top"></div>
+
+  <div class="banner__inner">
+    <img src="assets/images/Banner.png" class="banner__image banner__image--mobile" />
+
+    <img src="assets/images/BannerPC.png" class="banner__image banner__image--desktop" />
+
+    <h1 class="banner__title" data-i18n="banner_title">
+      Desarrollo web
+    </h1>
+  </div>
+
+  <div class="banner__bar banner__bar--bottom"></div>
+</section>
+
+  <!-- Header -->
   <header class="header">
     <div class="switches">
       <div id="toggle-theme" class="toggle-theme">
@@ -71,11 +93,18 @@
           </div>
 
           <p class="card__text" data-i18n="profile_bio">
-            Soy un desarrollador web con una gran pasión por la programación y el mundo de los videojuegos...
+            Soy estudiante de Desarrollo de Aplicaciones Web y actualmente busco unas prácticas para completar mis estudios. En mi portafolio encontrarás diversos proyectos que he desarrollado para demostrar mis habilidades y mi evolución como programador.
+            
+            Entre mis trabajos más destacados se incluyen una aplicación web con CRUD completo y sistema de login, una tienda de deportivas con cambio de modelo en tiempo real y proceso de compra simulado, así como varios clones de videojuegos entre ellos, Comecocos y ¿Quién es quién?— en los que he implementado tanto la lógica como la interfaz gráfica.
+            
+            Todos mis proyectos están disponibles con su código en GitHub, y también puedes ver demostraciones en vídeo a través de mi canal de YouTube.
+            Me apasionan las bases de datos y el desarrollo web en general, y estoy siempre dispuesto a aprender nuevas tecnologías y afrontar nuevos retos.
           </p>
         </div>
       </article><!--end perfil-->
-
+      
+      
+      
       <!--Sección de experiencia-->
       <article class="card card--experience">
         <h2 class="card__title" data-i18n="experience_title">Experiencia</h2>
@@ -121,6 +150,8 @@
           </div>
         </div>
 
+       
+
         <!--hobbies-->
         <article class="card card--hobbies">
           <h2 class="card__title" data-i18n="hobbies_title">Hobbies</h2>
@@ -141,62 +172,105 @@
           <p class="card__text" data-i18n="hobby_learn">
             📖 Aprendizaje continuo – Siempre explorando nuevas tecnologías web y de videojuegos.
           </p>
+          <!--
+          De momento no usamos esta sección pero aqui añadiriamos nuestras redes sociales
           <p class="card__text">
-            📷 <a href="https://instagram.com/TU_USUARIO" target="_blank" data-i18n="hobby_gallery">Mi galería de
+            📷 <a href="https://instagram.com/joselu84z" target="_blank" data-i18n="hobby_gallery">Mi galería de
               ilustraciones</a>
           </p>
+          -->
         </article>
       </article><!--end experiencia + hobbies-->
+      
 
     </section><!--end columna izquierda-->
 
     <section class="columna columna--derecha">
 
-      <!-- Seccion de tecnologias Front-end -->
-      <article class="card card--skills">
-        <h2 class="card__title" data-i18n="skills_frontend_title">Front-end</h2>
-        <div class="skills">
-
-          <div class="skills__item">
-            <p class="skills__tech" data-i18n="skill_html">HTML</p>
-            <div class="skills__bar" style="--level: 80%;"></div>
+      <!-- Sección de Tecnologías -->
+      <article class="card card--technologies">
+        <h2 class="card__title" data-i18n="tech_title">Tecnologías</h2>
+      
+        <div class="tech-grid">
+      
+          <!-- Lenguajes y web -->
+          <div class="tech-item">
+            <i class="devicon-java-plain colored" aria-hidden="true"></i>
+            <span>Java</span>
           </div>
-
-          <div class="skills__item">
-            <p class="skills__tech" data-i18n="skill_css">CSS</p>
-            <div class="skills__bar" style="--level: 50%;"></div>
+      
+          <div class="tech-item">
+            <i class="devicon-javascript-plain colored" aria-hidden="true"></i>
+            <span>JavaScript</span>
           </div>
-
-          <div class="skills__item">
-            <p class="skills__tech" data-i18n="skill_js">JavaScript</p>
-            <div class="skills__bar" style="--level: 60%;"></div>
+      
+          <div class="tech-item">
+            <i class="devicon-html5-plain colored" aria-hidden="true"></i>
+            <span>HTML5</span>
           </div>
-
-          <div class="skills__item">
-            <p class="skills__tech" data-i18n="skill_java">Java</p>
-            <div class="skills__bar" style="--level: 85%;"></div>
+      
+          <div class="tech-item">
+            <i class="devicon-css3-plain colored" aria-hidden="true"></i>
+            <span>CSS3</span>
           </div>
-
+      
+          <div class="tech-item">
+            <i class="devicon-php-plain colored" aria-hidden="true"></i>
+            <span>PHP</span>
+          </div>
+      
+          <div class="tech-item">
+            <i class="devicon-python-plain colored" aria-hidden="true"></i>
+            <span>Python</span>
+          </div>
+      
+          <!-- Bases de datos -->
+          <div class="tech-item">
+            <i class="devicon-mariadb-original colored" aria-hidden="true"></i>
+            <span>MariaDB</span>
+          </div>
+      
+          <div class="tech-item">
+            <i class="devicon-sqlite-plain colored" aria-hidden="true"></i>
+            <span>SQLite</span>
+          </div>
+      
+          <!-- Backend / frameworks -->
+          <div class="tech-item">
+            <i class="devicon-flask-original colored" aria-hidden="true"></i>
+            <span>Flask</span>
+          </div>
+      
+          <!-- IDEs / entornos -->
+          <div class="tech-item">
+            <i class="devicon-eclipse-plain colored" aria-hidden="true"></i>
+            <span>Eclipse</span>
+          </div>
+      
+          <div class="tech-item">
+            <i class="devicon-visualstudio-plain colored" aria-hidden="true"></i>
+            <span>Visual Studio</span>
+          </div>
+      
+          <!-- Herramientas IA y otros (pill personalizada) -->
+          <div class="tech-item">
+            <span class="tech-item__pill">GPT</span>
+            <span>ChatGPT</span>
+          </div>
+      
+          <div class="tech-item">
+            <span class="tech-item__pill">Gemini</span>
+            <span>Gemini</span>
+          </div>
+      
+          <div class="tech-item">
+            <span class="tech-item__pill">NB</span>
+            <span>NotebookLM</span>
+          </div>
+      
         </div>
       </article>
 
-      <!-- Seccion de tecnologias de diseño ------------->
-      <article class="card card--skills">
-        <h2 class="card__title" data-i18n="skills_design_title">Diseño</h2>
-        <div class="skills">
-
-          <div class="skills__item">
-            <p class="skills__tech" data-i18n="skill_photoshop">Photoshop</p>
-            <div class="skills__bar" style="--level: 80%;"></div>
-          </div>
-
-          <div class="skills__item">
-            <p class="skills__tech" data-i18n="skill_illustrator">Adobe Illustrator</p>
-            <div class="skills__bar" style="--level: 75%;"></div>
-          </div>
-
-        </div>
-      </article>
 
       <!-- Sección de proyectos -->
 
