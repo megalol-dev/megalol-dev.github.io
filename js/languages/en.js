@@ -66,28 +66,34 @@ export default {
         "Professional web application for managing an animal shelter. Includes an adoption system, public request form, internal management of animals, role-based user system, and adoption requests. Full CRUD functionality with SQLite database storage and a Flask-powered backend.",
 
     proj2_title: "Sports Shoes Online Store",
-    proj2_type: "Web Application",
+    proj2_type: "Web Application – Dynamic Product Visualization & Simulated Payment",
     proj2_desc:
         "Prototype of an online store for purchasing sneakers. It includes a system to view sneakers in different colors in real time. The sneaker data is stored in a JSON file and the project is scalable for adding more items in the future.",
     
     proj3_title: "Online Supermarket Store",
-    proj3_type: "Web Application",
+    proj3_type: "Web Application – Inventory Management with Database and Simulated Payment",
     proj3_desc:
-        "Prototype of an online store for purchasing food, including an SQL database to manage the inventory.",
-
-    proj4_title: "Guess Who?",
-    proj4_type: "Video game - Desktop application",
+        "Supermarket- style online store prototype developed as a web application, featuring product management through an SQL database. It includes a scalable inventory system, dynamic product visualization, and a simulated checkout flow.",
+    
+    proj4_title: "Horoscope Web App",
+    proj4_type: "Web Application – Sessions & Cookies",
     proj4_desc:
-        "A digital version of the classic deduction game, developed in Java with a graphical interface and Dragon Ball-style AI-generated characters.",
+        "Web application developed in PHP focused on session and cookie management. It allows user registration and login, website customization through cookies (theme color and background), and horoscope visualization for each zodiac sign.",
 
-    proj5_title: "Pac-Man Clone",
+
+    proj5_title: "Guess Who?",
     proj5_type: "Video game - Desktop application",
     proj5_desc:
-        "A recreation of the classic Pac-Man with a level system, collisions, and custom music.",
+        "A digital version of the classic deduction game, developed in Java with a graphical interface and Dragon Ball-style AI-generated characters.",
 
-    proj6_title: "Task Manager",
-    proj6_type: "Desktop application",
+    proj6_title: "Pac-Man Clone",
+    proj6_type: "Video game - Desktop application",
     proj6_desc:
+        "Pac-Man–style game developed in Java featuring a scalable level system, collision detection, intelligent enemy behavior, and full game state management. It includes custom music and sound effects, a persistent high-score system with player name input, extra lives earned through points, start and end screens, and visual transitions between levels.",
+
+    proj7_title: "Task Manager",
+    proj7_type: "Desktop application",
+    proj7_desc:
         "A Java desktop application to create, edit, and organize tasks in a simple and intuitive way. Data persistence is included.",
 
     // Buttons

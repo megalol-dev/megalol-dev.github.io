@@ -63,34 +63,39 @@ export default {
 
     // Proyectos
 
-    proj1_title: "Refugio Animal — Plataforma de Adopciones",
+    proj1_title: "Refugio Animal — Plataforma de adopciones",
     proj1_type: "Aplicación Web + CRUD Completo",
     proj1_desc:
         "Aplicación web profesional para la gestión de un refugio animal. Incluye sistema de adopciones, formulario público, gestión interna de animales, usuarios con roles y solicitudes. CRUD completo con almacenamiento en base de datos SQLite y backend construido con Flask.",
     
-    proj2_title: "Tienda Online Deportivas",
-    proj2_type: "Aplicación Web",
+    proj2_title: "Tienda online deportivas",
+    proj2_type: "Aplicación web – Visualización dinámica de productos y pago simulado",
     proj2_desc:
         "Prototipo de tienda online para comprar deportivas. Incluye un sistema para ver deportivas de distintos colores en tiempo real. Los datos de las deportivas se almacenan en un archivo JSON y es escalable para añadir más artículos en el futuro.",
     
-    proj3_title: "Tienda Online supermercado",
-    proj3_type: "Aplicación Web",
+    proj3_title: "Tienda online supermercado",
+    proj3_type: "Aplicación web – Gestión de inventario con base de datos y pago simulado",
     proj3_desc:
-        "Prototipo de tienda online para comprar comida, incluye una base de datos SQL para gestionar el inventario.",
-
-    proj4_title: "¿Quién es quién?",
-    proj4_type: "Video juego - Aplicación de escritorio",
+        "Prototipo de tienda online tipo supermercado desarrollado como aplicación web, con gestión de productos mediante base de datos SQL. Incluye un sistema de inventario escalable, visualización dinámica de artículos y un flujo de compra con pago simulado.",
+    
+    proj4_title: "Web horóscopo",
+    proj4_type: "Aplicación Web - sesiones + cookies",
     proj4_desc:
-        "Versión digital del clásico juego de deducción, desarrollada en Java con interfaz gráfica y personajes al estilo Dragon Ball generados por IA.",
+        "Aplicación web desarrollada en PHP enfocada en la gestión de sesiones y cookies. Permite el registro e inicio de sesión de usuarios, la personalización de la web mediante cookies (tema de color y fondo) y la visualización del horóscopo de cada signo.",
 
-    proj5_title: "Comecocos",
+    proj5_title: "¿Quién es quién?",
     proj5_type: "Video juego - Aplicación de escritorio",
     proj5_desc:
-        "Recreación del clásico Pac-Man, con sistema de niveles, colisiones y música personalizada.",
+        "Versión digital del clásico juego de deducción, desarrollada en Java con interfaz gráfica y personajes al estilo Dragon Ball generados por IA.",
 
-    proj6_title: "Gestor de tareas",
-    proj6_type: "Aplicación de escritorio",
+    proj6_title: "Comecocos",
+    proj6_type: "Video juego - Aplicación de escritorio",
     proj6_desc:
+        "Juego tipo Pac-Man desarrollado en Java que implementa un sistema de niveles escalable, colisiones, enemigos con inteligencia propia y gestión completa del estado del juego. Incluye música y sonidos personalizados, sistema de récord persistente con nombre de jugador, vidas extras por puntos, pantallas de inicio y final, y transiciones visuales entre niveles",
+
+    proj7_title: "Gestor de tareas",
+    proj7_type: "Aplicación de escritorio",
+    proj7_desc:
         "Aplicación de escritorio en Java para crear, editar y organizar tareas de forma simple e intuitiva. Además, los datos son persistentes.",
 
     // Botones
