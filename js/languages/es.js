@@ -1,105 +1,130 @@
 // languages/es.js
 export default {
-    // Metadatos / generales
-    site_title: "Portfolio",
+  // Metadatos / generales
+  site_title: "Portfolio",
 
-    // Banner
-    banner_title: "Desarrollo web",
+  // Banner
+  banner_title: "Desarrollo web",
 
-    // Tema
-    toggle_dark: "Dark mode", // Si prefieres “Modo oscuro”, cámbialo aquí
+  // Tema
+  toggle_dark: "Dark mode", // Si prefieres “Modo oscuro”, cámbialo aquí
 
+  // Tecnologias
+  technologies_title: "Tecnologías",
+  // proyectos
+  projects_title: "Proyectos",
 
-    // Perfil
-    profile_role: "Front-end Developer",
-    profile_bio:
-        "Soy estudiante de Desarrollo de Aplicaciones Web y actualmente busco unas prácticas para completar mis estudios. En mi portafolio encontrarás diversos proyectos que he desarrollado para demostrar mis habilidades y mi evolución como programador. Entre mis trabajos más destacados se incluyen una aplicación web con CRUD completo y sistema de login, una tienda de deportivas con cambio de modelo en tiempo real y proceso de compra simulado, así como varios clones de videojuegos entre ellos, ¿Quién es quién? y el Comecocos, en los que he implementado tanto la lógica como la interfaz gráfica. Todos mis proyectos están disponibles con su código en GitHub, y también puedes ver demostraciones en vídeo a través de mi canal de YouTube. Me apasionan las bases de datos y el desarrollo web en general, y estoy siempre dispuesto a aprender nuevas tecnologías y afrontar nuevos retos.",
+  languages_title: "Lenguajes",
+  frameworks_title: "Frameworks y Librerías",
+  databases_title: "Bases de Datos",
+  tools_title: "Herramientas",
 
-    // Experiencia
-    experience_title: "Experiencia",
+  // botones de ver demo
+  btn_live: "Ver Demo",
 
-    exp1_job: "Desarrollador Front / Back",
-    exp1_desc:
-        "Desarrollé un videojuego inspirado en «Pac-Man», creando desde la lógica del juego, los controles y la interfaz, hasta el sistema de colisiones y los niveles escalables. También diseñé gráficos sencillos y añadí efectos de sonido y música para completar la experiencia.",
+  // Perfil
+  profile_role: "Full Stack Developer",
+  profile_bio: `
+<p>
+  Desarrollador Full Stack especializado en aplicaciones web y sistemas de gestión orientados a bases de datos. Me apasiona el desarrollo de soluciones empresariales, especialmente aplicaciones con CRUD completos, autenticación, control de roles y reglas de negocio.
+</p>
 
-    exp2_job: "Desarrollador Front / Back",
-    exp2_desc:
-        "Desarrollé un juego tipo «¿Quién es quién?» utilizando Java, implementando tanto la lógica del juego como la interfaz gráfica y el sistema de controles. Diseñé los personajes y elementos visuales con herramientas de inteligencia artificial, logrando un estilo coherente y atractivo. El proyecto destaca por su estructura modular, la interacción fluida con el usuario y el enfoque en la jugabilidad y la presentación visual.",
+<p>
+  Cuento con una sólida base en lógica de programación y diseño de sistemas interactivos, desarrollada tanto en proyectos web como en el desarrollo de videojuegos, lo que me permite abordar problemas complejos y crear aplicaciones escalables y bien estructuradas.
+</p>
 
+<p>
+  Soy Técnico Superior en Desarrollo de Aplicaciones Web (DAW) y mantengo una formación continua, explorando nuevas tecnologías y metodologías para seguir creciendo como desarrollador.
+</p>
+`,
 
-    exp3_job: "Front / Back Developer",
-    exp3_desc:
-        "Desarrollé un gestor de tareas en Java para practicar programación orientada a objetos y gestión de datos. Implementé crear, editar, completar y eliminar tareas, con almacenamiento sencillo y una interfaz Swing enfocada en claridad y facilidad de uso. Destaca por su estructura ordenada y su lógica bien definida.",
-    
+  // Experiencia
+  experience_title: "Experiencia",
 
-    
+  exp1_job: "Desarrollador Front / Back",
+  exp1_desc:
+    "Desarrollé un videojuego inspirado en «Pac-Man», creando desde la lógica del juego, los controles y la interfaz, hasta el sistema de colisiones y los niveles escalables. También diseñé gráficos sencillos y añadí efectos de sonido y música para completar la experiencia.",
 
-    // Hobbies
-    hobbies_title: "Hobbies",
-    hobby_art:
-        "🎨 Dibujo digital y manga – Aplico mis habilidades artísticas en el diseño de interfaces y recursos visuales para mis proyectos.",
-    hobby_games:
-        "🕹️ Juegos clásicos – Me inspiro en mecánicas retro para mis desarrollos.",
-    hobby_music:
-        "🎧 Música y videojuegos – Me gusta integrar sonido y ambientación en mis proyectos.",
-    hobby_learn:
-        "📖 Aprendizaje continuo – Siempre explorando nuevas tecnologías web y de desarrollo de videojuegos.",
-    hobby_gallery: "Mi galería de ilustraciones",
+  exp2_job: "Desarrollador Front / Back",
+  exp2_desc:
+    "Desarrollé un juego tipo «¿Quién es quién?» utilizando Java, implementando tanto la lógica del juego como la interfaz gráfica y el sistema de controles. Diseñé los personajes y elementos visuales con herramientas de inteligencia artificial, logrando un estilo coherente y atractivo. El proyecto destaca por su estructura modular, la interacción fluida con el usuario y el enfoque en la jugabilidad y la presentación visual.",
 
-    // Skills
+  exp3_job: "Front / Back Developer",
+  exp3_desc:
+    "Desarrollé un gestor de tareas en Java para practicar programación orientada a objetos y gestión de datos. Implementé crear, editar, completar y eliminar tareas, con almacenamiento sencillo y una interfaz Swing enfocada en claridad y facilidad de uso. Destaca por su estructura ordenada y su lógica bien definida.",
 
-    // Tecnologías
-    tech_title: "Tecnologías",
+  // Hobbies
+  hobbies_title: "Hobbies",
+  hobby_art:
+    "🎨 Dibujo digital y manga – Aplico mis habilidades artísticas en el diseño de interfaces y recursos visuales para mis proyectos.",
+  hobby_games:
+    "🕹️ Juegos clásicos – Me inspiro en mecánicas retro para mis desarrollos.",
+  hobby_music:
+    "🎧 Música y videojuegos – Me gusta integrar sonido y ambientación en mis proyectos.",
+  hobby_learn:
+    "📖 Aprendizaje continuo – Siempre explorando nuevas tecnologías web y de desarrollo de videojuegos.",
+  hobby_gallery: "Mi galería de ilustraciones",
 
-    skills_frontend_title: "Front-end",
-    skill_html: "HTML",
-    skill_css: "CSS",
-    skill_js: "JavaScript",
-    skill_java: "Java",
+  // Skills
 
-    skills_design_title: "Diseño",
-    skill_photoshop: "Photoshop",
-    skill_illustrator: "Adobe Illustrator",
+  // Tecnologías
+  tech_title: "Tecnologías",
 
-    // Proyectos
+  skills_frontend_title: "Front-end",
+  skill_html: "HTML",
+  skill_css: "CSS",
+  skill_js: "JavaScript",
+  skill_java: "Java",
 
-    proj1_title: "Refugio Animal — Plataforma de adopciones",
-    proj1_type: "Aplicación Web + CRUD Completo",
-    proj1_desc:
-        "Aplicación web profesional para la gestión de un refugio animal. Incluye sistema de adopciones, formulario público, gestión interna de animales, usuarios con roles y solicitudes. CRUD completo con almacenamiento en base de datos SQLite y backend construido con Flask.",
-    
-    proj2_title: "Tienda online deportivas",
-    proj2_type: "Aplicación web – Visualización dinámica de productos y pago simulado",
-    proj2_desc:
-        "Prototipo de tienda online para comprar deportivas. Incluye un sistema para ver deportivas de distintos colores en tiempo real. Los datos de las deportivas se almacenan en un archivo JSON y es escalable para añadir más artículos en el futuro.",
-    
-    proj3_title: "Tienda online supermercado",
-    proj3_type: "Aplicación web – Gestión de inventario con base de datos y pago simulado",
-    proj3_desc:
-        "Prototipo de tienda online tipo supermercado desarrollado como aplicación web, con gestión de productos mediante base de datos SQL. Incluye un sistema de inventario escalable, visualización dinámica de artículos y un flujo de compra con pago simulado.",
-    
-    proj4_title: "Web horóscopo",
-    proj4_type: "Aplicación Web - sesiones + cookies",
-    proj4_desc:
-        "Aplicación web desarrollada en PHP enfocada en la gestión de sesiones y cookies. Permite el registro e inicio de sesión de usuarios, la personalización de la web mediante cookies (tema de color y fondo) y la visualización del horóscopo de cada signo.",
+  skills_design_title: "Diseño",
+  skill_photoshop: "Photoshop",
+  skill_illustrator: "Adobe Illustrator",
 
-    proj5_title: "¿Quién es quién?",
-    proj5_type: "Video juego - Aplicación de escritorio",
-    proj5_desc:
-        "Versión digital del clásico juego de deducción, desarrollada en Java con interfaz gráfica y personajes al estilo Dragon Ball generados por IA.",
+  // Proyectos
 
-    proj6_title: "Comecocos",
-    proj6_type: "Video juego - Aplicación de escritorio",
-    proj6_desc:
-        "Juego tipo Pac-Man desarrollado en Java que implementa un sistema de niveles escalable, colisiones, enemigos con inteligencia propia y gestión completa del estado del juego. Incluye música y sonidos personalizados, sistema de récord persistente con nombre de jugador, vidas extras por puntos, pantallas de inicio y final, y transiciones visuales entre niveles",
+  proj1_title: "GastroReservas — Web de Restaurante Interactiva",
+  proj1_type: "Aplicación Web Completa · Proyecto Full Stack ",
+  proj1_desc:
+    "Plataforma de gestión para restaurantes con reservas online, administración de clientes, empleados, platos y reseñas. Implementa autenticación y control de roles, panel de administración y un CRUD completo conectado a MySQL, desarrollada en PHP con arquitectura MVC.",
 
-    proj7_title: "Gestor de tareas",
-    proj7_type: "Aplicación de escritorio",
-    proj7_desc:
-        "Aplicación de escritorio en Java para crear, editar y organizar tareas de forma simple e intuitiva. Además, los datos son persistentes.",
+  // boton especial de proyecto cerrado
+  btn_private: "Private project",
+  msg_project_private:
+    "Este proyecto es de uso privado. Si quieres acceder al código o usarlo, contacta conmigo.",
 
-    // Botones
-    btn_demo: "video",
-    btn_code: "code"
+  proj2_title: "Gestor de tareas Trello",
+  proj2_type: "Aplicación Web Full Stack",
+  proj2_desc:
+    "Aplicación web de gestión de tareas inspirada en Trello. Incluye autenticación de usuarios, recuperación de contraseñas, gestión de roles y tableros colaborativos con tarjetas arrastrables mediante Drag & Drop, ofreciendo una experiencia dinámica e intuitiva.",
+
+  proj3_title: "Netflix Clone",
+  proj3_type: "Aplicación Web · Consumo de API",
+  proj3_desc:
+    "Aplicación web inspirada en Netflix que consume una API externa para mostrar películas y series de forma dinámica. Incluye búsquedas, fichas de contenido y una interfaz responsive centrada en la experiencia de usuario.",
+
+  proj4_title: "CoreSys — ERP & CRM Management Platform",
+  proj4_type: "Aplicación Web Full Stack",
+  proj4_desc:
+    "Aplicación web empresarial para la gestión integral de procesos internos. Incluye módulos de CRM, facturación, gestión de clientes y usuarios, con control de roles, panel administrativo y una arquitectura escalableorientada a entornos reales de empresa.",
+
+  proj5_title: "Tienda online deportivas",
+  proj5_type:
+    "Aplicación web – Visualización dinámica de productos y pago simulado",
+  proj5_desc:
+    "Prototipo de tienda online para comprar deportivas. Incluye un sistema para ver deportivas de distintos colores en tiempo real. Los datos de las deportivas se almacenan en un archivo JSON y es escalable para añadir más artículos en el futuro.",
+
+  proj6_title: "Comecocos",
+  proj6_type: "Video juego - Aplicación de escritorio",
+  proj6_desc:
+    "Juego tipo Pac-Man desarrollado en Java que implementa un sistema de niveles escalable, colisiones, enemigos con inteligencia propia y gestión completa del estado del juego. Incluye música y sonidos personalizados, sistema de récord persistente con nombre de jugador, vidas extras por puntos, pantallas de inicio y final, y transiciones visuales entre niveles.",
+
+  proj7_title: "¿Quién es quién?",
+  proj7_type: "Video juego - Aplicación de escritorio",
+  proj7_desc:
+    "Versión digital del clásico juego de deducción, desarrollada en Java con interfaz gráfica y personajes al estilo Dragon Ball generados por IA.",
+
+  // Botones
+  btn_demo: "video",
+  btn_code: "code",
 };
 

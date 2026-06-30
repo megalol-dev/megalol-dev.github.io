@@ -15,21 +15,27 @@ const rootStyles = document.documentElement.style;
 const flagsElement = document.getElementById("flags");
 
 /* ============================
+   Estado global de idioma
+   ============================ */
+
+window.CURRENT_LANG = localStorage.getItem("lang") || document.documentElement.lang || "es";
+window.I18N_TEXTS = {};
+
+/* ============================
    Multi-idioma (ES / EN)
    ============================ */
 
-// Variable para cambiar de idioma (carga dinámica de módulos .js dentro de /languages)
 const changeLanguage = async (language) => {
     try {
-        // Carga dinámica del diccionario, p. ej. ./languages/es.js o ./languages/en.js
         const langModule = await import(`./languages/${language}.js`);
         const texts = langModule.default || langModule.texts || langModule;
 
-        // Aplica los textos a todos los nodos con data-i18n="clave"
-        applyTranslations(texts);
+        window.CURRENT_LANG = language;
+        window.I18N_TEXTS = texts;
 
-        // Recuerda el idioma elegido
+        applyTranslations(texts);
         localStorage.setItem("lang", language);
+        document.documentElement.lang = language;
     } catch (err) {
         console.error("Error cargando idioma:", language, err);
     }
@@ -37,21 +43,16 @@ const changeLanguage = async (language) => {
 
 // Aplica el diccionario recibido a los elementos marcados con data-i18n
 const applyTranslations = (texts) => {
-    // Recorre todas las claves del diccionario
     Object.keys(texts).forEach((key) => {
-        // Soporta múltiples nodos con la misma clave
         const nodes = document.querySelectorAll(`[data-i18n="${key}"]`);
         nodes.forEach((node) => {
-            // Si quieres permitir HTML (riesgo XSS si el texto no es de confianza), usar innerHTML
-            // Aquí usamos textContent para seguridad y simplicidad.
-            node.textContent = texts[key];
+            node.innerHTML = texts[key];
         });
     });
 };
 
 // Método para cambiar de idioma (clic en banderas)
 flagsElement.addEventListener("click", (e) => {
-    // Busca el elemento más cercano con data-language (puede ser el <img> o su contenedor)
     const targetFlag = e.target.closest("[data-language]");
     if (!targetFlag) return;
 
@@ -61,45 +62,51 @@ flagsElement.addEventListener("click", (e) => {
     changeLanguage(lang);
 });
 
-// Idioma por defecto al cargar: el que esté guardado, o el del <html lang="">, o 'es'
+// Idioma por defecto al cargar
 window.addEventListener("DOMContentLoaded", () => {
     const saved = localStorage.getItem("lang") || document.documentElement.lang || "es";
     changeLanguage(saved);
 });
 
-
 /* ============================
    Tema oscuro / claro
    ============================ */
 
-// Método para cambiar entre el modo noche y el modo día
 toggleTheme.addEventListener("click", () => {
     document.body.classList.toggle("dark");
 
-    /* 
-      Si estás en modo noche pasas al modo día y viceversa,
-      cambia el icono y el texto 
-    */
     if (toggleIcon.src.includes("moon.svg")) {
         toggleIcon.src = "assets/icons/sun.svg";
-        toggleText.textContent = "Light mode";
+        toggleText.textContent =
+            window.I18N_TEXTS?.theme_light || "Light mode";
     } else {
         toggleIcon.src = "assets/icons/moon.svg";
-        toggleText.textContent = "Dark mode";
+        toggleText.textContent =
+            window.I18N_TEXTS?.theme_dark || "Dark mode";
     }
-}); // end
-
+});
 
 /* ============================
    Color primario (paleta)
    ============================ */
 
-// Método para cambiar los colores de las letras (primary color)
 toggleColor.addEventListener("click", (e) => {
-    // Solo actúa si se hace click en un elemento con data-color
     const colorItem = e.target.closest("[data-color]");
     if (!colorItem) return;
 
     rootStyles.setProperty("--primary-color", colorItem.dataset.color);
 });
 
+/* ============================
+   Proyecto privado
+   ============================ */
+
+function showPrivateProjectMessage() {
+    const modal = document.getElementById("private-modal");
+    modal.classList.remove("hidden");
+}
+
+function closePrivateModal() {
+    const modal = document.getElementById("private-modal");
+    modal.classList.add("hidden");
+}

@@ -1,327 +1,544 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Devicon: iconos de tecnologías -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/devicon.min.css"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <title data-i18n="site_title">Portfolio</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-  <!-- Devicon: iconos de tecnologías -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/styles.css" />
-  <title data-i18n="site_title">Portfolio</title>
-</head>
+  <body class="dark">
+    <section class="banner container">
+      <div class="banner__container">
+        <div class="banner__profile">
+          <!-- Columna izquierda -->
+          <div class="banner__sidebar">
+            <img
+              src="assets/images/Perfil.png"
+              alt="Foto de perfil de José Luis Escudero"
+              class="banner__avatar"
+            />
 
+            <div class="banner__personal-info">
+              <p class="banner__contact-text">
+                <a href="tel:+34654870786"> +34 654 870 786 </a>
+              </p>
 
+              <p class="banner__contact-text">
+                <a href="mailto:escuderopolojoseluis@gmail.com">
+                  escuderopolojoseluis@gmail.com
+                </a>
+              </p>
+            </div>
+          </div>
 
-<body class="dark">
+          <!-- Columna derecha -->
+          <div class="banner__info">
+            <h1 class="banner__name">José Luis Escudero</h1>
 
-<section class="banner">
-  <div class="banner__bar banner__bar--top"></div>
+            <p class="banner__role" data-i18n="profile_role">
+              Full Stack Developer
+            </p>
 
-  <div class="banner__inner">
-    <img src="assets/images/Banner.png" class="banner__image banner__image--mobile" />
+            <div class="banner__contact">
+              <a
+                href="https://github.com/megalol-dev"
+                target="_blank"
+                title="GitHub"
+              >
+                <i class="fab fa-github"></i>
+              </a>
 
-    <img src="assets/images/BannerPC.png" class="banner__image banner__image--desktop" />
+              <a
+                href="https://www.linkedin.com/in/TU-USUARIO"
+                target="_blank"
+                title="LinkedIn"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
 
-    <h1 class="banner__title" data-i18n="banner_title">
-      Desarrollo web
-    </h1>
-  </div>
+              <a
+                href="https://www.youtube.com/@Megalol-dev"
+                target="_blank"
+                title="YouTube"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
 
-  <div class="banner__bar banner__bar--bottom"></div>
-</section>
-
-  <!-- Header -->
-  <header class="header">
-    <div class="switches">
-      <div id="toggle-theme" class="toggle-theme">
-        <img id="toggle-icon" src="assets/icons/moon.svg" alt="icon theme" class="toggle-theme__icon" />
-        <p id="toggle-text" class="toggle-theme__text" data-i18n="toggle_dark">Dark mode</p>
+            <div class="banner__description" data-i18n="profile_bio">
+              <p></p>
+              <p></p>
+              <p></p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Seccion para marcar los idiomas -->
-    <div id="flags" class="flags">
-      <div class="flags__item" data-language="es" title="Español">
-        <img class="flags__img" src="assets/icons/banderaEsp.png" alt="Icono de España" />
+    <!-- Header -->
+    <header class="header container">
+      <div class="switches">
+        <div
+          id="toggle-theme"
+          class="toggle-theme"
+          class="toggle-theme"
+          title="Cambiar tema oscuro/claro"
+        >
+          <img
+            id="toggle-icon"
+            src="assets/icons/moon.svg"
+            alt="icon theme"
+            class="toggle-theme__icon"
+          />
+          <p
+            id="toggle-text"
+            class="toggle-theme__text"
+            data-i18n="toggle_dark"
+          >
+            Dark mode
+          </p>
+        </div>
       </div>
-      <div class="flags__item" data-language="en" title="English">
-        <img class="flags__img" src="assets/icons/banderaReU.png" alt="Icon of United Kingdom" />
-      </div>
-    </div>
 
-    <!--
+      <!-- Seccion para marcar los idiomas -->
+      <div id="flags" class="flags">
+        <div class="flags__item" data-language="es" title="Español">
+          <img
+            class="flags__img"
+            src="assets/icons/banderaEsp.png"
+            alt="Icono de España"
+          />
+        </div>
+        <div class="flags__item" data-language="en" title="English">
+          <img
+            class="flags__img"
+            src="assets/icons/banderaReU.png"
+            alt="Icon of United Kingdom"
+          />
+        </div>
+      </div>
+
+      <!--
         Colores para la página
       -->
-    <div id="toggle-colors" class="colors">
-      <div data-color="hsl(214, 84%, 56%)" class="colors__item colors__item--blue"></div>
-      <div data-color="hsl(141, 96%, 44%)" class="colors__item colors__item--green"></div>
-      <div data-color="hsl(289, 96%, 44%)" class="colors__item colors__item--purple"></div>
-      <div data-color="hsl(25, 96%, 44%)" class="colors__item colors__item--orange"></div>
-    </div>
-  </header>
+      <div id="toggle-colors" class="colors">
+        <div
+          data-color="hsl(214, 84%, 56%)"
+          class="colors__item colors__item--blue"
+          title="Tema azul"
+        ></div>
 
-  <main class="main">
-    <!-- Sección de la columna izquiera -->
-    <section class="columna columna--izquierda">
+        <div
+          data-color="hsl(141, 96%, 44%)"
+          class="colors__item colors__item--green"
+          title="Tema verde"
+        ></div>
 
-      <!-- Tarjeta de presentación, foto, nombre, tlf... -->
-      <article class="card profile-card">
-        <header class="card__header">
-          <div class="card__image">
-            <img src="assets/images/Perfil.png" alt="Foto de perfil de José Luis Escudero Delv" />
-          </div>
+        <div
+          data-color="hsl(289, 96%, 44%)"
+          class="colors__item colors__item--purple"
+          title="Tema morado"
+        ></div>
 
-          <div class="card__titles">
-            <h2 class="card__title">José Luis Escudero Delv</h2>
-            <p class="card__subtitle" data-i18n="profile_role">Front-end Developer</p>
-          </div>
-        </header>
+        <div
+          data-color="hsl(25, 96%, 44%)"
+          class="colors__item colors__item--orange"
+          title="Tema naranja"
+        ></div>
+      </div>
+    </header>
 
-        <div class="card__body">
-          <div class="card__link">
-            <i class="fas fa-envelope"></i>
-            <a href="mailto:escuderopolojoseluis@gmail.com">escuderopolojoseluis@gmail.com</a>
-          </div>
-
-          <div class="card__link">
-            <i class="fas fa-phone-alt"></i>
-            <a href="tel:+34654870786">+34 654 870 786</a>
-          </div>
-
-          <p class="card__text" data-i18n="profile_bio">
-            Soy estudiante de Desarrollo de Aplicaciones Web y actualmente busco unas prácticas para completar mis estudios. En mi portafolio encontrarás diversos proyectos que he desarrollado para demostrar mis habilidades y mi evolución como programador.
-            
-            Entre mis trabajos más destacados se incluyen una aplicación web con CRUD completo y sistema de login, una tienda de deportivas con cambio de modelo en tiempo real y proceso de compra simulado, así como varios clones de videojuegos entre ellos, Comecocos y ¿Quién es quién?— en los que he implementado tanto la lógica como la interfaz gráfica.
-            
-            Todos mis proyectos están disponibles con su código en GitHub, y también puedes ver demostraciones en vídeo a través de mi canal de YouTube.
-            Me apasionan las bases de datos y el desarrollo web en general, y estoy siempre dispuesto a aprender nuevas tecnologías y afrontar nuevos retos.
-          </p>
-        </div>
-      </article><!--end perfil-->
-      
-      
-      
-      <!--Sección de experiencia-->
-      <!-- DESCOMENTA ESTA SECCION CUANDO QUIERAS AÑADIR LA SECCION DE EXPERIENCIA LABORAL
-      <article class="card card--experience">
-        <h2 class="card__title" data-i18n="experience_title">Experiencia</h2>
-      -->
-
-        <!--Trabajo 1-->
-        <!-- DECOMENTA ESTA SECCION CUANDO QUIERAS AÑADIR EL PRIMER TRABAJO
-        <div class="experience">
-          <img src="assets/icons/LogoTrabajos.svg" alt="Logotipo trabajos"
-          class="experience__image" />
-
-          <div class="experience__info">
-            <p class="experience__time">1-8-2025 hasta 24-8-2025</p>
-            <h3 class="experience__job" data-i18n="exp1_job">Front / Back Developer</h3>
-            <p class="experience__description" data-i18n="exp1_desc">
-              Desarrollé un videojuego inspirado en "Pac-Man", creando desde la lógica del juego...
-            </p>
-          </div>
-        </div>
-        -->
-
-        <!--Trabajo 2-->
-        <!-- DECOMENTA ESTA SECCION CUANDO QUIERAS AÑADIR EL SEGUNDO TRABAJO
-        <div class="experience">
-          <img src="assets/icons/LogoTrabajos.svg" alt="Logotipo trabajos"
-          class="experience__image" />  
-
-          <div class="experience__info">
-            <p class="experience__time">1-6-2025 hasta 16-6-2025</p>
-            <h3 class="experience__job" data-i18n="exp2_job">Front / Back Developer</h3>
-            <p class="experience__description" data-i18n="exp2_desc">
-              Desarrollé un juego tipo "¿Quién es quién?" utilizando Java, implementando tanto la lógica...
-            </p>
-          </div>
-        </div>
-        -->
-
-        <!--Trabajo 3-->
-        <!-- DECOMENTA ESTA SECCION CUANDO QUIERAS AÑADIR EL TERCER TRABAJO
-        <div class="experience">
-          <img src="assets/icons/LogoTrabajos.svg" alt="Logotipo trabajos" class="experience__image" />
-
-          <div class="experience__info">
-            <p class="experience__time">10-9-2025 hasta 14-9-2025</p>
-            <h3 class="experience__job" data-i18n="exp3_job">Front / Back Developer</h3>
-            <p class="experience__description" data-i18n="exp3_desc">
-              Desarrollé un gestor de tareas en Java con el objetivo de practicar la programación...
-            </p>
-          </div>
-        </div>
-        -->
-
-       
-
-        <!--hobbies-->
-        <article class="card card--hobbies">
-          <h2 class="card__title" data-i18n="hobbies_title">Hobbies</h2>
-          <div class="card__image--container">
-            <img src="assets/images/hobbies.png" alt="Imagen ilustrativa de hobbies" />
-          </div>
-
-          <!-- Lista breve de hobbies (una línea por hobby) -->
-          <p class="card__text" data-i18n="hobby_art">
-            🎨 Dibujo digital y manga – Aplico mis habilidades artísticas...
-          </p>
-          <p class="card__text" data-i18n="hobby_games">
-            🕹️ Juegos clásicos – Me inspiro en mecánicas retro para mis desarrollos.
-          </p>
-          <p class="card__text" data-i18n="hobby_music">
-            🎧 Música y videojuegos – Me gusta integrar sonido y ambientación en mis proyectos.
-          </p>
-          <p class="card__text" data-i18n="hobby_learn">
-            📖 Aprendizaje continuo – Siempre explorando nuevas tecnologías web y de videojuegos.
-          </p>
-          <!--
-          De momento no usamos esta sección pero aqui añadiriamos nuestras redes sociales
-          <p class="card__text">
-            📷 <a href="https://instagram.com/joselu84z" target="_blank" data-i18n="hobby_gallery">Mi galería de
-              ilustraciones</a>
-          </p>
-          -->
-        </article>
-      </article><!--end experiencia + hobbies-->
-      
-
-    </section><!--end columna izquierda-->
-
-    <section class="columna columna--derecha">
-
+    <main class="main container">
       <!-- Sección de Tecnologías -->
+      <h2 class="card__title section-title" data-i18n="technologies_title">
+        Tecnologías
+      </h2>
       <article class="card card--technologies">
-        <h2 class="card__title" data-i18n="tech_title">Tecnologías</h2>
-      
+        <!-- Lenguajes -->
+        <h3 class="tech-category" data-i18n="languages_title">Lenguajes</h3>
         <div class="tech-grid">
-      
-          <!-- Lenguajes y web -->
           <div class="tech-item">
-            <i class="devicon-java-plain colored" aria-hidden="true"></i>
-            <span>Java</span>
-          </div>
-      
-          <div class="tech-item">
-            <i class="devicon-javascript-plain colored" aria-hidden="true"></i>
-            <span>JavaScript</span>
-          </div>
-      
-          <div class="tech-item">
-            <i class="devicon-html5-plain colored" aria-hidden="true"></i>
+            <i class="devicon-html5-plain colored"></i>
             <span>HTML5</span>
           </div>
-      
+
           <div class="tech-item">
-            <i class="devicon-css3-plain colored" aria-hidden="true"></i>
+            <i class="devicon-css3-plain colored"></i>
             <span>CSS3</span>
           </div>
-      
+
           <div class="tech-item">
-            <i class="devicon-php-plain colored" aria-hidden="true"></i>
+            <i class="devicon-javascript-plain colored"></i>
+            <span>JavaScript</span>
+          </div>
+
+          <div class="tech-item">
+            <i class="devicon-java-plain colored"></i>
+            <span>Java</span>
+          </div>
+
+          <div class="tech-item">
+            <i class="devicon-php-plain colored"></i>
             <span>PHP</span>
           </div>
-      
+
           <div class="tech-item">
-            <i class="devicon-python-plain colored" aria-hidden="true"></i>
+            <i class="devicon-python-plain colored"></i>
             <span>Python</span>
           </div>
-      
-          <!-- Bases de datos -->
+        </div>
+
+        <!-- Frameworks -->
+        <h3 class="tech-category" data-i18n="frameworks_title">
+          Frameworks y Librerías
+        </h3>
+        <div class="tech-grid">
           <div class="tech-item">
-            <i class="devicon-mariadb-original colored" aria-hidden="true"></i>
-            <span>MariaDB</span>
+            <i class="devicon-bootstrap-plain colored"></i>
+            <span>Bootstrap</span>
           </div>
-      
+
           <div class="tech-item">
-            <i class="devicon-sqlite-plain colored" aria-hidden="true"></i>
-            <span>SQLite</span>
+            <i class="devicon-react-original colored"></i>
+            <span>React</span>
           </div>
-      
-          <!-- Backend / frameworks -->
+
           <div class="tech-item">
-            <i class="devicon-flask-original colored" aria-hidden="true"></i>
+            <i class="devicon-astro-plain"></i>
+            <span>Astro</span>
+          </div>
+
+          <div class="tech-item">
+            <i class="devicon-nextjs-original-wordmark"></i>
+            <span>Next.js</span>
+          </div>
+
+          <div class="tech-item">
+            <i class="devicon-laravel-plain colored"></i>
+            <span>Laravel</span>
+          </div>
+
+          <div class="tech-item">
+            <i class="devicon-flask-original"></i>
             <span>Flask</span>
           </div>
-      
-          <!-- IDEs / entornos -->
+
           <div class="tech-item">
-            <i class="devicon-eclipse-plain colored" aria-hidden="true"></i>
+            <i class="devicon-wordpress-plain colored"></i>
+            <span>WordPress</span>
+          </div>
+        </div>
+
+        <!-- Bases de datos -->
+        <h3 class="tech-category" data-i18n="databases_title">
+          Bases de Datos
+        </h3>
+        <div class="tech-grid">
+          <div class="tech-item">
+            <i class="devicon-mariadb-original colored"></i>
+            <span>MariaDB</span>
+          </div>
+
+          <div class="tech-item">
+            <i class="devicon-sqlite-plain colored"></i>
+            <span>SQLite</span>
+          </div>
+
+          <div class="tech-item">
+            <i class="devicon-mongodb-plain colored"></i>
+            <span>MongoDB</span>
+          </div>
+        </div>
+
+        <!-- Herramientas -->
+        <h3 class="tech-category" data-i18n="tools_title">Herramientas</h3>
+        <div class="tech-grid">
+          <div class="tech-item">
+            <i class="devicon-git-plain colored"></i>
+            <span>Git</span>
+          </div>
+
+          <div class="tech-item">
+            <i class="devicon-github-original"></i>
+            <span>GitHub</span>
+          </div>
+
+          <div class="tech-item">
+            <i class="devicon-vscode-plain colored"></i>
+            <span>VS Code</span>
+          </div>
+
+          <div class="tech-item">
+            <i class="devicon-eclipse-plain colored"></i>
             <span>Eclipse</span>
           </div>
-      
-          <div class="tech-item">
-            <i class="devicon-visualstudio-plain colored" aria-hidden="true"></i>
-            <span>Visual Studio</span>
-          </div>
-      
-          <!-- Herramientas IA y otros (pill personalizada) -->
-          <div class="tech-item">
-            <span class="tech-item__pill">GPT</span>
-            <span>ChatGPT</span>
-          </div>
-      
-          <div class="tech-item">
-            <span class="tech-item__pill">Gemini</span>
-            <span>Gemini</span>
-          </div>
-      
-          <div class="tech-item">
-            <span class="tech-item__pill">NB</span>
-            <span>NotebookLM</span>
-          </div>
-      
         </div>
       </article>
-
 
       <!-- Sección de proyectos -->
+      <h2 class="section-title" data-i18n="projects_title">Proyectos</h2>
 
-
-      <!-- Proyecto 1 -->
+      <!-- Proyecto 1 -------------------------------------------------------->
       <article class="card card--project">
-        <div class="card__image-container">
-          <img src="assets/images/RefugioAnimal.png" alt="Captura del proyecto Refugio Animal" class="card__image" />
-        </div>
-      
         <div class="project">
+          <h2 class="card__title" data-i18n="proj1_title">
+            GastroReservas — Web de Restaurante Interactiva
+          </h2>
+
+          <div class="card__image-container">
+            <img
+              src="assets/images/appBar.png"
+              alt="Captura del proyecto GastroReservas"
+              class="card__image"
+            />
+          </div>
+
           <div class="project__tags">
-            <span class="project__tag">#Flask</span>
-            <span class="project__tag">#Python</span>
             <span class="project__tag">#HTML</span>
             <span class="project__tag">#CSS</span>
-            <span class="project__tag">#SQLite</span>
+            <span class="project__tag">#JavaScript</span>
+            <span class="project__tag">#PHP</span>
+            <span class="project__tag">#MySQL</span>
+            <span class="project__tag">#MVC</span>
           </div>
-      
-          <h2 class="card__title" data-i18n="proj1_title">Refugio Animal — Plataforma de Adopciones</h2>
-          <p class="card__text" data-i18n="proj1_type">Aplicación Web + CRUD Completo</p>
-          <p class="card__text" data-i18n="proj1_desc">
-            “Aplicación web profesional para la gestión de un refugio animal. Incluye sistema de adopciones, formulario público, gestión interna de animales, usuarios con roles y solicitudes. CRUD completo con almacenamiento en base de datos SQLite y backend construido con Flask.”
+
+          <p class="card__text" data-i18n="proj1_type">
+            Aplicación Web Completa · Proyecto Full Stack
           </p>
-      
+
+          <p class="card__text" data-i18n="proj1_desc">
+            Plataforma de gestión para restaurantes con reservas online,
+            administración de clientes, empleados, platos y reseñas. Implementa
+            autenticación y control de roles, panel de administración y un CRUD
+            completo conectado a MySQL, desarrollada en PHP con arquitectura
+            MVC.
+          </p>
+
           <div class="buttons">
-            <a href="https://youtu.be/wa5V8d4gj3k" class="button button--primary" target="_blank">video</a>
-      
-            <a href="https://github.com/megalol-dev/Proyecto-Refugio-Animal" class="button button--ghost"
-              target="_blank">code</a>
+            <a
+              href="https://youtu.be/ZGpqeSNQ4bs"
+              class="button button--primary"
+              data-i18n="btn_demo"
+              target="_blank"
+            >
+              video
+            </a>
+
+            <a
+              href="https://github.com/megalol-dev/restaurante-nan-nan"
+              class="button button--ghost"
+              data-i18n="btn_code"
+              target="_blank"
+            >
+              code
+            </a>
           </div>
         </div>
       </article>
 
-      
-
-      <!-- Proyecto 2 -->
+      <!-- Proyecto 2 ----------------------------------------------------------->
       <article class="card card--project">
-        <div class="card__image-container">
-          <img src="assets/images/DeportivasTienda.png" alt="Captura del proyecto Tienda Online Deportivas" class="card__image" />
-        </div>
-
         <div class="project">
+          <h2 class="card__title" data-i18n="proj2_title">
+            Gestor de tareas Trello
+          </h2>
+
+          <div class="card__image-container">
+            <img
+              src="assets/images/appTrello.png"
+              alt="Imagen del proyecto Gestor de tareas"
+              class="card__image"
+            />
+          </div>
+
+          <div class="project__tags">
+            <span class="project__tag">#HTML</span>
+            <span class="project__tag">#CSS</span>
+            <span class="project__tag">#JS</span>
+            <span class="project__tag">#Laravel</span>
+            <span class="project__tag">#PHP</span>
+            <span class="project__tag">#MariaDB</span>
+          </div>
+
+          <p class="card__text" data-i18n="proj2_type">
+            Aplicación Web Full Stack
+          </p>
+
+          <p class="card__text" data-i18n="proj2_desc">
+            Aplicación web de gestión de tareas inspirada en Trello. Incluye
+            autenticación de usuarios, recuperación de contraseñas, gestión de
+            roles y tableros colaborativos con tarjetas arrastrables mediante
+            Drag & Drop, ofreciendo una experiencia dinámica e intuitiva.
+          </p>
+
+          <div class="buttons">
+            <a
+              href="https://youtu.be/rmv4MwAxgQ8"
+              class="button button--primary"
+              data-i18n="btn_demo"
+              target="_blank"
+            >
+              video
+            </a>
+
+            <a
+              href="https://github.com/megalol-dev/gestor-trello"
+              class="button button--ghost"
+              data-i18n="btn_code"
+              target="_blank"
+            >
+              code
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 3 -------------------------------------------------------->
+      <article class="card card--project">
+        <div class="project">
+          <h2 class="card__title" data-i18n="proj3_title">Netflix Clone</h2>
+
+          <div class="card__image-container">
+            <img
+              src="assets/images/appCine.png"
+              alt="Captura del proyecto Netflix Clone"
+              class="card__image"
+            />
+          </div>
+
+          <div class="project__tags">
+            <span class="project__tag">#HTML</span>
+            <span class="project__tag">#CSS</span>
+            <span class="project__tag">#JavaScript</span>
+            <span class="project__tag">#Astro</span>
+            <span class="project__tag">#API</span>
+          </div>
+
+          <p class="card__text" data-i18n="proj3_type">
+            Aplicación Web · Consumo de API
+          </p>
+
+          <p class="card__text" data-i18n="proj3_desc">
+            Aplicación web inspirada en Netflix que consume una API externa para
+            mostrar películas y series de forma dinámica. Incluye búsquedas,
+            fichas de contenido y una interfaz responsive centrada en la
+            experiencia de usuario.
+          </p>
+
+          <div class="buttons">
+            <a
+              href="https://youtu.be/_rlHMVV9Ap4"
+              class="button button--primary"
+              data-i18n="btn_demo"
+              target="_blank"
+            >
+              video
+            </a>
+
+            <a
+              href="https://github.com/megalol-dev/cineapp"
+              class="button button--ghost"
+              data-i18n="btn_code"
+              target="_blank"
+            >
+              code
+            </a>
+
+            <a
+              href="https://cineapp-jose.netlify.app"
+              class="button button--secondary"
+              target="_blank"
+            >
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 4 ------------------------------------------------------->
+      <article class="card card--project">
+        <div class="project">
+          <h2 class="card__title" data-i18n="proj4_title">
+            CoreSys — ERP & CRM Management Platform
+          </h2>
+
+          <div class="card__image-container">
+            <img
+              src="assets/images/appEPR.png"
+              alt="Captura del proyecto ERP - CRM"
+              class="card__image"
+            />
+          </div>
+
+          <div class="project__tags">
+            <span class="project__tag">#HTML</span>
+            <span class="project__tag">#CSS</span>
+            <span class="project__tag">#JS</span>
+            <span class="project__tag">#PHP</span>
+            <span class="project__tag">#SQLite</span>
+          </div>
+
+          <p class="card__text" data-i18n="proj4_type">
+            Aplicación Web Empresarial · Sistema ERP & CRM
+          </p>
+
+          <p class="card__text" data-i18n="proj4_desc">
+            Aplicación web empresarial para la gestión integral de procesos
+            internos. Incluye módulos de CRM, facturación, gestión de clientes y
+            usuarios, con control de roles, panel administrativo y una
+            arquitectura escalable orientada a entornos reales de empresa.
+          </p>
+
+          <div class="buttons">
+            <a
+              href="https://youtu.be/LtaSYJ0hnrg"
+              class="button button--primary"
+              data-i18n="btn_demo"
+              target="_blank"
+            >
+              video
+            </a>
+
+            <a
+              href="https://github.com/megalol-dev/ecohome-erp-prototype"
+              class="button button--ghost"
+              data-i18n="btn_code"
+              target="_blank"
+            >
+              code
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 5 -------------------------------------------------------->
+      <article class="card card--project">
+        <div class="project">
+          <h2 class="card__title" data-i18n="proj5_title">
+            Tienda Online deportivas
+          </h2>
+
+          <div class="card__image-container">
+            <img
+              src="assets/images/appTienda.png"
+              alt="Captura del proyecto Tienda Online Deportivas"
+              class="card__image"
+            />
+          </div>
+
           <div class="project__tags">
             <span class="project__tag">#HTML</span>
             <span class="project__tag">#CSS</span>
@@ -329,167 +546,147 @@
             <span class="project__tag">#JSON</span>
           </div>
 
-          <h2 class="card__title" data-i18n="proj2_title">Tienda Online deportivas</h2>
-          <p class="card__text" data-i18n="proj2_type">Aplicación web – Visualización dinámica de productos y pago simulado</p>
-          <p class="card__text" data-i18n="proj2_desc">“Prototipo de tienda online para comprar deportivas. Incluye un sistema para ver deportivas de distintos colores en
-          tiempo real. Los datos de las deportivas se almacenan en un archivo JSON y es escalable para añadir más artículos en el futuro.”</p>
+          <p class="card__text" data-i18n="proj5_type">
+            Aplicación web – Visualización dinámica de productos y pago simulado
+          </p>
+
+          <p class="card__text" data-i18n="proj5_desc">
+            Prototipo de tienda online para comprar deportivas. Incluye un
+            sistema para ver deportivas de distintos colores en tiempo real. Los
+            datos de las deportivas se almacenan en un archivo JSON y es
+            escalable para añadir más artículos en el futuro.
+          </p>
 
           <div class="buttons">
-            <a href="https://youtu.be/nl5yikE-lU8" class="button button--primary" data-i18n="btn_demo" target="_blank">video</a>
-          
-            <a href="https://github.com/megalol-dev/tienda-deportivas-web" class="button button--ghost" data-i18n="btn_code"
-              target="_blank">code</a>
-          </div>
-      </article>
+            <a
+              href="https://youtu.be/nl5yikE-lU8"
+              class="button button--primary"
+              data-i18n="btn_demo"
+              target="_blank"
+            >
+              video
+            </a>
 
-
-      <!-- Proyecto 3 -->
-      <article class="card card--project">
-        <div class="card__image-container">
-          <img src="assets/images/TiendaComida.png" alt="Captura del proyecto Tienda Online Comida" class="card__image" />
-        </div>
-
-        <div class="project">
-          <div class="project__tags">
-            <span class="project__tag">#HTML</span>
-            <span class="project__tag">#CSS</span>
-            <span class="project__tag">#JS</span>
-            <span class="project__tag">#PHP</span>
-            <span class="project__tag">#MariaDB</span>
-          </div>
-
-          <h2 class="card__title" data-i18n="proj3_title">Tienda Online supermercado</h2>
-          <p class="card__text" data-i18n="proj3_type">Aplicación web – Gestión de inventario con base de datos y pago simulado</p>
-          <p class="card__text" data-i18n="proj3_desc">“Prototipo de tienda online tipo supermercado desarrollado como aplicación web, con gestión de productos mediante base de datos SQL. Incluye un sistema de inventario escalable, visualización dinámica de artículos y un flujo de compra con pago
-          simulado.”</p>
-
-          <div class="buttons">
-            <a href="https://youtu.be/81HFFqz691w" class="button button--primary" data-i18n="btn_demo" target="_blank">video</a>
-          
-            <a href="https://github.com/megalol-dev/metazona-supermercado" class="button button--ghost" data-i18n="btn_code"
-              target="_blank">code</a>
-          </div>
-      </article>
-
-      <!-- Proyecto 4 -->
-      <article class="card card--project">
-        <div class="card__image-container">
-          <img src="assets/images/horoscopoWeb.png" alt="Captura del proyecto Horóscopo" class="card__image" />
-        </div>
-      
-        <div class="project">
-          <div class="project__tags">
-            <span class="project__tag">#HTML</span>
-            <span class="project__tag">#CSS</span>
-            <span class="project__tag">#PHP</span>
-            <span class="project__tag">#SQLite</span>
-          </div>
-      
-          <h2 class="card__title" data-i18n="proj4_title">Web de horóscopo + sesiones y cookies</h2>
-          <p class="card__text" data-i18n="proj4_type">Aplicación Web</p>
-          <p class="card__text" data-i18n="proj4_desc">“Aplicación web desarrollada en PHP enfocada en la gestión de sesiones y cookies.
-          Permite el registro e inicio de sesión de usuarios, la personalización de la web
-          mediante cookies (tema de color y fondo) y la visualización del horóscopo de cada signo.”</p>
-      
-          <div class="buttons">
-            <a href="https://youtu.be/zeAYW0hPAF8" class="button button--primary" data-i18n="btn_demo"
-              target="_blank">video</a>
-      
-            <a href="https://github.com/megalol-dev/horoscopo-app" class="button button--ghost" data-i18n="btn_code"
-              target="_blank">code</a>
-          </div>
-      </article>
-
-      <!-- Proyecto 5 -->
-      <article class="card card--project">
-        <div class="card__image-container">
-          <img src="assets/images/QuienEsQuien.png" alt="Imagen del proyecto ¿Quién es quién?" class="card__image" />
-        </div>
-
-        <div class="project">
-          <div class="project__tags">
-            <span class="project__tag">#Java</span>
-            <span class="project__tag">#Swing</span>
-            <span class="project__tag">#Game</span>
-            <span class="project__tag">#Desktop</span>
-          </div>
-
-          <h2 class="card__title" data-i18n="proj5_title">¿Quién es quién?</h2>
-          <p class="card__text" data-i18n="proj5_type">Video juego - Aplicación de escritorio</p>
-          <p class="card__text" data-i18n="proj5_desc">“Versión digital del clásico juego de deducción...”</p>
-
-          <div class="buttons">
-            <a href="https://youtu.be/YJ6Bn3XuExE " class="button button--primary" data-i18n="btn_demo" target="_blank">video</a>
-
-            <a href= "https://github.com/megalol-dev/quien-es-quien-java" 
-              class="button button--ghost" 
+            <a
+              href="https://github.com/megalol-dev/tienda-deportivas-web"
+              class="button button--ghost"
               data-i18n="btn_code"
-              target="_blank">code</a>
+              target="_blank"
+            >
+              code
+            </a>
           </div>
+        </div>
       </article>
 
-
-      <!-- Proyecto 6 -->
+      <!-- Proyecto 6 -------------------------------------------------------->
       <article class="card card--project">
-        <div class="card__image-container">
-          <img src="assets/images/Comecocos.jpg" alt="Imagen del proyecto Comecocos" class="card__image" />
-        </div>
-
         <div class="project">
-          <div class="project__tags">
-            <span class="project__tag">#Java</span>
-            <span class="project__tag">#Swing</span>
-            <span class="project__tag">#Game</span>
-            <span class="project__tag">#Desktop</span>
-          </div>
-
           <h2 class="card__title" data-i18n="proj6_title">Comecocos</h2>
-          <p class="card__text" data-i18n="proj6_type">Video juego - Aplicación de escritorio</p>
-          <p class="card__text" data-i18n="proj6_desc">“Recreación del clásico Pac-Man...”</p>
 
-          <div class="buttons">
-            <a href="https://youtu.be/3_o1sipq6Po" class="button button--primary" data-i18n="btn_demo" target="_blank">video</a>
-
-            <a href="https://github.com/megalol-dev/comecocos-java" 
-              class="button button--ghost" 
-              data-i18n="btn_code"
-              target="_blank">code</a>
+          <div class="card__image-container">
+            <img
+              src="assets/images/appCocos.png"
+              alt="Imagen del proyecto Comecocos"
+              class="card__image"
+            />
           </div>
-      </article>
 
-
-      <!-- Proyecto 7 -->
-      <article class="card card--project">
-        <div class="card__image-container">
-          <img src="assets/images/GestorTareas.png" alt="Imagen del proyecto Gestor de tareas" class="card__image" />
-        </div>
-
-        <div class="project">
           <div class="project__tags">
-            <span class="project__tag">#Eclipse</span>
-            <span class="project__tag">#JAVA</span>
+            <span class="project__tag">#Java</span>
             <span class="project__tag">#Swing</span>
+            <span class="project__tag">#Game</span>
+            <span class="project__tag">#Desktop</span>
           </div>
 
-          <h2 class="card__title" data-i18n="proj7_title">Gestor de tareas</h2>
-          <p class="card__text" data-i18n="proj7_type">Aplicación de escritorio</p>
-          <p class="card__text" data-i18n="proj7_desc">“Aplicación de escritorio en Java para crear, editar y organizar
-            tareas...”</p>
+          <p class="card__text" data-i18n="proj6_type">
+            Videojuego · Aplicación de escritorio
+          </p>
+
+          <p class="card__text" data-i18n="proj6_desc">
+            Recreación del clásico Pac-Man desarrollada en Java y Swing. Incluye
+            múltiples niveles, sistema de puntuación, enemigos con
+            comportamientos diferenciados, transiciones de fase, efectos de
+            sonido y una interfaz gráfica completamente personalizada.
+          </p>
 
           <div class="buttons">
-            <a href="https://youtu.be/nU82f2x1c5M" class="button button--primary" data-i18n="btn_demo" target="_blank">video</a>
+            <a
+              href="https://youtu.be/3_o1sipq6Po"
+              class="button button--primary"
+              data-i18n="btn_demo"
+              target="_blank"
+            >
+              video
+            </a>
 
-            <a href="https://github.com/megalol-dev/gestor-tareas-java" 
-              class="button button--ghost" 
+            <a
+              href="https://github.com/megalol-dev/comecocos-java"
+              class="button button--ghost"
               data-i18n="btn_code"
-              target="_blank">code</a>
+              target="_blank"
+            >
+              code
+            </a>
           </div>
+        </div>
       </article>
 
-    </section>
-  </main>
+      <!-- Proyecto 7 -------------------------------------------------------->
+      <article class="card card--project">
+        <div class="project">
+          <h2 class="card__title" data-i18n="proj7_title">¿Quién es quién?</h2>
 
-  <script src="js/scripts.js"></script>
-</body>
+          <div class="card__image-container">
+            <img
+              src="assets/images/appQuien.png"
+              alt="Imagen del proyecto ¿Quién es quién?"
+              class="card__image"
+            />
+          </div>
 
+          <div class="project__tags">
+            <span class="project__tag">#Java</span>
+            <span class="project__tag">#Swing</span>
+            <span class="project__tag">#Game</span>
+            <span class="project__tag">#Desktop</span>
+          </div>
+
+          <p class="card__text" data-i18n="proj7_type">
+            Videojuego · Aplicación de escritorio
+          </p>
+
+          <p class="card__text" data-i18n="proj7_desc">
+            Versión digital del clásico juego de deducción desarrollada en Java
+            y Swing. Incluye interfaz gráfica personalizada, personajes
+            diseñados mediante IA, sistema de preguntas dinámico y una
+            arquitectura modular centrada en la lógica de juego y la experiencia
+            de usuario.
+          </p>
+
+          <div class="buttons">
+            <a
+              href="https://youtu.be/YJ6Bn3XuExE"
+              class="button button--primary"
+              data-i18n="btn_demo"
+              target="_blank"
+            >
+              video
+            </a>
+
+            <a
+              href="https://github.com/megalol-dev/quien-es-quien-java"
+              class="button button--ghost"
+              data-i18n="btn_code"
+              target="_blank"
+            >
+              code
+            </a>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <script src="js/scripts.js"></script>
+  </body>
 </html>

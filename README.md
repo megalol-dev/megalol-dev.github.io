@@ -1,31 +1,56 @@
-# 🌐 Portafolio Personal — José Luis Escudero Delv
+# 💼 Personal Portfolio - José Luis Escudero
 
-¡Bienvenido a mi portafolio!  
-Este sitio web está desarrollado con **HTML, CSS y JavaScript**, y muestra mis proyectos personales y experiencia en desarrollo de software.
+My personal developer portfolio where I showcase my projects, skills, and experience as a Full Stack Developer.
 
-🔗 **Visita mi web:** [https://megalol-dev.github.io/](https://megalol-dev.github.io/)
+## 🌐 Live Website
 
----
+🔗 https://megalol-dev.github.io/
 
-## 🚀 Tecnologías utilizadas
-- HTML5  
-- CSS3  
-- JavaScript  
+## 🚀 About
+
+This portfolio was built to present my work, technical skills, and personal projects in a clean and professional way.
+
+Features include:
+
+- 🌙 Dark / Light mode
+- 🌍 Multi-language support (Spanish & English)
+- 🎨 Dynamic color themes
+- 📱 Responsive design
+- 💼 Project showcase with videos and live demos
+- 🔗 Direct access to GitHub repositories and social networks
+
+## 🛠️ Technologies
+
+- HTML5
+- CSS3
+- JavaScript
+- Responsive Design
 - Git & GitHub Pages
 
+## 📂 Featured Projects
+
+### 🍽️ GastroReservas
+Restaurant management platform with reservations, employees, customers, reviews, authentication, roles and complete CRUD system.
+
+### 📋 Trello Task Manager
+Collaborative task management application inspired by Trello with authentication, password recovery and drag & drop cards.
+
+### 🎬 Netflix Clone
+Web application that consumes an external API to display movies and TV shows dynamically.
+
+## 📸 Screenshots
+
+Add screenshots of your portfolio here.
+
+## 👨‍💻 Author
+
+**José Luis Escudero**
+
+- Portfolio: https://megalol-dev.github.io/
+- GitHub: https://github.com/megalol-dev
+- LinkedIn: NO DISPONIBLE
+- YouTube: https://www.youtube.com/@Megalol-dev
+
 ---
 
-## 💼 Proyectos destacados
-- 🎮 **Comecocos (Java Swing)** – Versión del clásico Pac-Man con niveles, colisiones y sonidos personalizados.  
-- 🧩 **¿Quién es quién? (Java Swing)** – Juego de deducción con interfaz gráfica y personajes generados por IA.  
-- 🛒 **Tienda Online Deportivas (Web)** – Prototipo de tienda para visualizar zapatillas deportivas en distintos colores.  
-
----
-
-## 📫 Contacto
-📧 **Correo:** escuderopolojoseluis@gmail.com  
-💼 **GitHub:** [megalol-dev](https://github.com/megalol-dev)
-
----
-
-> “Sigo aprendiendo cada día y disfrutando del proceso de crear cosas desde cero.”
+⭐ If you like this portfolio, feel free to fork it or use it as inspiration.

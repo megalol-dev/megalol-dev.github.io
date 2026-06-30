@@ -1,102 +1,130 @@
 // languages/en.js
 export default {
-    // Metadata / general
-    site_title: "Portfolio",
+  // Metadata / general
+  site_title: "Portfolio",
 
-    // Banner
-    banner_title: "Web development",
+  // Banner
+  banner_title: "Web development",
 
-    // Theme
-    toggle_dark: "Dark mode",
+  // Theme
+  toggle_dark: "Dark mode",
 
-    // Profile
-    profile_role: "Front-end Developer",
-    profile_bio:
-        "I am a Web Application Development student currently seeking an internship to complete my studies. In my portfolio, you will find a variety of projects I have created to showcase my skills and growth as a developer. Among my most notable works are a full web application with complete CRUD functionality and a user login system, a sneaker store with real-time model switching and a simulated checkout process, as well as several video game clones —including Guess Who? and Pac-Man— where I implemented both the game logic and the graphical interface. All of my projects are available with their source code on GitHub, and you can also watch demonstration videos on my YouTube channel. I am passionate about databases and web development in general, and I am always eager to learn new technologies and take on new challenges.",
+  // Tecnologies
+  technologies_title: "Technologies",
+  // Projects
+  projects_title: "Projects",
 
-    // Experience
-    experience_title: "Experience",
+  languages_title: "Languages",
+  frameworks_title: "Frameworks & Libraries",
+  databases_title: "Databases",
+  tools_title: "Tools",
 
-    exp1_job: "Front / Back Developer",
-    exp1_desc:
-        "I developed a video game inspired by 'Pac-Man', creating everything from the game logic, controls, and interface to the collision system and scalable levels. I also designed simple graphics and added sound effects and music to complete the experience.",
+  // botones de ver demo
+  btn_live: "Live Demo",
 
-    exp2_job: "Front / Back Developer",
-    exp2_desc:
-        "I developed a 'Guess Who?' type game using Java, implementing both the game logic and the graphical interface along with the control system. I designed the characters and visual elements using AI tools, achieving a coherent and appealing style. The project stands out for its modular structure, smooth user interaction, and focus on gameplay and visual presentation.",
+  // Profile
+  profile_role: "Full Stack Developer",
+  profile_bio: `
+<p>
+  Full Stack Developer specialized in web applications and database-oriented management systems. I am passionate about building business solutions, especially applications with complete CRUD operations, authentication, role-based access control, and business rules.
+</p>
 
-    exp3_job: "Front / Back Developer",
-    exp3_desc:
-        "I created a task manager in Java to practice object-oriented programming and data management. It includes features to create, edit, complete, and delete tasks, with a simple storage system and a Swing-based interface focused on clarity and ease of use. The project stands out for its clean structure and well-defined logic.",
-    
+<p>
+  I have a solid foundation in programming logic and interactive system design, developed through both web projects and video game development, which allows me to tackle complex problems and build scalable, well-structured applications.
+</p>
 
+<p>
+  I hold a Higher Technician Degree in Web Application Development (DAW) and continuously expand my knowledge by exploring new technologies and methodologies to keep growing as a developer.
+</p>
+`,
 
-    // Hobbies
-    hobbies_title: "Hobbies",
-    hobby_art:
-        "🎨 Digital drawing and manga – I apply my artistic skills to design interfaces and visual assets for my projects.",
-    hobby_games:
-        "🕹️ Classic games – I take inspiration from retro mechanics for my developments.",
-    hobby_music:
-        "🎧 Music and video games – I enjoy integrating sound and atmosphere into my projects.",
-    hobby_learn:
-        "📖 Continuous learning – Always exploring new web technologies and game development tools.",
-    hobby_gallery: "My illustration gallery",
+  // Experience
+  experience_title: "Experience",
 
-    // Skills
+  exp1_job: "Front / Back Developer",
+  exp1_desc:
+    "I developed a video game inspired by 'Pac-Man', creating everything from the game logic, controls, and interface to the collision system and scalable levels. I also designed simple graphics and added sound effects and music to complete the experience.",
 
-    tech_title: "Technologies",
+  exp2_job: "Front / Back Developer",
+  exp2_desc:
+    "I developed a 'Guess Who?' type game using Java, implementing both the game logic and the graphical interface along with the control system. I designed the characters and visual elements using AI tools, achieving a coherent and appealing style. The project stands out for its modular structure, smooth user interaction, and focus on gameplay and visual presentation.",
 
+  exp3_job: "Front / Back Developer",
+  exp3_desc:
+    "I created a task manager in Java to practice object-oriented programming and data management. It includes features to create, edit, complete, and delete tasks, with a simple storage system and a Swing-based interface focused on clarity and ease of use. The project stands out for its clean structure and well-defined logic.",
 
-    skills_frontend_title: "Front-end",
-    skill_html: "HTML",
-    skill_css: "CSS",
-    skill_js: "JavaScript",
-    skill_java: "Java",
+  // Hobbies
+  hobbies_title: "Hobbies",
+  hobby_art:
+    "🎨 Digital drawing and manga – I apply my artistic skills to design interfaces and visual assets for my projects.",
+  hobby_games:
+    "🕹️ Classic games – I take inspiration from retro mechanics for my developments.",
+  hobby_music:
+    "🎧 Music and video games – I enjoy integrating sound and atmosphere into my projects.",
+  hobby_learn:
+    "📖 Continuous learning – Always exploring new web technologies and game development tools.",
+  hobby_gallery: "My illustration gallery",
 
-    skills_design_title: "Design",
-    skill_photoshop: "Photoshop",
-    skill_illustrator: "Adobe Illustrator",
+  // Skills
 
-    // Projects
+  tech_title: "Technologies",
 
-    proj1_title: "Animal Shelter — Adoption Platform",
-    proj1_type: "Web Application + Full CRUD",
-    proj1_desc:
-        "Professional web application for managing an animal shelter. Includes an adoption system, public request form, internal management of animals, role-based user system, and adoption requests. Full CRUD functionality with SQLite database storage and a Flask-powered backend.",
+  skills_frontend_title: "Front-end",
+  skill_html: "HTML",
+  skill_css: "CSS",
+  skill_js: "JavaScript",
+  skill_java: "Java",
 
-    proj2_title: "Sports Shoes Online Store",
-    proj2_type: "Web Application – Dynamic Product Visualization & Simulated Payment",
-    proj2_desc:
-        "Prototype of an online store for purchasing sneakers. It includes a system to view sneakers in different colors in real time. The sneaker data is stored in a JSON file and the project is scalable for adding more items in the future.",
-    
-    proj3_title: "Online Supermarket Store",
-    proj3_type: "Web Application – Inventory Management with Database and Simulated Payment",
-    proj3_desc:
-        "Supermarket- style online store prototype developed as a web application, featuring product management through an SQL database. It includes a scalable inventory system, dynamic product visualization, and a simulated checkout flow.",
-    
-    proj4_title: "Horoscope Web App",
-    proj4_type: "Web Application – Sessions & Cookies",
-    proj4_desc:
-        "Web application developed in PHP focused on session and cookie management. It allows user registration and login, website customization through cookies (theme color and background), and horoscope visualization for each zodiac sign.",
+  skills_design_title: "Design",
+  skill_photoshop: "Photoshop",
+  skill_illustrator: "Adobe Illustrator",
 
+  // Projects
 
-    proj5_title: "Guess Who?",
-    proj5_type: "Video game - Desktop application",
-    proj5_desc:
-        "A digital version of the classic deduction game, developed in Java with a graphical interface and Dragon Ball-style AI-generated characters.",
+  // Projects 1
+  proj1_title: "GastroReservas — Interactive Restaurant Web App",
+  proj1_type: "Full Web Application · Full Stack Project",
+  proj1_desc:
+    "Restaurant management platform with online reservations, administration of customers, employees, dishes, and reviews. Implements authentication and role-based access control, an administration panel, and a complete CRUD system connected to MySQL, developed in PHP following the MVC architecture.",
 
-    proj6_title: "Pac-Man Clone",
-    proj6_type: "Video game - Desktop application",
-    proj6_desc:
-        "Pac-Man–style game developed in Java featuring a scalable level system, collision detection, intelligent enemy behavior, and full game state management. It includes custom music and sound effects, a persistent high-score system with player name input, extra lives earned through points, start and end screens, and visual transitions between levels.",
+  // Projects 2
+  proj2_title: "Trello Task Manager",
+  proj2_type: "Aplicación Web Full Stack",
+  proj2_desc:
+    "Trello-inspired web application for task and project management. It includes user authentication, password recovery, role management, and collaborative boards with drag-and-drop cards, providing a dynamic and intuitive user experience..",
 
-    proj7_title: "Task Manager",
-    proj7_type: "Desktop application",
-    proj7_desc:
-        "A Java desktop application to create, edit, and organize tasks in a simple and intuitive way. Data persistence is included.",
+  // boton especial de proyecto privado
+  btn_private: "Private project",
+  msg_project_private:
+    "This project is private. If you want access to the code or want to use it, please contact me.",
 
-    // Buttons
-    btn_demo: "video",
-    btn_code: "code"
+  proj3_title: "Netflix Clone",
+  proj3_type: "Web Application · API Integration",
+  proj3_desc:
+    "Netflix-inspired web application that consumes an external API to dynamically display movies and TV shows. Includes search functionality, content details pages, and a responsive interface focused on user experience.",
+
+  proj4_title: "CoreSys — ERP & CRM Management Platform",
+  proj4_type: "Full Stack Web Application",
+  proj4_desc:
+    "Business web application for the comprehensive management of internal processes. Includes CRM modules, invoicing, customer and user management, role-based access control, an administration panel, and a scalable architecture designed for real-world business environments.",
+
+  proj5_title: "Sports Shoes Online Store",
+  proj5_type:
+    "Web Application – Dynamic Product Visualization & Simulated Payment",
+  proj5_desc:
+    "Prototype of an online store for purchasing sneakers. It includes a system to view sneakers in different colors in real time. The sneaker data is stored in a JSON file and the project is scalable for adding more items in the future.",
+
+  proj6_title: "Pac-Man Clone",
+  proj6_type: "Video game - Desktop application",
+  proj6_desc:
+    "Pac-Man–style game developed in Java featuring a scalable level system, collision detection, intelligent enemy behavior, and full game state management. It includes custom music and sound effects, a persistent high-score system with player name input, extra lives earned through points, start and end screens, and visual transitions between levels.",
+
+  proj7_title: "Guess Who?",
+  proj7_type: "Video game - Desktop application",
+  proj7_desc:
+    "A digital version of the classic deduction game, developed in Java with a graphical interface and Dragon Ball-style AI-generated characters.",
+
+  // Buttons
+  btn_demo: "video",
+  btn_code: "code",
 };

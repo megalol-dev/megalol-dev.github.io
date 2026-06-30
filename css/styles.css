@@ -1,692 +1,676 @@
+/* ============================
+   VARIABLES GLOBALES
+============================ */
 
-/*Variables generales - son las usadas en el modo día*/
-:root{
+:root {
+    /* Color principal del tema */
     --primary-color: hsl(214, 84%, 56%);
-    --text-color:hsl(0, 0%, 5%);
-    --bg-color:hsl(0, 0%, 40%);
+
+    /* Colores base modo claro */
+    --text-color: #111111;
+    --bg-color: hsl(0, 0%, 40%);
     --bg-card-color: hsl(0, 0%, 90%);
 
+    /* Layout */
+    --container-width: 1300px;
     --border-radius: 0.8em;
 
-    --transition: color .3s ease, background-color .3s ease;
-}
-
-/* Todo tenga un borde*/
-*{
-    box-sizing: border-box;
-}
-
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-
-}
-
-/* Todo el cuerpo de la web*/
-body{
-    margin: 0;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: var(--transition);
-    font-family: sans-serif;
-}
-
-/*Modo nocturno ON: cambiamos el color del fondo y las letras*/
-body.dark{
-    --text-color: hsl(0, 100%, 99%);
-    --bg-color: hsl(0, 0%, 6%);
-    --bg-card-color: hsl(0, 2%, 11%);
-}
-
-/* Para la cabeza de la pagina web */
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 75px;
-    padding: 0 1.5em;
-    background-color: var(--bg-card-color);
-    transition: var(--transition);
-}
-
-/* Interruptores */
-.switches{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-}
-
-
-.toggle-theme{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.flags{
-    width: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.flags__item{
-    width: 30px;
-
-}
-
-.flags__img {
-    display: block;
-    cursor: pointer;
-}
-
-
-
-.toggle-theme__icon{
-    margin-right: 0.5em;
-    width: 20px;
-}
-
-.toggle-theme__text{
-    font-size: 0.8rem;
-}
-
-.colors {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 20px;
-    width: 100px;
-}
-
-.colors__item {
-    width: 20px;
-    height: 20px;
-    border: 1px solid var(--text-color);
-    cursor: pointer;
-    background-color: var(--primary-color);
- 
-}
-
-.colors__item--blue {
-   --primary-color: hsl(214, 84%, 56%);
-}
-
-.colors__item--green {
-    --primary-color: hsl(141, 96%, 44%);
-}
-
-.colors__item--purple {
-    --primary-color: hsl(289, 96%, 44%);
-}
-
-.colors__item--orange {
-    --primary-color: hsl(25, 96%, 44%);
-}
-
-.title {
-    text-align: center;
-    color: var(--primary-color);
-    transition: var(--transicion);
-}
-
-/* Para que en movil se vea en una columna*/
-.main {
-    display: grid;
-    grid-template-columns: 1fr;
-    /* móvil: una columna */
-    gap: 1rem;
-    /* opcional, separación */
-    padding: 2em;
-}
-
-
-/*media query del main*/
-@media (min-width: 720px) {
-    .main {
-        /*grid-template-columns: 320px 1fr;*/
-        grid-template-columns: min-content 1fr;
-        /* izquierda fija, derecha flexible */
-        align-items: start;
-    }
-}
-
-.columna {
-    display: grid;
-    gap: 0.5em;
-}
-
-
-/* La columna de la derecha contendrá 1 o 2 tarjetas en grid */
-.columna--derecha {
-    display: grid;
-    gap: 1rem;
-}
-
-/* 2 columnas en pantallas anchas */
-@media (min-width: 720px) {
-    .columna--derecha {
-        grid-template-columns: 1fr 1fr;
-        align-items: start;
-    }
-}
-
-
-/*Fondo de la columna izquierda donde se ven mis datos*/
-.card {
-    padding: 1em;
-    background-color: var(--bg-card-color);
-    border-radius: var(--border-radius);
-}
-
-
-
-.card__image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    /* antes era cover */
-    object-position: center;
-    background-color: var(--bg-card-color);
-    /* relleno detrás si sobran bordes */
-}
-
-.card__image img {
-    width: 100%;
-    height: auto;
-    /* o fija una altura y usa object-fit */
-    display: block;
-    object-fit: cover;
-    /* útil si fijas altura */
-}
-
-.card__image-container {
-    width: 100%;
-    /* ocupa todo el ancho disponible */
-    aspect-ratio: 1 / 1;
-    /* 🔥 crea un cuadrado perfecto */
-    overflow: hidden;
-    /* recorta el exceso */
-    border-radius: var(--border-radius);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--bg-card-color);
-    /* por si la imagen tarda en cargar */
-}
-
-.card__header {
-    padding: 1em 0;
-
-}
-
-.card__title {
-    margin: 0.5;
-    margin-bottom: 1em;
-    font-size: 1.2rem;
-}
-
-.card__subtitle {
-    font-size: 1.2rem;
-    opacity: 0.8;
-}
-
-
-.card__link {
-    display: inline-flex;
-    /* usa inline-flex en lugar de flex */
-    align-items: center;
-    gap: 0.5em;
-    white-space: nowrap;
-    /* evita que el email se corte */
-    overflow: hidden;
-    /* opcional si el contenedor es estrecho */
-    text-overflow: ellipsis;
-    /* opcional, añade "..." si se corta */
-}
-
-
-.card__link a {
-    font-size: clamp(0.8rem, 2vw, 1rem);
-}
-
-
-.card__text {
-    font-size: .9rem;
-    line-height: 1.5;
-}
-
-/* (Opcional) Ajustes visuales coherentes entre cards de skills */
-.card--skills .card__title {
-    margin-top: 0;
-}
-
-
-/* Card proyecto a ancho completo de la grid de la derecha */
-.card--project {
-    /* Por defecto (móvil) apilado */
-    display: grid;
-    gap: 1rem;
-}
-
-/* Contenido del proyecto */
-.project {
-    position: relative;
-    display: grid;
-    gap: .5rem;
-}
-
-.project__tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .5rem;
-    margin: .5em 0;
-    font-size: .8rem;
-    width: 100%;
+    /* Transiciones */
+    --transition: color .3s ease, background-color .3s ease, border-color .3s ease;
     
 }
 
-@media (min-width: 760px) {
-    .project__tags {
-        font-size: 0.9rem;
-        
-    }
+/* ============================
+   MODO OSCURO
+============================ */
+
+body.dark {
+    --text-color: hsl(0, 100%, 99%);
+    --bg-color: hsl(270, 3%, 13%);
+    --bg-card-color: hsl(0, 2%, 11%);
+}
+
+body {
+    background:
+        linear-gradient(to bottom,
+            #050505 0%,
+            #0f1117 35%,
+            #151922 70%,
+            #1a2030 100%);
+
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+body.dark {
+    background:
+        linear-gradient(to bottom,
+           
+            #ffffff 0%,
+            #f2f5fa 35%,
+            #e7edf7 70%,
+            #dfe7f3 100%);
+}
+
+/* ============================
+   BANNER / PERFIL
+============================ */
+
+.banner {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.banner__container {
+    background-color: var(--bg-card-color);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    transition: var(--transition);
+}
+
+/* Contenedores generales */
+.container {
+    width: min(100% - 3rem, var(--container-width));
+    margin-inline: auto;
+}
+
+/* Contenedor principal */
+.banner__profile {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+/* Columna izquierda */
+.banner__sidebar {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1;
+}
+
+/* Foto */
+.banner__avatar {
+    width: 280px;
+    height: auto;
+
+    border-radius: var(--border-radius);
+    border: 3px solid var(--primary-color);
+}
+
+/* Teléfono y correo */
+.banner__personal-info {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.banner__contact-text {
+    color: var(--primary-color);
+    margin: .5rem 0;
+}
+
+.banner__contact-text a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.banner__contact-text a:hover {
+    color: var(--primary-color);
+}
+
+/* Columna derecha */
+.banner__info {
+    flex: 1;
+}
+
+/* Nombre */
+.banner__name {
+    margin: 0;
+    font-size: 3rem;
+    color: var(--text-color);
+}
+
+/* Profesión */
+.banner__role {
+    margin-top: .5rem;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+/* Iconos sociales */
+.banner__contact {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.banner__contact a {
+    color: var(--primary-color);
+    font-size: 2rem;
+    transition: var(--transition);
+}
+
+.banner__contact a:hover {
+    transform: scale(1.1);
+}
+
+/* Descripción */
+.banner__description {
+    max-width: 850px;
+}
+
+.banner__description p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.banner__description p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ============================
+   BARRA DE OPCIONES
+============================ */
+
+.header {
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    width: 82%;
+    background-color: var(--bg-card-color);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    transition: var(--transition);
+}
+
+/* ============================
+   TEMA OSCURO / CLARO
+============================ */
+
+.switches {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.toggle-theme {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+}
+
+.toggle-theme__icon {
+    width: 22px;
+    height: 22px;
+}
+
+.toggle-theme__text {
+    margin: 0;
+    font-size: .9rem;
+    color: var(--text-color);
+}
+
+/* ============================
+   IDIOMAS
+============================ */
+
+.flags {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+}
+
+.flags__item {
+    width: 28px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform .2s ease;
+}
+
+.flags__item:hover {
+    transform: scale(1.1);
+}
+
+.flags__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ============================
+   COLORES DEL TEMA
+============================ */
+
+.colors {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: .55rem;
+}
+
+.colors__item {
+    width: 22px;
+    height: 22px;
+
+    border: 1px solid var(--text-color);
+    border-radius: .15rem;
+
+    cursor: pointer;
+    transition: transform .2s ease, border-color .2s ease;
+}
+
+.colors__item:hover {
+    transform: scale(1.15);
+    border-color: var(--primary-color);
+}
+
+/* Colores individuales */
+.colors__item--blue {
+    background-color: hsl(214, 84%, 56%);
+}
+
+.colors__item--green {
+    background-color: hsl(141, 96%, 44%);
+}
+
+.colors__item--purple {
+    background-color: hsl(289, 96%, 44%);
+}
+
+.colors__item--orange {
+    background-color: hsl(25, 96%, 44%);
+}
+
+
+/* ============================
+   CONTENEDOR PRINCIPAL
+============================ */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* ============================
+   TARJETA TECNOLOGÍAS
+============================ */
+
+.card--technologies {
+    background-color: var(--bg-card-color);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    transition: var(--transition);
+}
+
+/* ============================
+   TÍTULOS DE SECCIÓN
+============================ */
+
+.tech-category {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
+    color: var(--primary-color);
+    font-size: 1.4rem;
+}
+
+.tech-category:first-child {
+    margin-top: 0;
+}
+
+/* ============================
+   GRID DE TECNOLOGÍAS
+============================ */
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1rem;
+}
+
+/* ============================
+   TARJETA INDIVIDUAL
+============================ */
+
+.tech-item {
+    background-color: var(--bg-color);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+
+    padding: 1.5rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+
+    transition: var(--transition);
+}
+
+/* Hover suave */
+
+.tech-item:hover {
+    transform: translateY(-3px);
+}
+
+/* ============================
+   ICONOS
+============================ */
+
+.tech-item i {
+    font-size: 3rem;
+}
+
+/* ============================
+   NOMBRES
+============================ */
+
+.tech-item span {
+    color: var(--text-color);
+    font-weight: 600;
+    text-align: center;
+}
+
+
+/* ============================
+   TARJETAS DE PROYECTOS
+============================ */
+
+.card--project {
+    background-color: var(--bg-card-color);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: var(--transition);
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Título */
+.card--project .card__title {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 2rem;
+    text-align: center;
+    
+}
+
+/* Imagen */
+.card__image-container {
+    width: 100%;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: 1px solid var(--primary-color);
+}
+
+.card__image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Tags */
+.project__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
 }
 
 .project__tag {
-    padding: .4em .8em;
-    border-radius: var(--border-radius);
     background-color: var(--primary-color);
-    color: var(--bg-color);
-    font-size: .8rem;
-    opacity: .9;
-}
-
-
-
-
-/* A partir de 720px, si tu .columna--derecha ya es 2 columnas */
-@media (min-width: 720px) {
-    .card--project {
-        grid-column: 1 / -1;
-        /*ocupa las 2 columnas de .columna--derecha */
-        grid-template-columns: minmax(180px, 220px) 1fr;
-        /* imagen | contenido */
-        align-items: start;
-    }
-}
-
-
-.skills {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-
-.skills__item {
-    display: flex;
-    align-items: center;
-    /* centra verticalmente nombre y barra */
-    justify-content: space-between;
-    gap: 1rem;
-    /* espacio entre texto y barra */
-}
-
-
-/* Nombre de la tecnología */
-.skills__tech {
+    color: #fff;
+    padding: .45rem .9rem;
+    border-radius: 999px;
+    font-size: .85rem;
     font-weight: 600;
+}
+
+/* Textos */
+.card__text {
+    margin: 0;
     color: var(--text-color);
-    min-width: 90px;
-    /* ancho mínimo para alinear bien */
+    line-height: 1.7;
 }
 
-/* Barra de progreso */
-.skills__bar {
-    flex: 1;
-    /* ocupa todo el espacio restante */
-    position: relative;
-    height: 8px;
-    background-color: #b8b8b8;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-}
-
-
-/* Parte que se rellena */
-.skills__bar::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 0;
-    background-color: var(--primary-color);
-    border-radius: inherit;
-    animation: fill-bar 5s ease forwards;
-    /* animación al cargar */
-}
-
-.icon {
-    margin-right: 1em;
-}
-
-.experience {
-    display: flex;
-    align-items: start;
-    margin-bottom: 1em;
-    padding: 1em;
-    border: 2px solid var(--primary-color);
-    border-radius: var(--border-radius);
-    transition: var(--transition);
-}
-
-.experience__image { 
-    max-width: 15%;   
-    margin-right: 1em;
-}
-
-.experience__time {
-    font-size: 0.8rem;
-    margin-bottom: 0.5em;
-}
-
-.experience__job {
-    margin:0;
-    margin-bottom: 0.5em;
+.card__text:first-of-type {
+    font-weight: bold;
     color: var(--primary-color);
-    transition: var(--transition);
-
 }
 
-.experience__description {
-    font-size: .8rem;
-    margin-bottom: 1.5em;
-
-
-}
-
-/* Botones alineados y con separación */
+/* Botones */
 .buttons {
     display: flex;
-    justify-content: space-between;
-    width: 225px;
-    gap: .5rem;
+    gap: 1rem;
     margin-top: .5rem;
 }
 
 .button {
-    width: 100px;
-    line-height: 2.5;
+    width: 120px;
     text-align: center;
+    padding: .8rem 1rem;
     border-radius: var(--border-radius);
+    text-decoration: none;
     transition: var(--transition);
-    
-}
-
-@media screen and (min-width: 992px) {
-    .banner__inner {
-        height: 160px;
-        /* más bajo para respetar proporción */
-    }
 }
 
 .button--primary {
     background-color: var(--primary-color);
-    color: var(--bg-color);
+    color: #fff;
+}
 
+.button--ghost {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.banner__description,
+.banner__description p {
+    color: var(--text-color);
+}
+
+.toggle-theme__icon {
+    width: 22px;
+    height: 22px;
+    transition: filter .3s ease;
+}
+
+body.dark .toggle-theme__icon {
+    filter: invert(1);
 }
 
 
-.button--ghost {
+.banner__container,
+.header,
+.card {
+    border: 3px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-bottom: 0;
+    color: #ffffff;
+}
+
+body.dark .section-title {
+    color: #111111;
+}
+
+.button--secondary {
     background-color: transparent;
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
 }
 
-@keyframes fill-bar {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: var(--level, 0%);
-    }
-}
-
-
-
-/* Ajustes de color en modo día */
-body:not(.dark) .project__tag,
-body:not(.dark) .button--primary {
-    background-color: #000;
-    /* negro puro */
-    color: #fff;
-    /* texto blanco */
-    border-color: #000;
-    /* borde coherente */
-}
-
-/* Si quieres que las tags sigan usando el color primario pero más oscuro, usa esta variante: */
-body:not(.dark) .project__tag {
+.button--secondary:hover {
     background-color: var(--primary-color);
-    color: #fff;
-}
-
-/* Botón "Demo" en modo día */
-body:not(.dark) .button--primary {
-    background-color: var(--primary-color);
-    /* mantiene el color del tema */
-    color: #ffffff;
-    /* texto negro */
-    border-color: var(--primary-color);
-    /* borde del mismo color */
+    color: white;
 }
 
 
-/* ===== Banner a ancho completo ===== */
 
-.banner {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
 
-.banner__inner {
-    position: relative;
-    width: 100%;
-    height: 220px;
-    /* altura ideal para móvil/tablet */
-    overflow: hidden;
-}
+/* ============================
+   RESPONSIVE - TABLET Y MÓVIL
+============================ */
 
-.banner__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+@media (max-width: 900px) {
 
-/* Capa oscura para que se lea bien el texto */
-.banner__inner::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.35),
-            rgba(0, 0, 0, 0.55));
-}
-
-/* Texto centrado encima del banner */
-.banner__title {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 1rem;
-    color: #ffffff;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-weight: 700;
-    font-size: clamp(1.6rem, 4vw, 2.8rem);
-}
-
-/* Por defecto (móvil): solo mostramos la imagen móvil */
-.banner__image--desktop {
-    display: none;
-}
-
-/* En escritorio (PC): 992px en adelante */
-@media screen and (min-width: 992px) {
-    .banner__image--mobile {
-        display: none;
+    /* Contenedores */
+    .container {
+        width: calc(100% - 2rem);
     }
 
-    .banner__image--desktop {
-        display: block;
+    /* Banner */
+    .banner__container {
+        padding: 2rem;
+    }
+
+    .banner__profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .banner__sidebar {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .banner__info {
+        width: 100%;
+    }
+
+    .banner__name {
+        font-size: 2.3rem;
+    }
+
+    .banner__role {
+        font-size: 1.2rem;
+    }
+
+    .banner__contact {
+        justify-content: center;
+    }
+
+    .banner__description {
+        max-width: 100%;
+    }
+
+    /* Barra de opciones */
+    .header {
+        width: calc(90% - 2rem);
+        padding: 1rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .switches,
+    .flags,
+    .colors {
+        justify-content: center;
+    }
+
+    /* Tecnologías */
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tech-item i {
+        font-size: 2.3rem;
+    }
+
+    /* Proyectos */
+    .card--project {
+        padding: 1.5rem;
+    }
+
+    .card--project .card__title {
+        font-size: 1.5rem;
+    }
+
+    .project__tags {
+        justify-content: center;
+    }
+
+    /* Botones */
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        width: 100%;
+        max-width: 250px;
     }
 }
 
 
 /* ============================
-   BARRAS DEL BANNER
-============================= */
+   MÓVILES PEQUEÑOS
+============================ */
 
-/* Contenedor de cada barra */
-.banner__bar {
-    width: 100%;
-    height: 6px;
-    overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.1);
-    /* sutil fondo */
-    position: relative;
-}
+@media (max-width: 600px) {
 
-/* Parte animada de cada barra */
-.banner__bar::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 0%;
-    background-color: var(--primary-color);
-    animation: banner-fill 6s ease forwards;
-}
-
-/* Barra SUPERIOR → carga IZQUIERDA → DERECHA */
-.banner__bar--top::after {
-    left: 0;
-}
-
-/* Barra INFERIOR → carga DERECHA → IZQUIERDA */
-.banner__bar--bottom::after {
-    right: 0;
-    animation-name: banner-fill-reverse;
-}
-
-/* Animación normal */
-@keyframes banner-fill {
-    from {
-        width: 0%;
+    .banner__avatar {
+        width: 170px;
+        height: 170px;
     }
 
-    to {
-        width: 100%;
-    }
-}
-
-/* Animación inversa */
-@keyframes banner-fill-reverse {
-    from {
-        width: 0%;
+    .banner__name {
+        font-size: 2rem;
     }
 
-    to {
-        width: 100%;
+    .banner__role {
+        font-size: 1rem;
     }
-}
 
-/* RESPONSIVE (opcional, por si quieres que sean más finas en móvil) */
-@media (max-width: 480px) {
-    .banner__bar {
-        height: 4px;
+    .banner__contact a {
+        font-size: 1.6rem;
     }
-}
 
-
-/* ============================
-   SECCIÓN TECNOLOGÍAS
-============================= */
-
-/* Que la tarjeta de tecnologías ocupe el ancho completo en la columna derecha */
-.card--technologies {
-    margin-bottom: 1rem;
-}
-
-/* En pantallas anchas, que ocupe las 2 columnas de .columna--derecha */
-@media (min-width: 720px) {
-    .card--technologies {
-        grid-column: 1 / -1;
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
-}
 
-/* Grid de iconos */
-.tech-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    gap: 1rem;
-    margin-top: 0.5rem;
-}
+    .card--project .card__title {
+        font-size: 1.3rem;
+    }
 
-/* Cada tecnología */
-.tech-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 0.3rem;
-    padding: 0.75rem 0.5rem;
-    border-radius: var(--border-radius);
-    background-color: rgba(0, 0, 0, 0.04);
-}
+    .project__tag {
+        font-size: .75rem;
+    }
 
-/* Iconos Devicon */
-.tech-item i {
-    font-size: 2.2rem;
-    line-height: 1;
-}
-
-/* Texto debajo del icono */
-.tech-item span {
-    font-size: 0.85rem;
-}
-
-/* “Pills” para GPT, Gemini, NotebookLM, Flash */
-.tech-item__pill {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 999px;
-    background-color: var(--primary-color);
-    color: var(--bg-color);
-    font-size: 0.9rem;
-    font-weight: 700;
-}
-
-/* Ajustes para modo oscuro: que el fondo no quede demasiado claro */
-body.dark .tech-item {
-    background-color: rgba(255, 255, 255, 0.03);
+    .card__text {
+        font-size: .95rem;
+    }
 }
