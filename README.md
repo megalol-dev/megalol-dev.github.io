@@ -38,9 +38,6 @@ Collaborative task management application inspired by Trello with authentication
 ### 🎬 Netflix Clone
 Web application that consumes an external API to display movies and TV shows dynamically.
 
-## 📸 Screenshots
-
-Add screenshots of your portfolio here.
 
 ---
 
