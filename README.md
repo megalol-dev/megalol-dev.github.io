@@ -50,6 +50,7 @@ Web application that consumes an external API to display movies and TV shows dyn
 💼 LinkedIn: https://linkedin.com/in/jose-luis-escudero-polo
 
 📺 YouTube: https://www.youtube.com/@Megalol-dev
+
 ---
 
 ⭐ If you like this portfolio, feel free to fork it or use it as inspiration.
