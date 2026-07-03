@@ -42,15 +42,17 @@ Web application that consumes an external API to display movies and TV shows dyn
 
 Add screenshots of your portfolio here.
 
-## 👨‍💻 Author
+---
 
-**José Luis Escudero**
+## 👨‍💻 Contacto
 
-- Portfolio: https://megalol-dev.github.io/
-- GitHub: https://github.com/megalol-dev
-- LinkedIn: NO DISPONIBLE
-- YouTube: https://www.youtube.com/@Megalol-dev
+📧 Email: **escuderopolojoseluis@gmail.com**
 
+🌐 Portfolio: https://megalol-dev.github.io/
+
+💼 LinkedIn: https://linkedin.com/in/jose-luis-escudero-polo
+
+📺 YouTube: https://www.youtube.com/@Megalol-dev
 ---
 
 ⭐ If you like this portfolio, feel free to fork it or use it as inspiration.
