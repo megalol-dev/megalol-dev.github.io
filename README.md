@@ -38,18 +38,18 @@ Collaborative task management application inspired by Trello with authentication
 ### 🎬 Netflix Clone
 Web application that consumes an external API to display movies and TV shows dynamically.
 
-## 📸 Screenshots
 
-Add screenshots of your portfolio here.
+---
 
-## 👨‍💻 Author
+## 👨‍💻 Contacto
 
-**José Luis Escudero**
+📧 Email: **escuderopolojoseluis@gmail.com**
 
-- Portfolio: https://megalol-dev.github.io/
-- GitHub: https://github.com/megalol-dev
-- LinkedIn: NO DISPONIBLE
-- YouTube: https://www.youtube.com/@Megalol-dev
+🌐 Portfolio: https://megalol-dev.github.io/
+
+💼 LinkedIn: https://linkedin.com/in/jose-luis-escudero-polo
+
+📺 YouTube: https://www.youtube.com/@Megalol-dev
 
 ---
 
