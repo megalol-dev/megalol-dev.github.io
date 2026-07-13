@@ -82,26 +82,26 @@ export default {
 
   // Proyectos
 
-  proj1_title: "GastroReservas — Web de Restaurante Interactiva",
+  proj1_title: "Web de Restaurante Interactiva",
   proj1_type: "Aplicación Web Completa · Proyecto Full Stack ",
   proj1_desc:
     "Plataforma de gestión para restaurantes con reservas online, administración de clientes, empleados, platos y reseñas. Implementa autenticación y control de roles, panel de administración y un CRUD completo conectado a MySQL, desarrollada en PHP con arquitectura MVC.",
-  
+
   // boton especial de proyecto cerrado
   btn_private: "Private project",
   msg_project_private:
     "Este proyecto es de uso privado. Si quieres acceder al código o usarlo, contacta conmigo.",
 
-  proj2_title: "Motor gráfico · Editor visual · Herramienta de desarrollo",
+  proj2_title: "Motor gráfico 2D - Editor visual - Herramienta de desarrollo",
   proj2_type: "Motor gráfico - Editor visual",
   proj2_desc:
     "Motor de aventuras gráficas 2D con editor visual integrado. Permite crear, editar y jugar aventuras sin modificar el código fuente, gestionando mapas, objetos y hotspots mediante archivos JSON cargados dinámicamente. Su arquitectura reutilizable facilita la creación de nuevos escenarios y el desarrollo de futuras funcionalidades de forma escalable.",
-  
+
   proj3_title: "CoreSys — ERP & CRM Management Platform",
   proj3_type: "Aplicación Web Full Stack",
   proj3_desc:
     "Aplicación web empresarial para la gestión integral de procesos internos. Incluye módulos de CRM, facturación, gestión de clientes y usuarios, con control de roles, panel administrativo y una arquitectura escalableorientada a entornos reales de empresa.",
-  
+
   proj4_title: "Netflix Clone",
   proj4_type: "Aplicación Web · Consumo de API",
   proj4_desc:
@@ -117,17 +117,17 @@ export default {
     "Aplicación web – Visualización dinámica de productos y pago simulado",
   proj6_desc:
     "Prototipo de tienda online para comprar deportivas. Incluye un sistema para ver deportivas de distintos colores en tiempo real. Los datos de las deportivas se almacenan en un archivo JSON y es escalable para añadir más artículos en el futuro.",
-  
-  proj7_title: "Comecocos",
+
+  proj7_title: "Comecocos en java",
   proj7_type: "Video juego - Aplicación de escritorio",
   proj7_desc:
     "Juego tipo Pac-Man desarrollado en Java que implementa un sistema de niveles escalable, colisiones, enemigos con inteligencia propia y gestión completa del estado del juego. Incluye música y sonidos personalizados, sistema de récord persistente con nombre de jugador, vidas extras por puntos, pantallas de inicio y final, y transiciones visuales entre niveles.",
-  
-  proj8_title: "¿Quién es quién?",
+
+  proj8_title: "¿Quién es quién? en java",
   proj8_type: "Video juego - Aplicación de escritorio",
   proj8_desc:
     "Versión digital del clásico juego de deducción, desarrollada en Java con interfaz gráfica y personajes al estilo Dragon Ball generados por IA.",
-  
+
   // Botones
   btn_demo: "video",
   btn_code: "code",

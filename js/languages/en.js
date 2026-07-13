@@ -82,7 +82,7 @@ export default {
   // Projects
 
   // Projects 1
-  proj1_title: "GastroReservas — Interactive Restaurant Web App",
+  proj1_title: "Interactive Restaurant Web App",
   proj1_type: "Full Web Application · Full Stack Project",
   proj1_desc:
     "Restaurant management platform with online reservations, administration of customers, employees, dishes, and reviews. Implements authentication and role-based access control, an administration panel, and a complete CRUD system connected to MySQL, developed in PHP following the MVC architecture.",
