@@ -63,7 +63,7 @@ body.dark {
 
 .banner__container {
     background-color: var(--bg-card-color);
-    border: 1px solid var(--primary-color);
+    border: 3px solid var(--primary-color);
     border-radius: var(--border-radius);
     padding: 3rem;
     transition: var(--transition);
@@ -181,7 +181,7 @@ body.dark {
     padding: 1rem 2rem;
     width: 82%;
     background-color: var(--bg-card-color);
-    border: 1px solid var(--primary-color);
+    border: 3px solid var(--primary-color);
     border-radius: var(--border-radius);
 
     display: grid;
@@ -263,7 +263,7 @@ body.dark {
     width: 22px;
     height: 22px;
 
-    border: 1px solid var(--text-color);
+    border: 3px solid var(--text-color);
     border-radius: .15rem;
 
     cursor: pointer;
@@ -310,7 +310,7 @@ body.dark {
 
 .card--technologies {
     background-color: var(--bg-card-color);
-    border: 1px solid var(--primary-color);
+    border: 3px solid var(--primary-color);
     border-radius: var(--border-radius);
     padding: 2rem;
     transition: var(--transition);
@@ -348,7 +348,7 @@ body.dark {
 
 .tech-item {
     background-color: var(--bg-color);
-    border: 1px solid var(--primary-color);
+    border: 3px solid var(--primary-color);
     border-radius: var(--border-radius);
 
     padding: 1.5rem 1rem;
@@ -391,20 +391,95 @@ body.dark {
    TARJETAS DE PROYECTOS
 ============================ */
 
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.project__content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.card__image-container {
+
+    flex: 0 0 58%;
+
+    max-height: 420px;
+
+    overflow: auto;
+
+    border-radius: var(--border-radius);
+    border: 3px solid var(--primary-color);
+}
+
+
+.card__image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.project__info {
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+.project__info .card__text:first-child {
+
+    color: var(--primary-color);
+
+    font-weight: bold;
+
+    margin: 0;
+}
+
+.project__info .card__text:last-child {
+
+    margin: 0;
+
+    line-height: 1.8;
+}
+
+.project__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.project__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .7rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
 .card--project {
     background-color: var(--bg-card-color);
-    border: 1px solid var(--primary-color);
+    border: 3px solid var(--primary-color);
     border-radius: var(--border-radius);
     padding: 2rem;
     margin-bottom: 2rem;
     transition: var(--transition);
 }
 
-.project {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
 
 /* Título */
 .card--project .card__title {
@@ -413,27 +488,6 @@ body.dark {
     font-size: 2rem;
     text-align: center;
     
-}
-
-/* Imagen */
-.card__image-container {
-    width: 100%;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    border: 1px solid var(--primary-color);
-}
-
-.card__image {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-/* Tags */
-.project__tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .75rem;
 }
 
 .project__tag {
@@ -455,13 +509,7 @@ body.dark {
 .card__text:first-of-type {
     font-weight: bold;
     color: var(--primary-color);
-}
-
-/* Botones */
-.buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: .5rem;
+    margin-bottom: .8rem;
 }
 
 .button {
@@ -479,7 +527,7 @@ body.dark {
 }
 
 .button--ghost {
-    border: 1px solid var(--primary-color);
+    border: 3px solid var(--primary-color);
     color: var(--primary-color);
 }
 
@@ -506,14 +554,12 @@ body.dark .toggle-theme__icon {
 .banner__container,
 .header,
 .card {
-    border: 3px solid var(--primary-color);
     border-radius: var(--border-radius);
     transition: var(--transition);
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 2rem;
     margin-bottom: 0;
     color: #ffffff;
 }
@@ -524,7 +570,7 @@ body.dark .section-title {
 
 .button--secondary {
     background-color: transparent;
-    border: 1px solid var(--primary-color);
+    border: 3px solid var(--primary-color);
     color: var(--primary-color);
 }
 
@@ -580,7 +626,6 @@ body.dark .section-title {
 }
 
 
-
 /* ============================
    RESPONSIVE - TABLET Y MÓVIL
 ============================ */
@@ -628,9 +673,9 @@ body.dark .section-title {
         max-width: 100%;
     }
 
-    /* Barra de opciones */
+    /* Barra superior */
     .header {
-        width: calc(90% - 2rem);
+        width: calc(100% - 2rem);
         padding: 1rem;
 
         display: flex;
@@ -653,29 +698,55 @@ body.dark .section-title {
         font-size: 2.3rem;
     }
 
-    /* Proyectos */
+    /* =====================
+       PROYECTOS
+    ===================== */
+
     .card--project {
         padding: 1.5rem;
     }
 
     .card--project .card__title {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+    }
+
+    .project__content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .card__image-container {
+        flex: none;
+        width: 100%;
+        max-height: none;
+    }
+
+    .project__info {
+        width: 100%;
+    }
+
+    .project__footer {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
     }
 
     .project__tags {
         justify-content: center;
     }
 
-    /* Botones */
     .buttons {
-        flex-direction: column;
-        align-items: center;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .button {
-        width: 100%;
-        max-width: 250px;
+        width: 180px;
     }
+
 }
 
 
@@ -687,7 +758,7 @@ body.dark .section-title {
 
     .banner__avatar {
         width: 170px;
-        height: 170px;
+        height: auto;
     }
 
     .banner__name {
@@ -707,6 +778,12 @@ body.dark .section-title {
         gap: 1rem;
     }
 
+    /* Proyectos */
+
+    .card--project {
+        padding: 1rem;
+    }
+
     .card--project .card__title {
         font-size: 1.3rem;
     }
@@ -717,14 +794,33 @@ body.dark .section-title {
 
     .card__text {
         font-size: .95rem;
+        line-height: 1.6;
     }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
 }
 
 
+/* Iconos personalizados */
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
+
     .tech-item img {
+
         width: 56px;
         height: 56px;
+
     }
+
 }

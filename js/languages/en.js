@@ -88,42 +88,52 @@ export default {
     "Restaurant management platform with online reservations, administration of customers, employees, dishes, and reviews. Implements authentication and role-based access control, an administration panel, and a complete CRUD system connected to MySQL, developed in PHP following the MVC architecture.",
 
   // Projects 2
-  proj2_title: "Trello Task Manager",
-  proj2_type: "Aplicación Web Full Stack",
+  proj2_title: "Adventure Engine — 2D Graphic Adventure Engine",
+  proj2_type: "Game Engine · Visual Editor · Development Tool",
   proj2_desc:
-    "Trello-inspired web application for task and project management. It includes user authentication, password recovery, role management, and collaborative boards with drag-and-drop cards, providing a dynamic and intuitive user experience..",
-
+    "A 2D graphic adventure engine featuring an integrated visual editor. It allows users to create, edit and play adventures without modifying the source code by managing maps, objects and hotspots through dynamically loaded JSON files. Its reusable architecture makes it easy to build new scenarios and extend the engine with future features in a scalable way.",
   // boton especial de proyecto privado
   btn_private: "Private project",
   msg_project_private:
     "This project is private. If you want access to the code or want to use it, please contact me.",
 
-  proj3_title: "Netflix Clone",
-  proj3_type: "Web Application · API Integration",
+  // Projects 3
+  proj3_title: "CoreSys — ERP & CRM Management Platform",
+  proj3_type: "Full Stack Web Application",
   proj3_desc:
-    "Netflix-inspired web application that consumes an external API to dynamically display movies and TV shows. Includes search functionality, content details pages, and a responsive interface focused on user experience.",
-
-  proj4_title: "CoreSys — ERP & CRM Management Platform",
-  proj4_type: "Full Stack Web Application",
-  proj4_desc:
     "Business web application for the comprehensive management of internal processes. Includes CRM modules, invoicing, customer and user management, role-based access control, an administration panel, and a scalable architecture designed for real-world business environments.",
 
-  proj5_title: "Sports Shoes Online Store",
-  proj5_type:
-    "Web Application – Dynamic Product Visualization & Simulated Payment",
+  
+  // Projects 4
+  proj4_title: "Netflix Clone",
+  proj4_type: "Web Application · API Integration",
+  proj4_desc:
+    "Netflix-inspired web application that consumes an external API to dynamically display movies and TV shows. Includes search functionality, content details pages, and a responsive interface focused on user experience.",
+  
+  // Projects 5
+  proj5_title: "Trello Task Manager",
+  proj5_type: "Aplicación Web Full Stack",
   proj5_desc:
+    "Trello-inspired web application for task and project management. It includes user authentication, password recovery, role management, and collaborative boards with drag-and-drop cards, providing a dynamic and intuitive user experience..",
+
+  // Projects 6
+  proj6_title: "Sports Shoes Online Store",
+  proj6_type:
+    "Web Application – Dynamic Product Visualization & Simulated Payment",
+  proj6_desc:
     "Prototype of an online store for purchasing sneakers. It includes a system to view sneakers in different colors in real time. The sneaker data is stored in a JSON file and the project is scalable for adding more items in the future.",
 
-  proj6_title: "Pac-Man Clone",
-  proj6_type: "Video game - Desktop application",
-  proj6_desc:
-    "Pac-Man–style game developed in Java featuring a scalable level system, collision detection, intelligent enemy behavior, and full game state management. It includes custom music and sound effects, a persistent high-score system with player name input, extra lives earned through points, start and end screens, and visual transitions between levels.",
-
-  proj7_title: "Guess Who?",
+  // Projects 7
+  proj7_title: "Pac-Man Clone",
   proj7_type: "Video game - Desktop application",
   proj7_desc:
-    "A digital version of the classic deduction game, developed in Java with a graphical interface and Dragon Ball-style AI-generated characters.",
+    "Pac-Man–style game developed in Java featuring a scalable level system, collision detection, intelligent enemy behavior, and full game state management. It includes custom music and sound effects, a persistent high-score system with player name input, extra lives earned through points, start and end screens, and visual transitions between levels.",
 
+  // Projects 8
+  proj8_title: "Guess Who?",
+  proj8_type: "Video game - Desktop application",
+  proj8_desc:
+    "A digital version of the classic deduction game, developed in Java with a graphical interface and Dragon Ball-style AI-generated characters.",
   // Buttons
   btn_demo: "video",
   btn_code: "code",

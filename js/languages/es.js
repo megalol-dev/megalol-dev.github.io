@@ -86,43 +86,48 @@ export default {
   proj1_type: "Aplicación Web Completa · Proyecto Full Stack ",
   proj1_desc:
     "Plataforma de gestión para restaurantes con reservas online, administración de clientes, empleados, platos y reseñas. Implementa autenticación y control de roles, panel de administración y un CRUD completo conectado a MySQL, desarrollada en PHP con arquitectura MVC.",
-
+  
   // boton especial de proyecto cerrado
   btn_private: "Private project",
   msg_project_private:
     "Este proyecto es de uso privado. Si quieres acceder al código o usarlo, contacta conmigo.",
 
-  proj2_title: "Gestor de tareas Trello",
-  proj2_type: "Aplicación Web Full Stack",
+  proj2_title: "Motor gráfico · Editor visual · Herramienta de desarrollo",
+  proj2_type: "Motor gráfico - Editor visual",
   proj2_desc:
-    "Aplicación web de gestión de tareas inspirada en Trello. Incluye autenticación de usuarios, recuperación de contraseñas, gestión de roles y tableros colaborativos con tarjetas arrastrables mediante Drag & Drop, ofreciendo una experiencia dinámica e intuitiva.",
-
-  proj3_title: "Netflix Clone",
-  proj3_type: "Aplicación Web · Consumo de API",
+    "Motor de aventuras gráficas 2D con editor visual integrado. Permite crear, editar y jugar aventuras sin modificar el código fuente, gestionando mapas, objetos y hotspots mediante archivos JSON cargados dinámicamente. Su arquitectura reutilizable facilita la creación de nuevos escenarios y el desarrollo de futuras funcionalidades de forma escalable.",
+  
+  proj3_title: "CoreSys — ERP & CRM Management Platform",
+  proj3_type: "Aplicación Web Full Stack",
   proj3_desc:
+    "Aplicación web empresarial para la gestión integral de procesos internos. Incluye módulos de CRM, facturación, gestión de clientes y usuarios, con control de roles, panel administrativo y una arquitectura escalableorientada a entornos reales de empresa.",
+  
+  proj4_title: "Netflix Clone",
+  proj4_type: "Aplicación Web · Consumo de API",
+  proj4_desc:
     "Aplicación web inspirada en Netflix que consume una API externa para mostrar películas y series de forma dinámica. Incluye búsquedas, fichas de contenido y una interfaz responsive centrada en la experiencia de usuario.",
 
-  proj4_title: "CoreSys — ERP & CRM Management Platform",
-  proj4_type: "Aplicación Web Full Stack",
-  proj4_desc:
-    "Aplicación web empresarial para la gestión integral de procesos internos. Incluye módulos de CRM, facturación, gestión de clientes y usuarios, con control de roles, panel administrativo y una arquitectura escalableorientada a entornos reales de empresa.",
-
-  proj5_title: "Tienda online deportivas",
-  proj5_type:
-    "Aplicación web – Visualización dinámica de productos y pago simulado",
+  proj5_title: "Gestor de tareas Trello",
+  proj5_type: "Aplicación Web Full Stack",
   proj5_desc:
-    "Prototipo de tienda online para comprar deportivas. Incluye un sistema para ver deportivas de distintos colores en tiempo real. Los datos de las deportivas se almacenan en un archivo JSON y es escalable para añadir más artículos en el futuro.",
+    "Aplicación web de gestión de tareas inspirada en Trello. Incluye autenticación de usuarios, recuperación de contraseñas, gestión de roles y tableros colaborativos con tarjetas arrastrables mediante Drag & Drop, ofreciendo una experiencia dinámica e intuitiva.",
 
-  proj6_title: "Comecocos",
-  proj6_type: "Video juego - Aplicación de escritorio",
+  proj6_title: "Tienda online deportivas",
+  proj6_type:
+    "Aplicación web – Visualización dinámica de productos y pago simulado",
   proj6_desc:
-    "Juego tipo Pac-Man desarrollado en Java que implementa un sistema de niveles escalable, colisiones, enemigos con inteligencia propia y gestión completa del estado del juego. Incluye música y sonidos personalizados, sistema de récord persistente con nombre de jugador, vidas extras por puntos, pantallas de inicio y final, y transiciones visuales entre niveles.",
-
-  proj7_title: "¿Quién es quién?",
+    "Prototipo de tienda online para comprar deportivas. Incluye un sistema para ver deportivas de distintos colores en tiempo real. Los datos de las deportivas se almacenan en un archivo JSON y es escalable para añadir más artículos en el futuro.",
+  
+  proj7_title: "Comecocos",
   proj7_type: "Video juego - Aplicación de escritorio",
   proj7_desc:
+    "Juego tipo Pac-Man desarrollado en Java que implementa un sistema de niveles escalable, colisiones, enemigos con inteligencia propia y gestión completa del estado del juego. Incluye música y sonidos personalizados, sistema de récord persistente con nombre de jugador, vidas extras por puntos, pantallas de inicio y final, y transiciones visuales entre niveles.",
+  
+  proj8_title: "¿Quién es quién?",
+  proj8_type: "Video juego - Aplicación de escritorio",
+  proj8_desc:
     "Versión digital del clásico juego de deducción, desarrollada en Java con interfaz gráfica y personajes al estilo Dragon Ball generados por IA.",
-
+  
   // Botones
   btn_demo: "video",
   btn_code: "code",
