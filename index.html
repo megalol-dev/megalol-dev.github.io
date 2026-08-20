@@ -1,826 +1,487 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- FontAwesome -->
+    <meta
+      name="description"
+      content="Portfolio de José Luis Escudero, desarrollador Full Stack especializado en lógica de negocio, bases de datos e interfaces web."
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <!-- Devicon: iconos de tecnologías -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/devicon.min.css"
     />
-    <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css" />
-    <title data-i18n="site_title">Portfolio</title>
+    <title data-i18n="site_title">José Luis Escudero · Full Stack Developer</title>
   </head>
 
   <body class="dark">
-    <section class="banner container">
-      <div class="banner__container">
-        <div class="banner__profile">
-          <!-- Columna izquierda -->
-          <div class="banner__sidebar">
-            <img
-              src="assets/images/Perfil.png"
-              alt="Foto de perfil de José Luis Escudero"
-              class="banner__avatar"
-            />
+    <a class="skip-link" href="#contenido" data-i18n="skip_content">
+      Saltar al contenido
+    </a>
 
-            <div class="banner__personal-info">
-              <p class="banner__contact-text">
-                <a href="tel:+34654870786"> +34 654 870 786 </a>
-              </p>
+    <!-- Navegación principal -->
+    <header class="site-header">
+      <nav class="site-nav container" aria-label="Navegación principal" data-i18n-aria-label="aria_navigation">
+        <a class="site-nav__brand" href="#inicio" aria-label="Ir al inicio" data-i18n="brand_name">
+          Porfolio
+        </a>
 
-              <p class="banner__contact-text">
-                <a href="mailto:escuderopolojoseluis@gmail.com">
-                  escuderopolojoseluis@gmail.com
-                </a>
-              </p>
-            </div>
-          </div>
-
-          <!-- Columna derecha -->
-          <div class="banner__info">
-            <h1 class="banner__name">José Luis Escudero</h1>
-
-            <p class="banner__role" data-i18n="profile_role">
-              Full Stack Developer
-            </p>
-
-            <div class="banner__contact">
-              <a
-                href="https://github.com/megalol-dev"
-                target="_blank"
-                title="GitHub"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-
-              <a
-                href="https://linkedin.com/in/jose-luis-escudero-polo/"
-                target="_blank"
-                title="LinkedIn"
-              >
-                <i class="fab fa-linkedin"></i>
-              </a>
-
-              <a
-                href="https://www.youtube.com/@Megalol-dev"
-                target="_blank"
-                title="YouTube"
-              >
-                <i class="fab fa-youtube"></i>
-              </a>
-            </div>
-
-            <div class="banner__description" data-i18n="profile_bio">
-              <p></p>
-              <p></p>
-              <p></p>
-            </div>
-
-            <div class="banner__cv">
-              <a
-                href="assets/pdf/CV_JoseLuisEscudero_FullStackJunior.pdf"
-                target="_blank"
-                class="banner__cv-btn"
-              >
-                <i class="fas fa-file-pdf"></i>
-                Descargar CV PDF
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Header -->
-    <header class="header container">
-      <div class="switches">
-        <div
-          id="toggle-theme"
-          class="toggle-theme"
-          class="toggle-theme"
-          title="Cambiar tema oscuro/claro"
+        <button
+          id="nav-toggle"
+          class="site-nav__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-links"
+          aria-label="Abrir menú"
+          data-i18n-aria-label="aria_nav_open"
         >
-          <img
-            id="toggle-icon"
-            src="assets/icons/moon.svg"
-            alt="icon theme"
-            class="toggle-theme__icon"
-          />
-          <p
-            id="toggle-text"
-            class="toggle-theme__text"
-            data-i18n="toggle_dark"
-          >
-            Dark mode
-          </p>
-        </div>
-      </div>
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
 
-      <!-- Seccion para marcar los idiomas -->
-      <div id="flags" class="flags">
-        <div class="flags__item" data-language="es" title="Español">
-          <img
-            class="flags__img"
-            src="assets/icons/banderaEsp.png"
-            alt="Icono de España"
-          />
-        </div>
-        <div class="flags__item" data-language="en" title="English">
-          <img
-            class="flags__img"
-            src="assets/icons/banderaReU.png"
-            alt="Icon of United Kingdom"
-          />
-        </div>
-      </div>
+        <ul id="nav-links" class="site-nav__links">
+          <li><a class="nav-link is-active" href="#inicio" data-i18n="nav_home">Inicio</a></li>
+          <li><a class="nav-link" href="#proyectos" data-i18n="nav_projects">Proyectos</a></li>
+          <li><a class="nav-link" href="#videojuegos" data-i18n="nav_games">Videojuegos</a></li>
+          <li><a class="nav-link" href="#tecnologias" data-i18n="nav_technologies">Tecnologías</a></li>
+          <li>
+            <a
+              class="nav-link nav-link--cv"
+              href="assets/pdf/CV_JoseLuisEscudero_FullStackJunior.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="nav_cv"
+            >Descargar CV PDF</a>
+          </li>
+        </ul>
 
-      <!--
-        Colores para la página
-      -->
-      <div id="toggle-colors" class="colors">
-        <div
-          data-color="hsl(214, 84%, 56%)"
-          class="colors__item colors__item--blue"
-          title="Tema azul"
-        ></div>
+        <details class="settings">
+          <summary class="settings__trigger" aria-label="Abrir preferencias" data-i18n-aria-label="aria_settings">
+            <i class="fas fa-sliders-h" aria-hidden="true"></i>
+          </summary>
+          <div class="settings__panel">
+            <button id="toggle-theme" class="setting-row" type="button">
+              <img id="toggle-icon" src="assets/icons/moon.svg" alt="" />
+              <span id="toggle-text" data-i18n="theme_dark">Modo oscuro</span>
+            </button>
 
-        <div
-          data-color="hsl(141, 96%, 44%)"
-          class="colors__item colors__item--green"
-          title="Tema verde"
-        ></div>
+            <div id="flags" class="flags" aria-label="Idioma">
+              <button class="flags__item" type="button" data-language="es" title="Español">
+                <img src="assets/icons/banderaEsp.png" alt="Español" />
+              </button>
+              <button class="flags__item" type="button" data-language="en" title="English">
+                <img src="assets/icons/banderaReU.png" alt="English" />
+              </button>
+            </div>
 
-        <div
-          data-color="hsl(289, 96%, 44%)"
-          class="colors__item colors__item--purple"
-          title="Tema morado"
-        ></div>
-
-        <div
-          data-color="hsl(25, 96%, 44%)"
-          class="colors__item colors__item--orange"
-          title="Tema naranja"
-        ></div>
-      </div>
+            <div id="toggle-colors" class="colors" aria-label="Color principal">
+              <button class="colors__item colors__item--blue" type="button" data-color="hsl(214, 84%, 56%)" aria-label="Azul"></button>
+              <button class="colors__item colors__item--green" type="button" data-color="hsl(141, 96%, 44%)" aria-label="Verde"></button>
+              <button class="colors__item colors__item--purple" type="button" data-color="hsl(289, 96%, 44%)" aria-label="Morado"></button>
+              <button class="colors__item colors__item--orange" type="button" data-color="hsl(25, 96%, 44%)" aria-label="Naranja"></button>
+            </div>
+          </div>
+        </details>
+      </nav>
     </header>
 
-    <main class="main container">
-      <!-- Sección de Tecnologías -->
-      <h2 class="card__title section-title" data-i18n="technologies_title">
-        Tecnologías
-      </h2>
-      <article class="card card--technologies">
-        <!-- Lenguajes -->
-        <h3 class="tech-category" data-i18n="languages_title">Lenguajes</h3>
-        <div class="tech-grid">
-          <div class="tech-item">
-            <i class="devicon-html5-plain colored"></i>
-            <span>HTML5</span>
+    <main id="contenido">
+      <!-- Hero -->
+      <section id="inicio" class="hero container page-section">
+        <div class="hero__visual reveal">
+          <div class="hero__portrait-frame">
+            <img
+              class="hero__portrait"
+              src="assets/images/Perfil.png"
+              alt="José Luis Escudero"
+              fetchpriority="high"
+              decoding="async"
+            />
           </div>
 
-          <div class="tech-item">
-            <i class="devicon-css3-plain colored"></i>
-            <span>CSS3</span>
-          </div>
-
-          <div class="tech-item">
-            <i class="devicon-javascript-plain colored"></i>
-            <span>JavaScript</span>
-          </div>
-
-          <div class="tech-item">
-            <i class="devicon-java-plain colored"></i>
-            <span>Java</span>
-          </div>
-
-          <div class="tech-item">
-            <i class="devicon-php-plain colored"></i>
-            <span>PHP</span>
-          </div>
-
-          <div class="tech-item">
-            <i class="devicon-python-plain colored"></i>
-            <span>Python</span>
-          </div>
+          <a
+            class="button button--primary hero__cv"
+            href="assets/pdf/CV_JoseLuisEscudero_FullStackJunior.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+            <span data-i18n="btn_cv">Descargar CV PDF</span>
+          </a>
         </div>
 
-        <!-- Frameworks -->
-        <h3 class="tech-category" data-i18n="frameworks_title">
-          Frameworks y Librerías
-        </h3>
-        <div class="tech-grid">
-          <div class="tech-item">
-            <i class="devicon-bootstrap-plain colored"></i>
-            <span>Bootstrap</span>
+        <div class="hero__content reveal">
+          <p class="eyebrow" data-i18n="hero_eyebrow">Full Stack Developer</p>
+          <h1>José Luis Escudero</h1>
+          <p class="hero__lead" data-i18n="hero_intro">
+            Desarrollo aplicaciones web completas centradas en lógica de negocio,
+            bases de datos e interfaces claras.
+          </p>
+
+          <div class="hero__strengths" aria-label="Especialidades">
+            <span>Java · Spring Boot</span>
+            <span>PHP · Laravel</span>
+            <span>SQL · Data Modeling</span>
+            <span>UX · Interfaces</span>
           </div>
 
-          <div class="tech-item">
-            <i class="devicon-react-original colored"></i>
-            <span>React</span>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#destacado" data-i18n="hero_cta_project">
+              Ver proyecto destacado
+            </a>
+            <a
+              class="button button--ghost"
+              href="https://linkedin.com/in/jose-luis-escudero-polo/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="hero_cta_contact"
+            >Contactar por LinkedIn</a>
           </div>
 
-          <div class="tech-item">
-            <i class="devicon-astro-plain"></i>
-            <span>Astro</span>
+          <div class="hero__social" aria-label="Redes profesionales">
+            <a href="https://github.com/megalol-dev" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="https://linkedin.com/in/jose-luis-escudero-polo/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.youtube.com/@Megalol-dev" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <i class="fab fa-youtube" aria-hidden="true"></i>
+            </a>
           </div>
 
-          <div class="tech-item">
-            <i class="devicon-nextjs-original-wordmark"></i>
-            <span>Next.js</span>
+          <details class="about-details">
+            <summary data-i18n="about_summary">Más sobre mí</summary>
+            <div class="about-details__content" data-i18n="profile_bio">
+              <p>
+                Soy desarrollador Full Stack y disfruto transformando necesidades
+                reales en aplicaciones web completas.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- Proyecto destacado -->
+      <section id="destacado" class="featured-section container page-section">
+        <header class="section-heading reveal">
+          <p class="eyebrow" data-i18n="featured_eyebrow">Proyecto destacado</p>
+          <h2 data-i18n="featured_title">Una tienda real, no solo una demostración</h2>
+          <p data-i18n="featured_intro">
+            El proyecto que mejor representa mi forma de trabajar de principio a fin.
+          </p>
+        </header>
+
+        <article class="featured-project project-entry reveal">
+          <div class="featured-project__media">
+            <img src="assets/images/appTienda.png" alt="UrbanSneakers, tienda online de zapatillas" decoding="async" />
           </div>
 
-          <div class="tech-item">
-            <i class="devicon-laravel-plain colored"></i>
-            <span>Laravel</span>
-          </div>
+          <div class="featured-project__content">
+            <span class="project-badge" data-i18n="featured_badge">Proyecto principal</span>
+            <h2 data-i18n="urban_title">UrbanSneakers</h2>
+            <p class="project-type" data-i18n="urban_type">E-commerce full stack · Pagos y gestión empresarial</p>
+            <p class="project-description" data-i18n="urban_desc">
+              Tienda online con catálogo, carrito persistente, pagos, pedidos,
+              facturas y panel interno por roles.
+            </p>
 
-          <div class="tech-item">
-            <i class="devicon-flask-original"></i>
-            <span>Flask</span>
-          </div>
+            <ul class="featured-project__highlights">
+              <li data-i18n="urban_highlight_1">Checkout real y webhooks firmados con Stripe</li>
+              <li data-i18n="urban_highlight_2">Seguridad por sesión, CSRF y permisos por rol</li>
+              <li data-i18n="urban_highlight_3">Pedidos, inventario, historial y facturación PDF</li>
+            </ul>
 
-          <div class="tech-item">
-            <i class="devicon-wordpress-plain colored"></i>
-            <span>WordPress</span>
+            <div class="project-tags">
+              <span>Java 21</span><span>Spring Boot</span><span>Spring Security</span>
+              <span>MariaDB</span><span>Stripe</span><span>JavaScript</span>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://youtu.be/QqcfqjKi-Zk?si=cXUm8dZhNKcsoi8h" class="button button--primary" data-i18n="btn_demo" target="_blank" rel="noopener noreferrer">Vídeo</a>
+              <a href="https://github.com/megalol-dev/tienda-deportivas-web" class="button button--ghost" data-i18n="btn_code" target="_blank" rel="noopener noreferrer">Código</a>
+            </div>
           </div>
+        </article>
+      </section>
+
+      <!-- Proyectos web -->
+      <section id="proyectos" class="projects-section container page-section">
+        <header class="section-heading reveal">
+          <h2 data-i18n="projects_title">Proyectos web</h2>
+          <p data-i18n="projects_intro">
+            Aplicaciones ordenadas por relevancia técnica y cercanía a problemas reales.
+          </p>
+        </header>
+
+        <div class="project-filters reveal" role="group" aria-label="Filtrar proyectos">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true" data-i18n="filter_all">Todos</button>
+          <button class="filter-button" type="button" data-filter="java" aria-pressed="false">Java / Spring</button>
+          <button class="filter-button" type="button" data-filter="php" aria-pressed="false">PHP / Laravel</button>
+          <button class="filter-button" type="button" data-filter="frontend" aria-pressed="false">Astro / TypeScript</button>
         </div>
 
-        <!-- Bases de datos -->
-        <h3 class="tech-category" data-i18n="databases_title">
-          Bases de Datos
-        </h3>
-        <div class="tech-grid">
-          <div class="tech-item">
-            <i class="devicon-mariadb-original colored"></i>
-            <span>MariaDB</span>
-          </div>
+        <div class="projects-grid">
+          <!-- UrbanSneakers -->
+          <article class="project-card project-entry reveal" data-category="java">
+            <div class="project__title"><h3 data-i18n="urban_title">UrbanSneakers</h3></div>
+            <div class="project-card__media">
+              <img src="assets/images/appTienda.png" alt="Captura de UrbanSneakers" loading="lazy" decoding="async" />
+            </div>
+            <div class="project-card__body">
+              <p class="project-type" data-i18n="urban_type">E-commerce full stack · Pagos y gestión empresarial</p>
+              <p class="project-description" data-i18n="urban_desc">Tienda online con el ciclo completo de compra y gestión.</p>
+              <div class="project-tags"><span>Java 21</span><span>Spring Boot</span><span>MariaDB</span><span>Stripe</span></div>
+              <div class="project-actions">
+                <a href="https://youtu.be/nl5yikE-lU8" class="button button--primary" data-i18n="btn_demo" target="_blank" rel="noopener noreferrer">Vídeo</a>
+                <a href="https://github.com/megalol-dev/tienda-deportivas-web" class="button button--ghost" data-i18n="btn_code" target="_blank" rel="noopener noreferrer">Código</a>
+              </div>
+            </div>
+          </article>
 
-          <div class="tech-item">
-            <i class="devicon-sqlite-plain colored"></i>
-            <span>SQLite</span>
-          </div>
+          <!-- GestorTrello -->
+          <article class="project-card project-entry reveal" data-category="php">
+            <div class="project__title"><h3 data-i18n="trello_title">GestorTrello</h3></div>
+            <div class="project-card__media">
+              <img src="assets/images/appTrello.png" alt="Captura de GestorTrello" loading="lazy" decoding="async" />
+            </div>
+            <div class="project-card__body">
+              <p class="project-type" data-i18n="trello_type">Gestión de proyectos full stack · Tableros Kanban</p>
+              <p class="project-description" data-i18n="trello_desc">Tableros, tareas, estadísticas y drag & drop con persistencia.</p>
+              <div class="project-tags"><span>Laravel</span><span>MySQL</span><span>Tailwind</span><span>JavaScript</span></div>
+              <div class="project-actions">
+                <a href="https://youtu.be/rmv4MwAxgQ8" class="button button--primary" data-i18n="btn_demo" target="_blank" rel="noopener noreferrer">Vídeo</a>
+                <a href="https://github.com/megalol-dev/gestor-trello" class="button button--ghost" data-i18n="btn_code" target="_blank" rel="noopener noreferrer">Código</a>
+              </div>
+            </div>
+          </article>
 
-          <div class="tech-item">
-            <i class="devicon-mongodb-plain colored"></i>
-            <span>MongoDB</span>
-          </div>
+          <!-- Restaurante Ñan Ñan -->
+          <article class="project-card project-entry reveal" data-category="php">
+            <div class="project__title"><h3 data-i18n="restaurant_title">Restaurante Ñan Ñan</h3></div>
+            <div class="project-card__media">
+              <img src="assets/images/appBar.png" alt="Captura de Restaurante Ñan Ñan" loading="lazy" decoding="async" />
+            </div>
+            <div class="project-card__body">
+              <p class="project-type" data-i18n="restaurant_type">Gestión de restaurante full stack · Reservas y operativa interna</p>
+              <p class="project-description" data-i18n="restaurant_desc">Reservas por aforo, carta, menús, reseñas y panel por roles.</p>
+              <div class="project-tags"><span>PHP 8</span><span>JavaScript</span><span>MariaDB</span><span>PDO</span></div>
+              <div class="project-actions">
+                <a href="https://youtu.be/ZGpqeSNQ4bs" class="button button--primary" data-i18n="btn_demo" target="_blank" rel="noopener noreferrer">Vídeo</a>
+                <a href="https://github.com/megalol-dev/restaurante-nan-nan" class="button button--ghost" data-i18n="btn_code" target="_blank" rel="noopener noreferrer">Código</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CineApp -->
+          <article class="project-card project-entry reveal" data-category="frontend">
+            <div class="project__title"><h3 data-i18n="cine_title">CineApp</h3></div>
+            <div class="project-card__media">
+              <img src="assets/images/appCine.png" alt="Captura de CineApp" loading="lazy" decoding="async" />
+            </div>
+            <div class="project-card__body">
+              <p class="project-type" data-i18n="cine_type">Aplicación de cine · Astro, TypeScript y API de TMDB</p>
+              <p class="project-description" data-i18n="cine_desc">Tendencias, búsquedas, fichas, tráilers y favoritos.</p>
+              <div class="project-tags"><span>Astro</span><span>TypeScript</span><span>TMDB</span><span>Netlify</span></div>
+              <div class="project-actions">
+                <a href="https://youtu.be/_rlHMVV9Ap4" class="button button--primary" data-i18n="btn_demo" target="_blank" rel="noopener noreferrer">Vídeo</a>
+                <a href="https://github.com/megalol-dev/cineapp" class="button button--ghost" data-i18n="btn_code" target="_blank" rel="noopener noreferrer">Código</a>
+                <a href="https://cineapp-jose.netlify.app" class="button button--secondary" data-i18n="btn_live" target="_blank" rel="noopener noreferrer">Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- EcoHome ERP -->
+          <article class="project-card project-entry reveal" data-category="php">
+            <div class="project__title"><h3 data-i18n="erp_title">EcoHome ERP</h3></div>
+            <div class="project-card__media">
+              <img src="assets/images/appEPR.png" alt="Captura de EcoHome ERP" loading="lazy" decoding="async" />
+            </div>
+            <div class="project-card__body">
+              <p class="project-type" data-i18n="erp_type">Sistema de gestión empresarial · ERP web</p>
+              <p class="project-description" data-i18n="erp_desc">Pedidos, stock, facturas, pagos, trabajadores e informes.</p>
+              <div class="project-tags"><span>PHP 8</span><span>SQLite</span><span>PDO</span><span>RBAC</span></div>
+              <div class="project-actions">
+                <a href="https://youtu.be/LtaSYJ0hnrg" class="button button--primary" data-i18n="btn_demo" target="_blank" rel="noopener noreferrer">Vídeo</a>
+                <a href="https://github.com/megalol-dev/ecohome-erp-prototype" class="button button--ghost" data-i18n="btn_code" target="_blank" rel="noopener noreferrer">Código</a>
+              </div>
+            </div>
+          </article>
         </div>
+      </section>
 
-        <!-- Herramientas -->
-        <h3 class="tech-category" data-i18n="tools_title">Herramientas</h3>
-        <div class="tech-grid">
-          <div class="tech-item">
-            <i class="devicon-git-plain colored"></i>
-            <span>Git</span>
+      <!-- Videojuegos desplegables -->
+      <section id="videojuegos" class="games-section container page-section">
+        <header class="section-heading reveal">
+          <p class="eyebrow" data-i18n="games_eyebrow">Laboratorio creativo</p>
+          <h2 class="section-title--games" data-i18n="games_title">Videojuegos</h2>
+          <p data-i18n="games_intro">Proyectos para practicar lógica, algoritmos, estados e interfaces interactivas.</p>
+        </header>
+
+        <details class="section-disclosure reveal">
+          <summary>
+            <span data-i18n="games_summary">Explorar proyectos de videojuegos</span>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </summary>
+          <div class="games-grid">
+            <article class="project-card project-entry">
+              <div class="project__title"><h3 data-i18n="engine_title">Motor de aventuras gráficas 2D</h3></div>
+              <div class="project-card__media">
+                <img src="assets/images/appMotorGrafico.png" alt="Motor de aventuras gráficas 2D" loading="lazy" decoding="async" />
+              </div>
+              <div class="project-card__body">
+                <p class="project-type" data-i18n="engine_type">Motor 2D · Editor visual · Herramienta de desarrollo</p>
+                <p class="project-description" data-i18n="engine_desc">Motor point-and-click con editor, Canvas, A* e inventarios.</p>
+                <div class="project-tags"><span>JavaScript</span><span>Canvas</span><span>A*</span><span>JSON</span></div>
+                <div class="project-actions">
+                  <a href="https://youtu.be/3K2VQ39qgwA?si=13djsaof3Edd22i-" class="button button--primary" data-i18n="btn_demo" target="_blank" rel="noopener noreferrer">Vídeo</a>
+                  <a href="https://github.com/megalol-dev/Motor_grafico/tree/main" class="button button--ghost" data-i18n="btn_code" target="_blank" rel="noopener noreferrer">Código</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card project-entry">
+              <div class="project__title"><h3 data-i18n="pacman_title">Comecocos</h3></div>
+              <div class="project-card__media">
+                <img src="assets/images/appCocos.png" alt="Comecocos en Java" loading="lazy" decoding="async" />
+              </div>
+              <div class="project-card__body">
+                <p class="project-type" data-i18n="pacman_type">Videojuego arcade · Aplicación de escritorio</p>
+                <p class="project-description" data-i18n="pacman_desc">Tres niveles, fantasmas por estados, audio y récord persistente.</p>
+                <div class="project-tags"><span>Java</span><span>Swing</span><span>AWT</span><span>Java I/O</span></div>
+                <div class="project-actions">
+                  <a href="https://youtu.be/3_o1sipq6Po" class="button button--primary" data-i18n="btn_demo" target="_blank" rel="noopener noreferrer">Vídeo</a>
+                  <a href="https://github.com/megalol-dev/comecocos-java" class="button button--ghost" data-i18n="btn_code" target="_blank" rel="noopener noreferrer">Código</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card project-entry">
+              <div class="project__title"><h3 data-i18n="guess_title">¿Quién es quién?</h3></div>
+              <div class="project-card__media">
+                <img src="assets/images/appQuien.png" alt="¿Quién es quién? en Java" loading="lazy" decoding="async" />
+              </div>
+              <div class="project-card__body">
+                <p class="project-type" data-i18n="guess_type">Juego de deducción · Aplicación de escritorio</p>
+                <p class="project-description" data-i18n="guess_desc">Preguntas limitadas, descartes automáticos y arquitectura orientada a objetos.</p>
+                <div class="project-tags"><span>Java</span><span>Swing</span><span>AWT</span><span>POO</span></div>
+                <div class="project-actions">
+                  <a href="https://youtu.be/YJ6Bn3XuExE" class="button button--primary" data-i18n="btn_demo" target="_blank" rel="noopener noreferrer">Vídeo</a>
+                  <a href="https://github.com/megalol-dev/quien-es-quien-java" class="button button--ghost" data-i18n="btn_code" target="_blank" rel="noopener noreferrer">Código</a>
+                </div>
+              </div>
+            </article>
           </div>
+        </details>
+      </section>
 
-          <div class="tech-item">
-            <i class="devicon-github-original"></i>
-            <span>GitHub</span>
-          </div>
+      <!-- Tecnologías desplegables -->
+      <section id="tecnologias" class="technologies-section container page-section">
+        <header class="section-heading reveal">
+          <p class="eyebrow" data-i18n="technologies_eyebrow">Stack técnico</p>
+          <h2 data-i18n="technologies_title">Tecnologías</h2>
+          <p data-i18n="technologies_intro">Herramientas respaldadas por los proyectos presentados.</p>
+        </header>
 
-          <div class="tech-item">
-            <i class="devicon-vscode-plain colored"></i>
-            <span>VS Code</span>
-          </div>
-
-          <div class="tech-item">
-            <i class="devicon-eclipse-plain colored"></i>
-            <span>Eclipse</span>
-          </div>
-        </div>
-      </article>
-      <!-- Sección de proyectos -->
-      <h2 class="section-title" data-i18n="projects_title">Proyectos</h2>
-
-      <!-- Proyecto 1 -------------------------------------------------------->
-      <article class="card card--project">
-        <div class="project">
-          <h2 class="card__title" data-i18n="proj1_title">
-            Web de Restaurante Interactiva
-          </h2>
-
-          <!-- Imagen + Información -->
-          <div class="project__content">
-            <div class="card__image-container">
-              <img
-                src="assets/images/appBar.png"
-                alt="Captura del proyecto GastroReservas"
-                class="card__image"
-              />
+        <details class="section-disclosure reveal">
+          <summary>
+            <span data-i18n="technologies_summary">Ver stack completo</span>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </summary>
+          <div class="technology-groups">
+            <div class="technology-group">
+              <h3 data-i18n="languages_title">Lenguajes</h3>
+              <div class="tech-grid">
+                <div class="tech-item"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+                <div class="tech-item"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+                <div class="tech-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                <div class="tech-item"><i class="devicon-typescript-plain colored"></i><span>TypeScript</span></div>
+                <div class="tech-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+                <div class="tech-item"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+                <div class="tech-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+              </div>
             </div>
 
-            <div class="project__info">
-              <p class="card__text" data-i18n="proj1_type">
-                Aplicación Web Completa · Proyecto Full Stack
-              </p>
-
-              <p class="card__text" data-i18n="proj1_desc">
-                Plataforma de gestión para restaurantes con reservas online,
-                administración de clientes, empleados, platos y reseñas.
-                Implementa autenticación y control de roles, panel de
-                administración y un CRUD completo conectado a MySQL,
-                desarrollada en PHP con arquitectura MVC.
-              </p>
-            </div>
-          </div>
-
-          <!-- Tags + Botones -->
-          <div class="project__footer">
-            <div class="project__tags">
-              <span class="project__tag">#HTML</span>
-              <span class="project__tag">#CSS</span>
-              <span class="project__tag">#JavaScript</span>
-              <span class="project__tag">#PHP</span>
-              <span class="project__tag">#MySQL</span>
-              <span class="project__tag">#MVC</span>
+            <div class="technology-group">
+              <h3 data-i18n="frameworks_title">Frameworks y librerías</h3>
+              <div class="tech-grid">
+                <div class="tech-item"><i class="devicon-spring-original colored"></i><span>Spring Boot</span></div>
+                <div class="tech-item"><i class="devicon-spring-original colored"></i><span>Spring Security</span></div>
+                <div class="tech-item"><i class="devicon-laravel-plain colored"></i><span>Laravel</span></div>
+                <div class="tech-item"><i class="devicon-astro-plain"></i><span>Astro</span></div>
+                <div class="tech-item"><i class="devicon-hibernate-plain colored"></i><span>JPA / Hibernate</span></div>
+                <div class="tech-item"><i class="devicon-tailwindcss-original colored"></i><span>Tailwind CSS</span></div>
+                <div class="tech-item"><i class="devicon-alpinejs-original colored"></i><span>Alpine.js</span></div>
+                <div class="tech-item"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
+                <div class="tech-item"><i class="devicon-react-original colored"></i><span>React</span></div>
+                <div class="tech-item"><i class="devicon-nextjs-original-wordmark"></i><span>Next.js</span></div>
+                <div class="tech-item"><i class="devicon-flask-original"></i><span>Flask</span></div>
+                <div class="tech-item"><i class="devicon-wordpress-plain colored"></i><span>WordPress</span></div>
+              </div>
             </div>
 
-            <div class="buttons">
-              <a
-                href="https://youtu.be/ZGpqeSNQ4bs"
-                class="button button--primary"
-                data-i18n="btn_demo"
-                target="_blank"
-              >
-                video
-              </a>
-
-              <a
-                href="https://github.com/megalol-dev/restaurante-nan-nan"
-                class="button button--ghost"
-                data-i18n="btn_code"
-                target="_blank"
-              >
-                code
-              </a>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Proyecto 2 -------------------------------------------------------->
-      <article class="card card--project">
-        <div class="project">
-          <h2 class="card__title" data-i18n="proj2_title">
-            Motor gráfico 2D - Editor visual - Herramienta de desarrollo
-          </h2>
-
-          <!-- Imagen + Información -->
-          <div class="project__content">
-            <div class="card__image-container">
-              <img
-                src="assets/images/appMotorGrafico.png"
-                alt="Motor de aventuras gráficas con editor visual"
-                class="card__image"
-              />
+            <div class="technology-group">
+              <h3 data-i18n="databases_title">Bases de datos</h3>
+              <div class="tech-grid">
+                <div class="tech-item"><i class="devicon-mysql-original colored"></i><span>MySQL</span></div>
+                <div class="tech-item"><i class="devicon-mariadb-original colored"></i><span>MariaDB</span></div>
+                <div class="tech-item"><i class="devicon-sqlite-plain colored"></i><span>SQLite</span></div>
+                <div class="tech-item"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
+              </div>
             </div>
 
-            <div class="project__info">
-              <p class="card__text" data-i18n="proj2_type">
-                Motor gráfico - Editor visual
-              </p>
-
-              <p class="card__text" data-i18n="proj2_desc">
-                Motor de aventuras gráficas 2D con editor visual integrado.
-                Permite crear, editar y jugar aventuras sin modificar el código
-                fuente, gestionando mapas, objetos y hotspots mediante archivos
-                JSON cargados dinámicamente. Su arquitectura reutilizable
-                facilita la creación de nuevos escenarios y el desarrollo de
-                futuras funcionalidades de forma escalable.
-              </p>
-            </div>
-          </div>
-
-          <!-- Tags + Botones -->
-          <div class="project__footer">
-            <div class="project__tags">
-              <span class="project__tag">#HTML</span>
-              <span class="project__tag">#CSS</span>
-              <span class="project__tag">#JS</span>
-              <span class="project__tag">#JSON</span>
-              <span class="project__tag">#GameEngine</span>
-              <span class="project__tag">#LevelEditor</span>
+            <div class="technology-group">
+              <h3 data-i18n="tools_title">Herramientas</h3>
+              <div class="tech-grid">
+                <div class="tech-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+                <div class="tech-item"><i class="devicon-github-original"></i><span>GitHub</span></div>
+                <div class="tech-item"><i class="devicon-vscode-plain colored"></i><span>VS Code</span></div>
+                <div class="tech-item"><i class="devicon-eclipse-plain colored"></i><span>Eclipse</span></div>
+                <div class="tech-item"><i class="devicon-maven-plain colored"></i><span>Maven</span></div>
+                <div class="tech-item"><i class="devicon-vitejs-plain colored"></i><span>Vite</span></div>
+                <div class="tech-item"><i class="devicon-netlify-plain colored"></i><span>Netlify</span></div>
+              </div>
             </div>
 
-            <div class="buttons">
-              <a
-                href="https://youtu.be/3K2VQ39qgwA?si=13djsaof3Edd22i-"
-                class="button button--primary"
-                target="_blank"
-              >
-                video
-              </a>
-
-              <a
-                href="https://github.com/megalol-dev/Motor_grafico/tree/main"
-                class="button button--ghost"
-                target="_blank"
-              >
-                code
-              </a>
+            <div class="technology-group">
+              <h3 data-i18n="integrations_title">APIs e integraciones</h3>
+              <div class="tech-grid">
+                <div class="tech-item"><i class="fas fa-exchange-alt"></i><span>REST APIs</span></div>
+                <div class="tech-item"><i class="fab fa-stripe"></i><span>Stripe</span></div>
+                <div class="tech-item"><i class="fas fa-film"></i><span>TMDB API</span></div>
+                <div class="tech-item"><i class="fas fa-paint-brush"></i><span>Canvas API</span></div>
+              </div>
             </div>
           </div>
-        </div>
-      </article>
-
-      <!-- Proyecto 3 ------------------------------------------------------->
-      <article class="card card--project">
-        <div class="project">
-          <h2 class="card__title" data-i18n="proj3_title">
-            CoreSys — ERP & CRM Management Platform
-          </h2>
-
-          <!-- Imagen + Información -->
-          <div class="project__content">
-            <div class="card__image-container">
-              <img
-                src="assets/images/appEPR.png"
-                alt="Captura del proyecto ERP - CRM"
-                class="card__image"
-              />
-            </div>
-
-            <div class="project__info">
-              <p class="card__text" data-i18n="proj3_type">
-                Aplicación Web Empresarial · Sistema ERP & CRM
-              </p>
-
-              <p class="card__text" data-i18n="proj3_desc">
-                Aplicación web empresarial para la gestión integral de procesos
-                internos. Incluye módulos de CRM, facturación, gestión de
-                clientes y usuarios, con control de roles, panel administrativo
-                y una arquitectura escalable orientada a entornos reales de
-                empresa.
-              </p>
-            </div>
-          </div>
-
-          <!-- Tags + Botones -->
-          <div class="project__footer">
-            <div class="project__tags">
-              <span class="project__tag">#HTML</span>
-              <span class="project__tag">#CSS</span>
-              <span class="project__tag">#JS</span>
-              <span class="project__tag">#PHP</span>
-              <span class="project__tag">#SQLite</span>
-            </div>
-
-            <div class="buttons">
-              <a
-                href="https://youtu.be/LtaSYJ0hnrg"
-                class="button button--primary"
-                data-i18n="btn_demo"
-                target="_blank"
-              >
-                video
-              </a>
-
-              <a
-                href="https://github.com/megalol-dev/ecohome-erp-prototype"
-                class="button button--ghost"
-                data-i18n="btn_code"
-                target="_blank"
-              >
-                code
-              </a>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Proyecto 4 -------------------------------------------------------->
-      <article class="card card--project">
-        <div class="project">
-          <h2 class="card__title" data-i18n="proj4_title">Netflix Clone</h2>
-
-          <!-- Imagen + Información -->
-          <div class="project__content">
-            <div class="card__image-container">
-              <img
-                src="assets/images/appCine.png"
-                alt="Captura del proyecto Netflix Clone"
-                class="card__image"
-              />
-            </div>
-
-            <div class="project__info">
-              <p class="card__text" data-i18n="proj4_type">
-                Aplicación Web · Consumo de API
-              </p>
-
-              <p class="card__text" data-i18n="proj4_desc">
-                Aplicación web inspirada en Netflix que consume una API externa
-                para mostrar películas y series de forma dinámica. Incluye
-                búsquedas, fichas de contenido y una interfaz responsive
-                centrada en la experiencia de usuario.
-              </p>
-            </div>
-          </div>
-
-          <!-- Tags + Botones -->
-          <div class="project__footer">
-            <div class="project__tags">
-              <span class="project__tag">#HTML</span>
-              <span class="project__tag">#CSS</span>
-              <span class="project__tag">#JavaScript</span>
-              <span class="project__tag">#Astro</span>
-              <span class="project__tag">#API</span>
-            </div>
-
-            <div class="buttons">
-              <a
-                href="https://youtu.be/_rlHMVV9Ap4"
-                class="button button--primary"
-                data-i18n="btn_demo"
-                target="_blank"
-              >
-                video
-              </a>
-
-              <a
-                href="https://github.com/megalol-dev/cineapp"
-                class="button button--ghost"
-                data-i18n="btn_code"
-                target="_blank"
-              >
-                code
-              </a>
-
-              <a
-                href="https://cineapp-jose.netlify.app"
-                class="button button--secondary"
-                target="_blank"
-              >
-                Live Demo
-              </a>
-            </div>
-          </div>
-        </div>
-      </article>
-
-
-      <!-- Proyecto 5 -------------------------------------------------------->
-      <article class="card card--project">
-        <div class="project">
-          <h2 class="card__title" data-i18n="proj5_title">
-            Gestor de tareas Trello
-          </h2>
-
-          <!-- Imagen + Información -->
-          <div class="project__content">
-            <div class="card__image-container">
-              <img
-                src="assets/images/appTrello.png"
-                alt="Imagen del proyecto Gestor de tareas"
-                class="card__image"
-              />
-            </div>
-
-            <div class="project__info">
-              <p class="card__text" data-i18n="proj5_type">
-                Aplicación Web Full Stack
-              </p>
-
-              <p class="card__text" data-i18n="proj5_desc">
-                Aplicación web de gestión de tareas inspirada en Trello. Incluye
-                autenticación de usuarios, recuperación de contraseñas, gestión
-                de roles y tableros colaborativos con tarjetas arrastrables
-                mediante Drag & Drop, ofreciendo una experiencia dinámica e
-                intuitiva.
-              </p>
-            </div>
-          </div>
-
-          <!-- Tags + Botones -->
-          <div class="project__footer">
-            <div class="project__tags">
-              <span class="project__tag">#HTML</span>
-              <span class="project__tag">#CSS</span>
-              <span class="project__tag">#JS</span>
-              <span class="project__tag">#Laravel</span>
-              <span class="project__tag">#PHP</span>
-              <span class="project__tag">#MariaDB</span>
-            </div>
-
-            <div class="buttons">
-              <a
-                href="https://youtu.be/rmv4MwAxgQ8"
-                class="button button--primary"
-                data-i18n="btn_demo"
-                target="_blank"
-              >
-                video
-              </a>
-
-              <a
-                href="https://github.com/megalol-dev/gestor-trello"
-                class="button button--ghost"
-                data-i18n="btn_code"
-                target="_blank"
-              >
-                code
-              </a>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Proyecto 6 -------------------------------------------------------->
-      <article class="card card--project">
-        <div class="project">
-          <h2 class="card__title" data-i18n="proj6_title">
-            Tienda Online deportivas
-          </h2>
-
-          <!-- Imagen + Información -->
-          <div class="project__content">
-            <div class="card__image-container">
-              <img
-                src="assets/images/appTienda.png"
-                alt="Captura del proyecto Tienda Online Deportivas"
-                class="card__image"
-              />
-            </div>
-
-            <div class="project__info">
-              <p class="card__text" data-i18n="proj6_type">
-                Aplicación web – Visualización dinámica de productos y pago
-                simulado
-              </p>
-
-              <p class="card__text" data-i18n="proj6_desc">
-                Prototipo de tienda online para comprar deportivas. Incluye un
-                sistema para ver deportivas de distintos colores en tiempo real.
-                Los datos de las deportivas se almacenan en un archivo JSON y es
-                escalable para añadir más artículos en el futuro.
-              </p>
-            </div>
-          </div>
-
-          <!-- Tags + Botones -->
-          <div class="project__footer">
-            <div class="project__tags">
-              <span class="project__tag">#HTML</span>
-              <span class="project__tag">#CSS</span>
-              <span class="project__tag">#JS</span>
-              <span class="project__tag">#JSON</span>
-            </div>
-
-            <div class="buttons">
-              <a
-                href="https://youtu.be/nl5yikE-lU8"
-                class="button button--primary"
-                data-i18n="btn_demo"
-                target="_blank"
-              >
-                video
-              </a>
-
-              <a
-                href="https://github.com/megalol-dev/tienda-deportivas-web"
-                class="button button--ghost"
-                data-i18n="btn_code"
-                target="_blank"
-              >
-                code
-              </a>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Proyecto 7 -------------------------------------------------------->
-      <article class="card card--project">
-        <div class="project">
-          <h2 class="card__title" data-i18n="proj7_title">Comecocos</h2>
-
-          <!-- Imagen + Información -->
-          <div class="project__content">
-            <div class="card__image-container">
-              <img
-                src="assets/images/appCocos.png"
-                alt="Imagen del proyecto Comecocos"
-                class="card__image"
-              />
-            </div>
-
-            <div class="project__info">
-              <p class="card__text" data-i18n="proj7_type">
-                Videojuego · Aplicación de escritorio
-              </p>
-
-              <p class="card__text" data-i18n="proj7_desc">
-                Recreación del clásico Pac-Man desarrollada en Java y Swing.
-                Incluye múltiples niveles, sistema de puntuación, enemigos con
-                comportamientos diferenciados, transiciones de fase, efectos de
-                sonido y una interfaz gráfica completamente personalizada.
-              </p>
-            </div>
-          </div>
-
-          <!-- Tags + Botones -->
-          <div class="project__footer">
-            <div class="project__tags">
-              <span class="project__tag">#Java</span>
-              <span class="project__tag">#Swing</span>
-              <span class="project__tag">#Game</span>
-              <span class="project__tag">#Desktop</span>
-            </div>
-
-            <div class="buttons">
-              <a
-                href="https://youtu.be/3_o1sipq6Po"
-                class="button button--primary"
-                data-i18n="btn_demo"
-                target="_blank"
-              >
-                video
-              </a>
-
-              <a
-                href="https://github.com/megalol-dev/comecocos-java"
-                class="button button--ghost"
-                data-i18n="btn_code"
-                target="_blank"
-              >
-                code
-              </a>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Proyecto 8 -------------------------------------------------------->
-      <article class="card card--project">
-        <div class="project">
-          <h2 class="card__title" data-i18n="proj8_title">¿Quién es quién?</h2>
-
-          <!-- Imagen + Información -->
-          <div class="project__content">
-            <div class="card__image-container">
-              <img
-                src="assets/images/appQuien.png"
-                alt="Imagen del proyecto ¿Quién es quién?"
-                class="card__image"
-              />
-            </div>
-
-            <div class="project__info">
-              <p class="card__text" data-i18n="proj8_type">
-                Videojuego · Aplicación de escritorio
-              </p>
-
-              <p class="card__text" data-i18n="proj8_desc">
-                Versión digital del clásico juego de deducción desarrollada en
-                Java y Swing. Incluye interfaz gráfica personalizada, personajes
-                diseñados mediante IA, sistema de preguntas dinámico y una
-                arquitectura modular centrada en la lógica de juego y la
-                experiencia de usuario.
-              </p>
-            </div>
-          </div>
-
-          <!-- Tags + Botones -->
-          <div class="project__footer">
-            <div class="project__tags">
-              <span class="project__tag">#Java</span>
-              <span class="project__tag">#Swing</span>
-              <span class="project__tag">#Game</span>
-              <span class="project__tag">#Desktop</span>
-            </div>
-
-            <div class="buttons">
-              <a
-                href="https://youtu.be/YJ6Bn3XuExE"
-                class="button button--primary"
-                data-i18n="btn_demo"
-                target="_blank"
-              >
-                video
-              </a>
-
-              <a
-                href="https://github.com/megalol-dev/quien-es-quien-java"
-                class="button button--ghost"
-                data-i18n="btn_code"
-                target="_blank"
-              >
-                code
-              </a>
-            </div>
-          </div>
-        </div>
-      </article>
+        </details>
+      </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="site-footer__content container">
+        <div>
+          <a class="site-footer__brand" href="#inicio">José Luis Escudero</a>
+          <p data-i18n="footer_text">Aplicaciones con lógica, datos e interfaces pensadas para personas.</p>
+        </div>
+        <div class="site-footer__links">
+          <a href="https://github.com/megalol-dev" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/jose-luis-escudero-polo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.youtube.com/@Megalol-dev" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="assets/pdf/CV_JoseLuisEscudero_FullStackJunior.pdf" target="_blank" rel="noopener noreferrer" data-i18n="nav_cv">Descargar CV PDF</a>
+        </div>
+        <p class="site-footer__copy">© <span id="current-year"></span> José Luis Escudero</p>
+      </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" type="button" aria-label="Volver arriba" data-i18n-aria-label="aria_back_top">
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
 
     <script src="js/scripts.js"></script>
   </body>

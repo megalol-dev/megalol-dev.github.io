@@ -1,29 +1,54 @@
-// Variables generales
+/* ============================
+   REFERENCIAS GENERALES
+============================ */
 
-/* Variables para tema, icono y texto */
+const body = document.body;
+const rootStyles = document.documentElement.style;
 const toggleTheme = document.getElementById("toggle-theme");
 const toggleIcon = document.getElementById("toggle-icon");
 const toggleText = document.getElementById("toggle-text");
-
-/* Variable para los colores */
 const toggleColor = document.getElementById("toggle-colors");
-
-// Variable de todos los estilos del CSS (Styles)
-const rootStyles = document.documentElement.style;
-
-/* Variables para controlar los idiomas (click en el icono del idioma) */
 const flagsElement = document.getElementById("flags");
-
-/* ============================
-   Estado global de idioma
-   ============================ */
+const navToggle = document.getElementById("nav-toggle");
+const navLinks = document.getElementById("nav-links");
+const settings = document.querySelector(".settings");
+const backToTop = document.getElementById("back-to-top");
 
 window.CURRENT_LANG = localStorage.getItem("lang") || document.documentElement.lang || "es";
 window.I18N_TEXTS = {};
 
 /* ============================
-   Multi-idioma (ES / EN)
-   ============================ */
+   IDIOMA
+============================ */
+
+const applyTranslations = (texts) => {
+    Object.entries(texts).forEach(([key, value]) => {
+        document.querySelectorAll(`[data-i18n="${key}"]`).forEach((node) => {
+            node.innerHTML = value;
+        });
+    });
+
+    document.querySelectorAll("[data-i18n-aria-label]").forEach((node) => {
+        const key = node.dataset.i18nAriaLabel;
+        if (texts[key]) node.setAttribute("aria-label", texts[key]);
+    });
+};
+
+const updateNavToggleLabel = () => {
+    const isOpen = navLinks.classList.contains("is-open");
+    const key = isOpen ? "aria_nav_close" : "aria_nav_open";
+    navToggle.setAttribute("aria-label", window.I18N_TEXTS[key] || (isOpen ? "Close menu" : "Open menu"));
+    navToggle.dataset.i18nAriaLabel = key;
+};
+
+const updateThemeControl = () => {
+    const isDark = body.classList.contains("dark");
+    const textKey = isDark ? "theme_light" : "theme_dark";
+
+    toggleIcon.src = isDark ? "assets/icons/sun.svg" : "assets/icons/moon.svg";
+    toggleText.textContent = window.I18N_TEXTS[textKey] ||
+        (isDark ? "Light mode" : "Dark mode");
+};
 
 const changeLanguage = async (language) => {
     try {
@@ -32,81 +57,186 @@ const changeLanguage = async (language) => {
 
         window.CURRENT_LANG = language;
         window.I18N_TEXTS = texts;
-
         applyTranslations(texts);
-        localStorage.setItem("lang", language);
+        updateThemeControl();
+        updateNavToggleLabel();
+
         document.documentElement.lang = language;
-    } catch (err) {
-        console.error("Error cargando idioma:", language, err);
+        localStorage.setItem("lang", language);
+
+        document.querySelectorAll("[data-language]").forEach((flag) => {
+            flag.classList.toggle("is-active", flag.dataset.language === language);
+        });
+
+    } catch (error) {
+        console.error("Error cargando idioma:", language, error);
     }
 };
 
-// Aplica el diccionario recibido a los elementos marcados con data-i18n
-const applyTranslations = (texts) => {
-    Object.keys(texts).forEach((key) => {
-        const nodes = document.querySelectorAll(`[data-i18n="${key}"]`);
-        nodes.forEach((node) => {
-            node.innerHTML = texts[key];
-        });
-    });
-};
-
-// Método para cambiar de idioma (clic en banderas)
-flagsElement.addEventListener("click", (e) => {
-    const targetFlag = e.target.closest("[data-language]");
-    if (!targetFlag) return;
-
-    const lang = targetFlag.dataset.language;
-    if (!lang) return;
-
-    changeLanguage(lang);
-});
-
-// Idioma por defecto al cargar
-window.addEventListener("DOMContentLoaded", () => {
-    const saved = localStorage.getItem("lang") || document.documentElement.lang || "es";
-    changeLanguage(saved);
+flagsElement.addEventListener("click", (event) => {
+    const flag = event.target.closest("[data-language]");
+    if (flag?.dataset.language) changeLanguage(flag.dataset.language);
 });
 
 /* ============================
-   Tema oscuro / claro
-   ============================ */
+   TEMA Y COLOR PRINCIPAL
+============================ */
+
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) body.classList.toggle("dark", savedTheme === "dark");
+
+const savedColor = localStorage.getItem("primary-color");
+if (savedColor) rootStyles.setProperty("--primary-color", savedColor);
 
 toggleTheme.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-
-    if (toggleIcon.src.includes("moon.svg")) {
-        toggleIcon.src = "assets/icons/sun.svg";
-        toggleText.textContent =
-            window.I18N_TEXTS?.theme_light || "Light mode";
-    } else {
-        toggleIcon.src = "assets/icons/moon.svg";
-        toggleText.textContent =
-            window.I18N_TEXTS?.theme_dark || "Dark mode";
-    }
+    body.classList.toggle("dark");
+    localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
+    updateThemeControl();
 });
 
-/* ============================
-   Color primario (paleta)
-   ============================ */
-
-toggleColor.addEventListener("click", (e) => {
-    const colorItem = e.target.closest("[data-color]");
+toggleColor.addEventListener("click", (event) => {
+    const colorItem = event.target.closest("[data-color]");
     if (!colorItem) return;
 
     rootStyles.setProperty("--primary-color", colorItem.dataset.color);
+    localStorage.setItem("primary-color", colorItem.dataset.color);
 });
 
 /* ============================
-   Proyecto privado
-   ============================ */
+   NAVEGACION RESPONSIVE
+============================ */
 
-function showPrivateProjectMessage() {
-    const modal = document.getElementById("private-modal");
-    modal.classList.remove("hidden");
+const closeMobileMenu = () => {
+    navLinks.classList.remove("is-open");
+    navToggle.setAttribute("aria-expanded", "false");
+    navToggle.querySelector("i").className = "fas fa-bars";
+    updateNavToggleLabel();
+};
+
+navToggle.addEventListener("click", () => {
+    const willOpen = !navLinks.classList.contains("is-open");
+    navLinks.classList.toggle("is-open", willOpen);
+    navToggle.setAttribute("aria-expanded", String(willOpen));
+    navToggle.querySelector("i").className = willOpen ? "fas fa-times" : "fas fa-bars";
+    updateNavToggleLabel();
+});
+
+navLinks.addEventListener("click", (event) => {
+    if (event.target.closest("a")) closeMobileMenu();
+});
+
+document.addEventListener("click", (event) => {
+    if (!event.target.closest(".site-nav") && navLinks.classList.contains("is-open")) {
+        closeMobileMenu();
+    }
+
+    if (settings.open && !event.target.closest(".settings")) {
+        settings.removeAttribute("open");
+    }
+});
+
+/* Seccion activa en la navegacion */
+const navSectionTargets = ["inicio", "destacado", "proyectos", "videojuegos", "tecnologias"];
+const navSections = navSectionTargets
+    .map((id) => document.getElementById(id))
+    .filter(Boolean);
+
+const updateActiveNav = (sectionId) => {
+    const targetId = sectionId === "destacado" ? "proyectos" : sectionId;
+    document.querySelectorAll(".nav-link[href^='#']").forEach((link) => {
+        link.classList.toggle("is-active", link.getAttribute("href") === `#${targetId}`);
+    });
+};
+
+const sectionObserver = new IntersectionObserver((entries) => {
+    const visibleEntries = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+    if (visibleEntries[0]) updateActiveNav(visibleEntries[0].target.id);
+}, {
+    rootMargin: "-25% 0px -60% 0px",
+    threshold: [0, .15, .35],
+});
+
+navSections.forEach((section) => sectionObserver.observe(section));
+
+/* ============================
+   FILTROS DE PROYECTOS
+============================ */
+
+const filterButtons = document.querySelectorAll(".filter-button");
+const filterableProjects = document.querySelectorAll("#proyectos .project-card");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+const filterProjects = (filter) => {
+    filterableProjects.forEach((card) => {
+        const shouldShow = filter === "all" || card.dataset.category === filter;
+        card.classList.toggle("is-filtered-out", !shouldShow);
+
+        if (shouldShow && !reduceMotion.matches) {
+            card.animate(
+                [
+                    { opacity: 0, transform: "translateY(12px) scale(.98)" },
+                    { opacity: 1, transform: "translateY(0) scale(1)" },
+                ],
+                { duration: 360, easing: "ease-out" },
+            );
+        }
+    });
+};
+
+document.querySelector(".project-filters").addEventListener("click", (event) => {
+    const button = event.target.closest("[data-filter]");
+    if (!button) return;
+
+    filterButtons.forEach((item) => {
+        const isActive = item === button;
+        item.classList.toggle("is-active", isActive);
+        item.setAttribute("aria-pressed", String(isActive));
+    });
+
+    filterProjects(button.dataset.filter);
+});
+
+/* ============================
+   ANIMACIONES AL HACER SCROLL
+============================ */
+
+const revealElements = document.querySelectorAll(".reveal");
+
+if (reduceMotion.matches || !("IntersectionObserver" in window)) {
+    revealElements.forEach((element) => element.classList.add("is-visible"));
+} else {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+        });
+    }, { threshold: .12, rootMargin: "0px 0px -40px" });
+
+    revealElements.forEach((element, index) => {
+        element.style.transitionDelay = `${Math.min(index % 4, 3) * 70}ms`;
+        revealObserver.observe(element);
+    });
 }
 
-function closePrivateModal() {
-    const modal = document.getElementById("private-modal");
-    modal.classList.add("hidden");
-}
+/* ============================
+   UTILIDADES DE PAGINA
+============================ */
+
+window.addEventListener("scroll", () => {
+    backToTop.classList.toggle("is-visible", window.scrollY > 650);
+}, { passive: true });
+
+backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: reduceMotion.matches ? "auto" : "smooth" });
+});
+
+document.getElementById("current-year").textContent = new Date().getFullYear();
+
+window.addEventListener("DOMContentLoaded", () => {
+    updateThemeControl();
+    changeLanguage(window.CURRENT_LANG);
+});
