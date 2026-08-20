@@ -60,11 +60,11 @@ export default {
     "The project that best represents how I work from end to end.",
   featured_badge: "Main project",
   projects_intro:
-    "Applications ordered by technical relevance and closeness to real-world problems.",
+    "Complete applications designed to evolve and scale with each client's needs.",
   filter_all: "All",
   games_eyebrow: "Creative lab",
   games_intro:
-    "Projects built to practise logic, algorithms, state management, and interactive interfaces.",
+    "Projects for practising logic, algorithms, state management, and interactive interfaces, including a graphic engine for building your own game without writing code.",
   games_summary: "Explore video game projects",
   technologies_eyebrow: "Technical stack",
   technologies_intro: "Tools supported by the projects presented here.",
@@ -76,6 +76,8 @@ export default {
   urban_type: "Full stack e-commerce · Payments and business operations",
   urban_desc:
     "A sneaker store covering the complete purchasing journey: variant-based catalog, persistent cart, registration, secure Stripe checkout, orders, PDF invoices, and an internal role-based management panel. The backend uses Java 21, Spring Boot, Spring Security, JPA/Hibernate, and MariaDB; the frontend is built with HTML, CSS, and JavaScript.",
+  urban_card_desc:
+    "Sneaker e-commerce with a variant catalog, persistent cart, Stripe checkout, orders, PDF invoices, and a role-based back office. Built with Java 21, Spring Boot, Spring Security, and MariaDB.",
   urban_highlight_1: "Real checkout and signed Stripe webhooks",
   urban_highlight_2: "Session security, CSRF protection, and role-based permissions",
   urban_highlight_3: "Orders, inventory, history, and PDF invoicing",
@@ -84,42 +86,42 @@ export default {
   trello_title: "GestorTrello",
   trello_type: "Full stack project management · Kanban boards",
   trello_desc:
-    "A productivity application with user accounts, password recovery, private boards, tasks, and progress analytics. It is built with Laravel 13, PHP, Blade, Eloquent, and MySQL; Tailwind CSS, Alpine.js, and JavaScript provide a responsive interface and drag-and-drop interactions with automatic persistence.",
+    "Project manager with user accounts, private boards, tasks, analytics, and persistent drag-and-drop. Built with Laravel 13, MySQL, Tailwind CSS, Alpine.js, and JavaScript.",
 
   // Restaurante Ñan Ñan
   restaurant_title: "Restaurante Ñan Ñan",
   restaurant_type: "Full stack restaurant management · Reservations and operations",
   restaurant_desc:
-    "A platform for browsing the menu, daily specials, and reviews, as well as booking tables with automatic capacity-based allocation. It includes private customer and staff areas, roles, dish and employee CRUD operations, and review moderation using PHP 8, JavaScript, sessions, a JSON API, PDO, and MariaDB.",
+    "Restaurant platform with menus, reviews, and capacity-based bookings. It includes private areas, role management, and dish and employee CRUD built with PHP 8, JavaScript, PDO, and MariaDB.",
 
   // CineApp
   cine_title: "CineApp",
   cine_type: "Movie discovery app · Astro, TypeScript, and the TMDB API",
   cine_desc:
-    "A Netlify-deployed application for discovering trending movies, searching by title, browsing 19 genres, and viewing details, trailers, and recommendations. Astro and TypeScript render TMDB data, while localStorage keeps a personal watchlist inside a responsive interface.",
+    "Movie discovery app with search, detail pages, trailers, recommendations, and favorites. Built with Astro, TypeScript, and TMDB, using localStorage and deployed on Netlify.",
 
   // EcoHome ERP
   erp_title: "EcoHome ERP",
   erp_type: "Business management system · Web ERP",
   erp_desc:
-    "A functional ERP that centralizes material orders, inventory, invoices, payments, employees, and reporting with permissions for five professional roles. It uses PHP 8, sessions, and PDO with SQLite, including transactions for stock operations and a server-rendered web interface.",
+    "Web ERP for orders, inventory, invoices, payments, employees, and reports across five professional roles. Built with PHP 8, PDO, and SQLite, including transactions for stock control.",
 
   // 2D graphic adventure engine
   engine_title: "2D Graphic Adventure Engine",
   engine_type: "2D engine · Visual editor · Development tool",
   engine_desc:
-    "A point-and-click engine with a visual editor for creating maps, collisions, objects, hotspots, and doors without changing source code. It implements Canvas rendering and camera control, A* movement, inventories, and reusable JSON data using JavaScript ES6, the Fetch API, and Web Storage.",
+    "Point-and-click engine with a visual editor for maps, collisions, objects, and doors. It features Canvas rendering, a camera, A* movement, inventories, and JSON data with JavaScript ES6.",
 
   // Pac-Man
   pacman_title: "Pac-Man-style Arcade",
   pacman_type: "Arcade video game · Desktop application",
   pacman_desc:
-    "A Pac-Man recreation featuring three levels, collisions, lives, power-ups, and ghosts that switch between chase, flee, and return-to-base states. Built with Java, Swing, and AWT, it includes sprites, audio, and a persistent high-score system stored through Java I/O.",
+    "Pac-Man recreation with three levels, lives, power-ups, and ghosts with multiple states. Built with Java, Swing, and AWT, including sprites, audio, and a persistent score through Java I/O.",
 
   // Guess Who?
   guess_title: "Guess Who?",
   guess_type: "Deduction game · Desktop application",
   guess_desc:
-    "A digital version of the board game with 24 characters, a randomly selected hidden character, limited questions, automatic elimination, and a final guessing mode. It is built with Java, Swing, and AWT, applying object-oriented programming, event handling, and separation between interface, data, and game logic.",
+    "Digital board game with 24 characters, limited questions, automatic elimination, and a final guess. Built with Java, Swing, and AWT using OOP and clear separation of interface, data, and game logic.",
 
 };

@@ -725,13 +725,6 @@ body.dark .setting-row img {
     text-align: center;
 }
 
-.project-card .project-description {
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
-}
-
 .project-card .project-tags {
     margin-top: 1.1rem;
 }
@@ -752,6 +745,10 @@ body.dark .setting-row img {
 .games-section,
 .technologies-section {
     border-top: 1px solid var(--border-color);
+}
+
+.games-section .section-heading {
+    max-width: 100%;
 }
 
 .section-disclosure {
@@ -899,6 +896,7 @@ body.dark .setting-row img {
 .back-to-top {
     position: fixed;
     z-index: 50;
+    isolation: isolate;
     right: 1.25rem;
     bottom: 1.25rem;
     display: grid;
@@ -917,10 +915,26 @@ body.dark .setting-row img {
     cursor: pointer;
 }
 
+.back-to-top::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: color-mix(in srgb, var(--primary-color) 58%, transparent);
+    border-radius: inherit;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.65);
+    content: "";
+}
+
 .back-to-top.is-visible {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
+}
+
+.back-to-top.is-visible::before {
+    animation: back-to-top-aura 3s ease-out infinite;
 }
 
 /* ============================
@@ -952,6 +966,23 @@ body.dark .setting-row img {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes back-to-top-aura {
+    0% {
+        opacity: .65;
+        transform: scale(.65);
+    }
+
+    42% {
+        opacity: 0;
+        transform: scale(1.9);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.9);
     }
 }
 

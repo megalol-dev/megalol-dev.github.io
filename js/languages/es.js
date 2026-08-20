@@ -60,11 +60,11 @@ export default {
     "El proyecto que mejor representa mi forma de trabajar de principio a fin.",
   featured_badge: "Proyecto principal",
   projects_intro:
-    "Aplicaciones ordenadas por relevancia técnica y cercanía a problemas reales.",
+    "Aplicaciones completas, preparadas para evolucionar y escalar según las necesidades de cada cliente.",
   filter_all: "Todos",
   games_eyebrow: "Laboratorio creativo",
   games_intro:
-    "Proyectos para practicar lógica, algoritmos, estados e interfaces interactivas.",
+    "Proyectos para practicar lógica, algoritmos, gestión de estados e interfaces interactivas, incluido un motor gráfico para construir tu propio juego sin escribir código.",
   games_summary: "Explorar proyectos de videojuegos",
   technologies_eyebrow: "Stack técnico",
   technologies_intro: "Herramientas respaldadas por los proyectos presentados.",
@@ -76,6 +76,8 @@ export default {
   urban_type: "E-commerce full stack · Pagos y gestión empresarial",
   urban_desc:
     "Tienda online de zapatillas que cubre el ciclo completo de compra: catálogo por variantes, carrito persistente, registro, checkout seguro con Stripe, pedidos, facturas PDF y panel interno con permisos por rol. El backend utiliza Java 21, Spring Boot, Spring Security, JPA/Hibernate y MariaDB; el frontend está desarrollado con HTML, CSS y JavaScript.",
+  urban_card_desc:
+    "E-commerce de zapatillas con catálogo por variantes, carrito persistente, checkout con Stripe, pedidos, facturas PDF y panel interno por roles. Desarrollado con Java 21, Spring Boot y MariaDB.",
   urban_highlight_1: "Checkout real y webhooks firmados con Stripe",
   urban_highlight_2: "Seguridad por sesión, CSRF y permisos por rol",
   urban_highlight_3: "Pedidos, inventario, historial y facturación PDF",
@@ -84,42 +86,42 @@ export default {
   trello_title: "GestorTrello",
   trello_type: "Gestión de proyectos full stack · Tableros Kanban",
   trello_desc:
-    "Aplicación de productividad con cuentas de usuario, recuperación de contraseña, tableros privados, tareas y estadísticas de progreso. Está construida con Laravel 13, PHP, Blade, Eloquent y MySQL; Tailwind CSS, Alpine.js y JavaScript aportan una interfaz responsive y drag & drop con persistencia automática.",
+    "Gestor de proyectos con cuentas de usuario, tableros privados, tareas, estadísticas y drag & drop persistente. Desarrollado con Laravel 13, MySQL, Tailwind CSS, Alpine.js y JavaScript.",
 
   // Restaurante Ñan Ñan
   restaurant_title: "Restaurante Ñan Ñan",
   restaurant_type: "Gestión de restaurante full stack · Reservas y operativa interna",
   restaurant_desc:
-    "Plataforma para consultar carta, menú diario y reseñas, además de reservar mesas con asignación automática según aforo. Incluye áreas privadas para clientes y personal, roles, CRUD de platos y empleados y moderación de reseñas mediante PHP 8, JavaScript, sesiones, API JSON, PDO y MariaDB.",
+    "Plataforma de restaurante con carta, menús, reseñas y reservas según aforo. Incluye áreas privadas, gestión por roles y CRUD de platos y empleados con PHP 8, JavaScript, PDO y MariaDB.",
 
   // CineApp
   cine_title: "CineApp",
   cine_type: "Aplicación de cine · Astro, TypeScript y API de TMDB",
   cine_desc:
-    "Aplicación desplegada en Netlify para descubrir películas en tendencia, buscar por título, explorar 19 géneros y consultar fichas, tráilers y recomendaciones. Astro y TypeScript renderizan los datos de TMDB, mientras que localStorage mantiene una lista personal de favoritos en una interfaz responsive.",
+    "Aplicación para descubrir películas, buscar títulos y consultar fichas, tráilers y recomendaciones. Creada con Astro, TypeScript y TMDB, con favoritos en localStorage y despliegue en Netlify.",
 
   // EcoHome ERP
   erp_title: "EcoHome ERP",
   erp_type: "Sistema de gestión empresarial · ERP web",
   erp_desc:
-    "ERP funcional que centraliza pedidos de materiales, inventario, facturas, pagos, trabajadores e informes con permisos para cinco perfiles profesionales. Utiliza PHP 8, sesiones y PDO sobre SQLite, con transacciones para operaciones de stock y una interfaz web renderizada en servidor.",
+    "ERP web para gestionar pedidos, stock, facturas, pagos, empleados e informes con cinco perfiles profesionales. Utiliza PHP 8, PDO y SQLite, incluyendo transacciones para controlar el inventario.",
 
   // Motor gráfico 2D
   engine_title: "Motor de aventuras gráficas 2D",
   engine_type: "Motor 2D · Editor visual · Herramienta de desarrollo",
   engine_desc:
-    "Motor point-and-click con editor visual para crear mapas, colisiones, objetos, hotspots y puertas sin modificar el código. Implementa renderizado y cámara con Canvas, movimiento mediante A*, inventarios y datos reutilizables en JSON usando JavaScript ES6, Fetch API y Web Storage.",
+    "Motor point-and-click con editor visual de mapas, colisiones, objetos y puertas. Incluye Canvas, cámara, movimiento A*, inventarios y datos JSON con JavaScript ES6, Fetch API y Web Storage.",
 
   // Comecocos
   pacman_title: "Comecocos",
   pacman_type: "Videojuego arcade · Aplicación de escritorio",
   pacman_desc:
-    "Recreación de Pac-Man con tres niveles, colisiones, vidas, power-ups y fantasmas que alternan entre persecución, huida y retorno a la base. Desarrollado con Java, Swing y AWT, incorpora sprites, audio y un récord persistente guardado mediante Java I/O.",
+    "Recreación de Pac-Man con tres niveles, vidas, power-ups y fantasmas con distintos estados. Desarrollada con Java, Swing y AWT, incluye sprites, audio y récord persistente mediante Java I/O.",
 
   // ¿Quién es quién?
   guess_title: "¿Quién es quién?",
   guess_type: "Juego de deducción · Aplicación de escritorio",
   guess_desc:
-    "Versión digital del juego de mesa con 24 personajes, personaje oculto aleatorio, preguntas limitadas, descarte automático y modo de adivinanza final. Está desarrollada en Java con Swing y AWT, aplicando programación orientada a objetos, eventos y separación entre interfaz, datos y lógica.",
+    "Versión digital con 24 personajes, preguntas limitadas, descarte automático y adivinanza final. Desarrollada con Java, Swing y AWT, aplicando POO y separación entre interfaz, datos y lógica.",
 
 };
