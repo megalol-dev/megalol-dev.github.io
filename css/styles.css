@@ -535,6 +535,15 @@ body.dark .setting-row img {
     border-top: 1px solid var(--border-color);
 }
 
+.featured-section .section-heading {
+    max-width: 100%;
+}
+
+.featured-section .section-heading h2 {
+    color: var(--primary-color);
+    font-style: italic;
+}
+
 .featured-project {
     display: grid;
     grid-template-columns: minmax(0, 1.15fr) minmax(340px, .85fr);
