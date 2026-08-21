@@ -162,47 +162,10 @@ const sectionObserver = new IntersectionObserver((entries) => {
 navSections.forEach((section) => sectionObserver.observe(section));
 
 /* ============================
-   FILTROS DE PROYECTOS
-============================ */
-
-const filterButtons = document.querySelectorAll(".filter-button");
-const filterableProjects = document.querySelectorAll("#proyectos .project-card");
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-const filterProjects = (filter) => {
-    filterableProjects.forEach((card) => {
-        const shouldShow = filter === "all" || card.dataset.category === filter;
-        card.classList.toggle("is-filtered-out", !shouldShow);
-
-        if (shouldShow && !reduceMotion.matches) {
-            card.animate(
-                [
-                    { opacity: 0, transform: "translateY(12px) scale(.98)" },
-                    { opacity: 1, transform: "translateY(0) scale(1)" },
-                ],
-                { duration: 360, easing: "ease-out" },
-            );
-        }
-    });
-};
-
-document.querySelector(".project-filters").addEventListener("click", (event) => {
-    const button = event.target.closest("[data-filter]");
-    if (!button) return;
-
-    filterButtons.forEach((item) => {
-        const isActive = item === button;
-        item.classList.toggle("is-active", isActive);
-        item.setAttribute("aria-pressed", String(isActive));
-    });
-
-    filterProjects(button.dataset.filter);
-});
-
-/* ============================
    ANIMACIONES AL HACER SCROLL
 ============================ */
 
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const revealElements = document.querySelectorAll(".reveal");
 
 if (reduceMotion.matches || !("IntersectionObserver" in window)) {

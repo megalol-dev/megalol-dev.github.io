@@ -61,7 +61,6 @@ export default {
   featured_badge: "Main project",
   projects_intro:
     "Complete applications designed to evolve and scale with each client's needs.",
-  filter_all: "All",
   games_eyebrow: "Creative lab",
   games_intro:
     "Projects for practising logic, algorithms, state management, and interactive interfaces, including a graphic engine for building your own game without writing code.",
@@ -76,8 +75,6 @@ export default {
   urban_type: "Full stack e-commerce · Payments and business operations",
   urban_desc:
     "A sneaker store covering the complete purchasing journey: variant-based catalog, persistent cart, registration, secure Stripe checkout, orders, PDF invoices, and an internal role-based management panel. The backend uses Java 21, Spring Boot, Spring Security, JPA/Hibernate, and MariaDB; the frontend is built with HTML, CSS, and JavaScript.",
-  urban_card_desc:
-    "Sneaker e-commerce with a variant catalog, persistent cart, Stripe checkout, orders, PDF invoices, and a role-based back office. Built with Java 21, Spring Boot, Spring Security, and MariaDB.",
   urban_highlight_1: "Real checkout and signed Stripe webhooks",
   urban_highlight_2: "Session security, CSRF protection, and role-based permissions",
   urban_highlight_3: "Orders, inventory, history, and PDF invoicing",

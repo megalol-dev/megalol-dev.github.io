@@ -61,7 +61,6 @@ export default {
   featured_badge: "Proyecto principal",
   projects_intro:
     "Aplicaciones completas, preparadas para evolucionar y escalar según las necesidades de cada cliente.",
-  filter_all: "Todos",
   games_eyebrow: "Laboratorio creativo",
   games_intro:
     "Proyectos para practicar lógica, algoritmos, gestión de estados e interfaces interactivas, incluido un motor gráfico para construir tu propio juego sin escribir código.",
@@ -76,8 +75,6 @@ export default {
   urban_type: "E-commerce full stack · Pagos y gestión empresarial",
   urban_desc:
     "Tienda online de zapatillas que cubre el ciclo completo de compra: catálogo por variantes, carrito persistente, registro, checkout seguro con Stripe, pedidos, facturas PDF y panel interno con permisos por rol. El backend utiliza Java 21, Spring Boot, Spring Security, JPA/Hibernate y MariaDB; el frontend está desarrollado con HTML, CSS y JavaScript.",
-  urban_card_desc:
-    "E-commerce de zapatillas con catálogo por variantes, carrito persistente, checkout con Stripe, pedidos, facturas PDF y panel interno por roles. Desarrollado con Java 21, Spring Boot y MariaDB.",
   urban_highlight_1: "Checkout real y webhooks firmados con Stripe",
   urban_highlight_2: "Seguridad por sesión, CSRF y permisos por rol",
   urban_highlight_3: "Pedidos, inventario, historial y facturación PDF",

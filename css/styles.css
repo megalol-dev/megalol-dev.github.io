@@ -649,32 +649,6 @@ body.dark .setting-row img {
     border-top: 1px solid var(--border-color);
 }
 
-.project-filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .65rem;
-    margin-bottom: 1.75rem;
-}
-
-.filter-button {
-    padding: .62rem .9rem;
-    background: var(--surface);
-    color: var(--muted-color);
-    border: 1px solid var(--border-color);
-    border-radius: 999px;
-    font-weight: 800;
-    cursor: pointer;
-    transition: color var(--transition), background-color var(--transition), border-color var(--transition), transform var(--transition);
-}
-
-.filter-button:hover,
-.filter-button.is-active {
-    background: var(--primary-color);
-    color: white;
-    border-color: var(--primary-color);
-    transform: translateY(-2px);
-}
-
 .projects-grid,
 .games-grid {
     display: grid;
@@ -698,10 +672,6 @@ body.dark .setting-row img {
     border-color: color-mix(in srgb, var(--primary-color) 55%, var(--border-color));
     box-shadow: var(--shadow-lg);
     transform: translateY(-6px);
-}
-
-.project-card.is-filtered-out {
-    display: none;
 }
 
 .project-card__media {
@@ -1152,16 +1122,6 @@ body.dark .setting-row img {
 
     .featured-project__content h2 {
         font-size: 2.35rem;
-    }
-
-    .project-filters {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .filter-button {
-        border-radius: var(--radius-sm);
-        font-size: .78rem;
     }
 
     .project-card__body,
